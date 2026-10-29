@@ -1,0 +1,188 @@
+[
+  {
+    "path": "../apresentacao/telas/01-onboarding.png",
+    "sha256": "f72881c86b0650d36abeae0c95f927870297e09a2807d29062fe5d92a61eb8a4",
+    "sha256Atual": "f72881c86b0650d36abeae0c95f927870297e09a2807d29062fe5d92a61eb8a4",
+    "intacta": true
+  },
+  {
+    "path": "../apresentacao/telas/02-configuracao-ia.png",
+    "sha256": "a8435ed52cd8412b1828594f8d5f5379cbb08e7dc7a1e38d59dbf939a40bba97",
+    "sha256Atual": "a8435ed52cd8412b1828594f8d5f5379cbb08e7dc7a1e38d59dbf939a40bba97",
+    "intacta": true
+  },
+  {
+    "path": "../apresentacao/telas/03-comportamento-ia.png",
+    "sha256": "ab0ed4bc9753ce43ef5ff8ad39bc54296484bb981c8071497493c7fa1027a70e",
+    "sha256Atual": "ab0ed4bc9753ce43ef5ff8ad39bc54296484bb981c8071497493c7fa1027a70e",
+    "intacta": true
+  },
+  {
+    "path": "../apresentacao/telas/04-whatsapp-chat.png",
+    "sha256": "502cabcfeafa87f319bc815443ad106637ce0242f7bd454a053db63715564c10",
+    "sha256Atual": "502cabcfeafa87f319bc815443ad106637ce0242f7bd454a053db63715564c10",
+    "intacta": true
+  },
+  {
+    "path": "../apresentacao/telas/05-ficha-cliente.png",
+    "sha256": "237c2dbd59b9626efddc31f72d8d698baafaa0d1e7cc3f2d37a0423f11828017",
+    "sha256Atual": "237c2dbd59b9626efddc31f72d8d698baafaa0d1e7cc3f2d37a0423f11828017",
+    "intacta": true
+  },
+  {
+    "path": "../apresentacao/telas/06-kanban-automatico.png",
+    "sha256": "513607eac35da6bd6d5bfaf7d5ab8149e9e115bb2042fa6b70ba954c194b6008",
+    "sha256Atual": "513607eac35da6bd6d5bfaf7d5ab8149e9e115bb2042fa6b70ba954c194b6008",
+    "intacta": true
+  },
+  {
+    "path": "../apresentacao/telas/07-autonomia-aprovacao.png",
+    "sha256": "78097b9993733fbeb8e745d11cca022508321054e7f7b369094c4622623d89fe",
+    "sha256Atual": "78097b9993733fbeb8e745d11cca022508321054e7f7b369094c4622623d89fe",
+    "intacta": true
+  },
+  {
+    "path": "../apresentacao/telas/08-followup-automatico.png",
+    "sha256": "923715c6bb070ab08ec44bbff4f742bebd411e4cf7ce68f59ab44ffe36e8ba3b",
+    "sha256Atual": "923715c6bb070ab08ec44bbff4f742bebd411e4cf7ce68f59ab44ffe36e8ba3b",
+    "intacta": true
+  },
+  {
+    "path": "../apresentacao/telas/09-dashboard.png",
+    "sha256": "0161e4b93d898c588653ade0e2a951733c8f6187b32f952a0ccb09c513023086",
+    "sha256Atual": "0161e4b93d898c588653ade0e2a951733c8f6187b32f952a0ccb09c513023086",
+    "intacta": true
+  },
+  {
+    "path": "../apresentacao/telas/10-kanban-auditoria-ia.png",
+    "sha256": "271a922db51f5a9657bf71878ff3f20f584235421e32e219c793ef8bbd4e7d6b",
+    "sha256Atual": "271a922db51f5a9657bf71878ff3f20f584235421e32e219c793ef8bbd4e7d6b",
+    "intacta": true
+  },
+  {
+    "path": "source/prod/wizard-nicho.png",
+    "sha256": "18dfe7703498f7b60e602f8ecb63767e62360111015ca37d4a97647bb1373d65",
+    "sha256Atual": "18dfe7703498f7b60e602f8ecb63767e62360111015ca37d4a97647bb1373d65",
+    "intacta": true
+  },
+  {
+    "path": "source/prod/complemento-assistente-topo.png",
+    "sha256": "b41bfcbf9d977d68615ab0db27b42d660ad6d452ba221396fade17dd5f33756e",
+    "sha256Atual": "b41bfcbf9d977d68615ab0db27b42d660ad6d452ba221396fade17dd5f33756e",
+    "intacta": true
+  },
+  {
+    "path": "source/prod/complemento-02-configuracao-ia.png",
+    "sha256": "b41bfcbf9d977d68615ab0db27b42d660ad6d452ba221396fade17dd5f33756e",
+    "sha256Atual": "b41bfcbf9d977d68615ab0db27b42d660ad6d452ba221396fade17dd5f33756e",
+    "intacta": true
+  },
+  {
+    "path": "source/prod/complemento-playground.png",
+    "sha256": "c1027d4a850b76b3b0ec01e19a4d34cce82657cdb942c2932a6ed0a0cf5f1f5d",
+    "sha256Atual": "c1027d4a850b76b3b0ec01e19a4d34cce82657cdb942c2932a6ed0a0cf5f1f5d",
+    "intacta": true
+  },
+  {
+    "path": "source/prod/complemento-transferencia-humana.png",
+    "sha256": "1e6f997c6c5fbffedb9ae857fd05d0c671079f8c8c44bc189850b35e5a37a9c9",
+    "sha256Atual": "1e6f997c6c5fbffedb9ae857fd05d0c671079f8c8c44bc189850b35e5a37a9c9",
+    "intacta": true
+  },
+  {
+    "path": "source/prod/complemento-03-comportamento-ia.png",
+    "sha256": "68e54b091068490487f7feca447a4b1bf430023f389e6345a640d4acac4ae3a4",
+    "sha256Atual": "68e54b091068490487f7feca447a4b1bf430023f389e6345a640d4acac4ae3a4",
+    "intacta": true
+  },
+  {
+    "path": "source/prod/complemento-comportamento-modalidades.png",
+    "sha256": "62dc7d767bd3328563abe1e16dbc79ec32f3bab47b46129cbe92a8b6b7dd4ddb",
+    "sha256Atual": "62dc7d767bd3328563abe1e16dbc79ec32f3bab47b46129cbe92a8b6b7dd4ddb",
+    "intacta": true
+  },
+  {
+    "path": "source/prod/complemento-04-whatsapp-chat.png",
+    "sha256": "2edaa51b5ee789b432b0a1716c3bb576a179ba32b427ddd34c561d36a554978b",
+    "sha256Atual": "2edaa51b5ee789b432b0a1716c3bb576a179ba32b427ddd34c561d36a554978b",
+    "intacta": true
+  },
+  {
+    "path": "source/prod/complemento-conversa-blocos-ia.png",
+    "sha256": "8eddb276839f12fb29e3a576d6ea6ed3a0b924783f4ff62f36749ad83d860eda",
+    "sha256Atual": "8eddb276839f12fb29e3a576d6ea6ed3a0b924783f4ff62f36749ad83d860eda",
+    "intacta": true
+  },
+  {
+    "path": "source/prod/complemento-ficha-extracao.png",
+    "sha256": "ab044e7fe948361c2e8e05f9f83c0b8504bae2462b2d0d199ea837271b6a385b",
+    "sha256Atual": "ab044e7fe948361c2e8e05f9f83c0b8504bae2462b2d0d199ea837271b6a385b",
+    "intacta": true
+  },
+  {
+    "path": "source/prod/complemento-ficha-memoria.png",
+    "sha256": "238e393ef7fc199db9594beb5c4351fcc6b2e6110809caceeb2131a479fa8530",
+    "sha256Atual": "238e393ef7fc199db9594beb5c4351fcc6b2e6110809caceeb2131a479fa8530",
+    "intacta": true
+  },
+  {
+    "path": "source/prod/complemento-ficha-qualificacao.png",
+    "sha256": "cec7f84637e08dcd38ac8cbdabac37ff4bbcd87a04cf94f145b3dc9bc90246fb",
+    "sha256Atual": "cec7f84637e08dcd38ac8cbdabac37ff4bbcd87a04cf94f145b3dc9bc90246fb",
+    "intacta": true
+  },
+  {
+    "path": "source/prod/06-kanban-automatico.png",
+    "sha256": "e70bd16699d4ee8c242c9e1c572ae97e0d07382ee7faeef7131edc3f3e757932",
+    "sha256Atual": "e70bd16699d4ee8c242c9e1c572ae97e0d07382ee7faeef7131edc3f3e757932",
+    "intacta": true
+  },
+  {
+    "path": "source/prod/10-kanban-auditoria-ia.png",
+    "sha256": "3c80ea23828c9efbd66a8be752b6398d3850d288127b070ceeed9fc2ffc8ef6e",
+    "sha256Atual": "3c80ea23828c9efbd66a8be752b6398d3850d288127b070ceeed9fc2ffc8ef6e",
+    "intacta": true
+  },
+  {
+    "path": "source/prod/complemento-autonomia-quatro-modos.png",
+    "sha256": "06cbb5d0a53521a8103add74ea2cc1bd4a2d8a68b4a76e4fbe19e15bd41470b0",
+    "sha256Atual": "06cbb5d0a53521a8103add74ea2cc1bd4a2d8a68b4a76e4fbe19e15bd41470b0",
+    "intacta": true
+  },
+  {
+    "path": "source/prod/complemento-07-autonomia-aprovacao.png",
+    "sha256": "651b5ffaba75117505458d0a681b76a9e364f729a00f2957137b9c69e0bd0461",
+    "sha256Atual": "651b5ffaba75117505458d0a681b76a9e364f729a00f2957137b9c69e0bd0461",
+    "intacta": true
+  },
+  {
+    "path": "source/prod/complemento-fila-decisoes.png",
+    "sha256": "d645170b549b38e3fa76bfdf309c94e0d931967b0c5e0778dff7be68bf1fa358",
+    "sha256Atual": "d645170b549b38e3fa76bfdf309c94e0d931967b0c5e0778dff7be68bf1fa358",
+    "intacta": true
+  },
+  {
+    "path": "source/prod/complemento-followup-sequencia.png",
+    "sha256": "95c5e10958490f2e48cde782c40f8f820f3c3465dcd36998c52494939b060232",
+    "sha256Atual": "95c5e10958490f2e48cde782c40f8f820f3c3465dcd36998c52494939b060232",
+    "intacta": true
+  },
+  {
+    "path": "source/prod/complemento-followup-historico.png",
+    "sha256": "63946d75d5eac9f58377fdce75c21dcbf18dcd60149f97fdbe272b081fba6d18",
+    "sha256Atual": "63946d75d5eac9f58377fdce75c21dcbf18dcd60149f97fdbe272b081fba6d18",
+    "intacta": true
+  },
+  {
+    "path": "source/prod/complemento-09-dashboard.png",
+    "sha256": "64c54284fc21da4e6305fad3ec8bacf0881b1462bc8980fa4caf7177d73cdf9a",
+    "sha256Atual": "64c54284fc21da4e6305fad3ec8bacf0881b1462bc8980fa4caf7177d73cdf9a",
+    "intacta": true
+  },
+  {
+    "path": "source/prod/09-dashboard.png",
+    "sha256": "2052c857da6e32f2f221f1d6a0446132263d7103420836ea86f9e486ee33afdf",
+    "sha256Atual": "2052c857da6e32f2f221f1d6a0446132263d7103420836ea86f9e486ee33afdf",
+    "intacta": true
+  }
+]

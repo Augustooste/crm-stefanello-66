@@ -1,0 +1,50 @@
+name: CI (docs)
+
+# Espelho no-op do ci.yml. Existe só para destravar PR que mexe apenas em
+# documentação.
+#
+# O ruleset "main — checks obrigatórios" exige os contexts `lint` e `test`. O
+# ci.yml tem `paths-ignore: docs/** e **.md` para não queimar minuto de Actions
+# em commit de documentação — e aí o check obrigatório nunca roda, nunca fica
+# verde, e a PR fica `MERGEABLE` mas `BLOCKED` para sempre (PR #242, 09/08/2026).
+#
+# Os `paths` abaixo são o complemento exato do `paths-ignore` do ci.yml. Em PR
+# mista (código + doc) os dois workflows rodam: o real valida de verdade e este
+# passa em segundos, então o gate continua sendo o do ci.yml. Mudou o filtro
+# lá, mude aqui junto — se os dois se sobrepuserem errado, volta o deadlock.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/**"
+      - "**.md"
+  pull_request:
+    paths:
+      - "docs/**"
+      - "**.md"
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # Os nomes têm que bater com os do ci.yml -- é o `name` que vira o context
+  # que o ruleset cobra, não o id do job.
+  lint:
+    name: lint
+    # Mesmo `vars.CI_RUNNER` do ci.yml. Antes era `ubuntu-latest` fixo para um
+    # runner local fora do ar não prender o no-op na fila; mas sem budget de
+    # Actions (29/09/2026) o hospedado nem inicia e este check reprovava sempre.
+    # Hoje há 2 runners locais com reinício automático; runner fora do ar =
+    # `gh variable delete CI_RUNNER` devolve tudo ao hospedado.
+    runs-on: ${{ vars.CI_RUNNER || 'ubuntu-latest' }}
+    timeout-minutes: 5
+    steps:
+      - run: echo "Mudança só de documentação — lint do ci.yml não se aplica."
+
+  test:
+    name: test
+    runs-on: ${{ vars.CI_RUNNER || 'ubuntu-latest' }}
+    timeout-minutes: 5
+    steps:
+      - run: echo "Mudança só de documentação — testes do ci.yml não se aplicam."

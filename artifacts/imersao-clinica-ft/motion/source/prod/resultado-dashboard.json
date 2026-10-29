@@ -1,0 +1,21 @@
+{
+  "profile": "prod",
+  "baseURL": "https://aceleraflow-remix.lovable.app",
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "capturadoEm": "2026-10-16T17:07:30.963Z",
+  "somente": "dashboard",
+  "onboarding": "Estado aplicado; o wizard não foi reexecutado.",
+  "autenticacao": "Sem trace, vídeo, HAR, storageState em disco ou screenshot do login.",
+  "results": [
+    {
+      "etapa": 9,
+      "titulo": "[REAL] F9: Indicadores numéricos do dashboard",
+      "arquivo": "09-dashboard.png",
+      "resultado": "PASSOU",
+      "rota": "/app"
+    }
+  ]
+}

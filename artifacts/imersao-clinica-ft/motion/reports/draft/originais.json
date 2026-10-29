@@ -1,0 +1,47 @@
+[
+  {
+    "file": "01-onboarding.png",
+    "sha256": "fb6f7aa5f2313d501e4f054be8f100b6b3eacee4027d775ee46de9453984449c",
+    "intacta": true
+  },
+  {
+    "file": "02-configuracao-ia.png",
+    "sha256": "945d58080bd1f37baa8e79f689d6089bdb5af7c6ea8f94101a374974e32db85b",
+    "intacta": true
+  },
+  {
+    "file": "03-comportamento-ia.png",
+    "sha256": "646b67703e7175d3786ddafea12912d92eedc5e91de13be61aee448d7e9c8496",
+    "intacta": true
+  },
+  {
+    "file": "04-whatsapp-chat.png",
+    "sha256": "47ac01e210e4f1463e0d1cc550b6db5696c4f4c210ee5b992ae394cef1261433",
+    "intacta": true
+  },
+  {
+    "file": "05-ficha-cliente.png",
+    "sha256": "b306ff8b6efc27c9e16e8b08f0292f1f9631f65281956cbfb01c3ed2796d9df5",
+    "intacta": true
+  },
+  {
+    "file": "06-kanban-automatico.png",
+    "sha256": "a12a1679fb89d88025520475900dd4a0df739cb350f647a9942bf862c5699a13",
+    "intacta": true
+  },
+  {
+    "file": "07-autonomia-aprovacao.png",
+    "sha256": "7cba56c7eb3de7a17301c0df26245f7d3252f0bf633ef4b5e39f9a75de109011",
+    "intacta": true
+  },
+  {
+    "file": "08-followup-automatico.png",
+    "sha256": "f14e63526111fca603829a11d53d6d9d3b4f39f8588d9cd74133dbbf4309a187",
+    "intacta": true
+  },
+  {
+    "file": "09-dashboard.png",
+    "sha256": "b162a0d2fa7d49ad9c90d4b5e1efd5593760b70f63725d6f95956f5977971f83",
+    "intacta": true
+  }
+]

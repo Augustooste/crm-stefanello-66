@@ -1,0 +1,7 @@
+# CRM IA
+
+> CRM com assistente de IA para pequenas e médias empresas: pipeline de vendas em kanban, inbox unificado de WhatsApp e e-mail, e uma IA que qualifica leads e transfere para humanos na hora certa.
+
+## Páginas
+
+- [Início](/): Visão geral do produto e do painel do CRM.

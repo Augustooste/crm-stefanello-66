@@ -1,0 +1,152 @@
+[
+  {
+    "time": 0.85,
+    "scene": "01-onboarding",
+    "subject": "Configuração inicial — Nicho"
+  },
+  {
+    "time": 3.1,
+    "scene": "01-onboarding",
+    "subject": "Nicho odontológico e funil aplicado"
+  },
+  {
+    "time": 5.25,
+    "scene": "02-configuracao-ia",
+    "subject": "Assistente ativa no workspace"
+  },
+  {
+    "time": 7,
+    "scene": "02-configuracao-ia",
+    "subject": "Prompt base real"
+  },
+  {
+    "time": 8.75,
+    "scene": "02-configuracao-ia",
+    "subject": "Área de teste sem envio externo"
+  },
+  {
+    "time": 10.5,
+    "scene": "02-configuracao-ia",
+    "subject": "Palavras de transferência humana"
+  },
+  {
+    "time": 12.25,
+    "scene": "03-comportamento",
+    "subject": "Janela de agrupamento real"
+  },
+  {
+    "time": 13.75,
+    "scene": "03-comportamento",
+    "subject": "Máximo de blocos real"
+  },
+  {
+    "time": 15.25,
+    "scene": "03-comportamento",
+    "subject": "Intervalo entre blocos real"
+  },
+  {
+    "time": 16.75,
+    "scene": "03-comportamento",
+    "subject": "Sempre em texto e ausência de ElevenLabs"
+  },
+  {
+    "time": 18.35,
+    "scene": "04-whatsapp",
+    "subject": "Canal Simulação e IA pausada após transferência"
+  },
+  {
+    "time": 20.85,
+    "scene": "04-whatsapp",
+    "subject": "Dois blocos genuínos da IA"
+  },
+  {
+    "time": 23.5,
+    "scene": "05-ficha",
+    "subject": "E-mail extraído e vínculo da mensagem-fonte"
+  },
+  {
+    "time": 25.5,
+    "scene": "05-ficha",
+    "subject": "Perfil consolidado de Mariana"
+  },
+  {
+    "time": 27.5,
+    "scene": "05-ficha",
+    "subject": "Qualificação de 85% baseada em nove mensagens"
+  },
+  {
+    "time": 29.25,
+    "scene": "06-kanban",
+    "subject": "Contato Cliente simulado em Em Atendimento"
+  },
+  {
+    "time": 30.75,
+    "scene": "06-kanban",
+    "subject": "Movido pela IA e conflito detectado preservados"
+  },
+  {
+    "time": 32.25,
+    "scene": "06-kanban",
+    "subject": "Novo Paciente para Em Atendimento com confiança de 100%"
+  },
+  {
+    "time": 35.85,
+    "scene": "06-kanban",
+    "subject": "Antes e depois do avanço em homologação"
+  },
+  {
+    "time": 37.5,
+    "scene": "06-kanban",
+    "subject": "Mariana na coluna de destino na gravação histórica"
+  },
+  {
+    "time": 39.45,
+    "scene": "06-kanban",
+    "subject": "Ator IA no painel de auditoria local"
+  },
+  {
+    "time": 41.1,
+    "scene": "06-kanban",
+    "subject": "Confiança e transição locais auditadas"
+  },
+  {
+    "time": 43,
+    "scene": "07-autonomia",
+    "subject": "Quatro modos de autonomia"
+  },
+  {
+    "time": 45.25,
+    "scene": "07-autonomia",
+    "subject": "Confiança mínima de 80%"
+  },
+  {
+    "time": 47.75,
+    "scene": "07-autonomia",
+    "subject": "Alerta real de prazo na fila de decisões"
+  },
+  {
+    "time": 50,
+    "scene": "08-followup",
+    "subject": "Sequência de avaliação inativa"
+  },
+  {
+    "time": 52,
+    "scene": "08-followup",
+    "subject": "Condição de 24 horas após o passo anterior"
+  },
+  {
+    "time": 54,
+    "scene": "08-followup",
+    "subject": "Histórico de João Farias sem execução registrada"
+  },
+  {
+    "time": 56.25,
+    "scene": "09-dashboard",
+    "subject": "Dezesseis negócios ativos do workspace"
+  },
+  {
+    "time": 58.75,
+    "scene": "09-dashboard",
+    "subject": "Um auto-avanço e nenhuma sugestão pendente"
+  }
+]

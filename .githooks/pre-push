@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# Roda a catraca do "erro do Supabase descartado" antes do push.
+#
+# Só no pre-push, nunca no pre-commit: commit tem que ser barato. Aqui custa ~2s
+# e evita descobrir no CI o que dava pra ver antes de subir.
+#
+# Ativado por `core.hooksPath = .githooks`, configurado pelo script `prepare` do
+# package.json (roda sozinho no `pnpm install`). Sem husky, sem dependência nova.
+#
+# Bypass quando precisar: `git push --no-verify`.
+set -euo pipefail
+
+# Não roda em push de branch deletada nem sem commits novos.
+if [ -t 0 ]; then
+  base="origin/main"
+else
+  base="origin/main"
+fi
+
+# Se a base não existe localmente (clone raso, primeiro fetch), não trava o push:
+# o CI cobre. Falhar aqui só ensinaria a usar --no-verify por reflexo.
+if ! git rev-parse --verify --quiet "$base" >/dev/null; then
+  echo "pre-push: $base não existe localmente, pulando a checagem (o CI cobre)."
+  exit 0
+fi
+
+echo "pre-push: checando escrita do Supabase com retorno descartado…"
+if ! node scripts/lint-erro-descartado.mjs "$base"; then
+  echo ""
+  echo "Push abortado. Corrija acima, ou use 'git push --no-verify' se for deliberado."
+  exit 1
+fi

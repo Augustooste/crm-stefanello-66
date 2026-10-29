@@ -1,0 +1,652 @@
+[
+  {
+    "file": "complemento-followup-sequencia.png",
+    "profile": "prod",
+    "baseURL": "https://aceleraflow-remix.lovable.app",
+    "capturedAt": "2026-10-16T16:57:19.195Z",
+    "route": "/nurture",
+    "font": "Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "controls": [
+      {
+        "text": "Abrir ou fechar menu lateral",
+        "role": null,
+        "aria": "Alternar menu lateral",
+        "x": 272,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "Últimos 30 dias",
+        "role": "combobox",
+        "aria": "Selecionar período do filtro global",
+        "x": 1386,
+        "y": 9.5,
+        "w": 170,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Abrir assistente IA",
+        "x": 1564,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Mudar para tema claro",
+        "x": 1616,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "27",
+        "role": null,
+        "aria": "Notificações (27 pendentes)",
+        "x": 1668,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "AFAdministrador Clínica FT",
+        "role": null,
+        "aria": "Menu de Administrador Clínica FT",
+        "x": 1720,
+        "y": 7.5,
+        "w": 184,
+        "h": 40,
+        "font": "14px"
+      },
+      {
+        "text": "Acompanhamento automático",
+        "role": null,
+        "aria": null,
+        "x": 400,
+        "y": 80,
+        "w": 427,
+        "h": 32,
+        "font": "28px"
+      },
+      {
+        "text": "Nova sequência",
+        "role": null,
+        "aria": null,
+        "x": 1637,
+        "y": 93,
+        "w": 139,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Confirmação de Avaliação AgendadaInativaMudança de etapa2 passo(s) · 0 inscrição(ões) ativa(s)",
+        "role": null,
+        "aria": null,
+        "x": 417,
+        "y": 171,
+        "w": 1247,
+        "h": 46,
+        "font": "14px"
+      },
+      {
+        "text": "Editar",
+        "role": null,
+        "aria": null,
+        "x": 1676,
+        "y": 178,
+        "w": 83,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Reativação de Proposta ParadaInativaEstagnado2 passo(s) · 0 inscrição(ões) ativa(s)",
+        "role": null,
+        "aria": null,
+        "x": 417,
+        "y": 263,
+        "w": 1247,
+        "h": 46,
+        "font": "14px"
+      },
+      {
+        "text": "Editar",
+        "role": null,
+        "aria": null,
+        "x": 1676,
+        "y": 270,
+        "w": 83,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Recall Periódico de Pacientes FinalizadosInativaPeriódico1 passo(s) · 0 inscrição(ões) ativa(s)",
+        "role": null,
+        "aria": null,
+        "x": 417,
+        "y": 355,
+        "w": 1247,
+        "h": 46,
+        "font": "14px"
+      },
+      {
+        "text": "Editar",
+        "role": null,
+        "aria": null,
+        "x": 1676,
+        "y": 362,
+        "w": 83,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Passos (2)",
+        "role": "tab",
+        "aria": null,
+        "x": 421,
+        "y": 495,
+        "w": 96,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Inscrições (1)",
+        "role": "tab",
+        "aria": null,
+        "x": 517,
+        "y": 495,
+        "w": 113,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Adicionar passo",
+        "role": null,
+        "aria": null,
+        "x": 417,
+        "y": 535,
+        "w": 141,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Editar passo 1",
+        "x": 1683,
+        "y": 589,
+        "w": 36,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Excluir passo 1",
+        "x": 1723,
+        "y": 589,
+        "w": 36,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Editar passo 2",
+        "x": 1683,
+        "y": 646,
+        "w": 36,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Excluir passo 2",
+        "x": 1723,
+        "y": 646,
+        "w": 36,
+        "h": 36,
+        "font": "14px"
+      }
+    ]
+  },
+  {
+    "file": "complemento-followup-inscricoes.png",
+    "profile": "prod",
+    "baseURL": "https://aceleraflow-remix.lovable.app",
+    "capturedAt": "2026-10-16T16:57:19.342Z",
+    "route": "/nurture",
+    "font": "Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "controls": [
+      {
+        "text": "Abrir ou fechar menu lateral",
+        "role": null,
+        "aria": "Alternar menu lateral",
+        "x": 272,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "Últimos 30 dias",
+        "role": "combobox",
+        "aria": "Selecionar período do filtro global",
+        "x": 1386,
+        "y": 9.5,
+        "w": 170,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Abrir assistente IA",
+        "x": 1564,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Mudar para tema claro",
+        "x": 1616,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "27",
+        "role": null,
+        "aria": "Notificações (27 pendentes)",
+        "x": 1668,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "AFAdministrador Clínica FT",
+        "role": null,
+        "aria": "Menu de Administrador Clínica FT",
+        "x": 1720,
+        "y": 7.5,
+        "w": 184,
+        "h": 40,
+        "font": "14px"
+      },
+      {
+        "text": "Acompanhamento automático",
+        "role": null,
+        "aria": null,
+        "x": 400,
+        "y": 80,
+        "w": 427,
+        "h": 32,
+        "font": "28px"
+      },
+      {
+        "text": "Nova sequência",
+        "role": null,
+        "aria": null,
+        "x": 1637,
+        "y": 93,
+        "w": 139,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Confirmação de Avaliação AgendadaInativaMudança de etapa2 passo(s) · 0 inscrição(ões) ativa(s)",
+        "role": null,
+        "aria": null,
+        "x": 417,
+        "y": 171,
+        "w": 1247,
+        "h": 46,
+        "font": "14px"
+      },
+      {
+        "text": "Editar",
+        "role": null,
+        "aria": null,
+        "x": 1676,
+        "y": 178,
+        "w": 83,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Reativação de Proposta ParadaInativaEstagnado2 passo(s) · 0 inscrição(ões) ativa(s)",
+        "role": null,
+        "aria": null,
+        "x": 417,
+        "y": 263,
+        "w": 1247,
+        "h": 46,
+        "font": "14px"
+      },
+      {
+        "text": "Editar",
+        "role": null,
+        "aria": null,
+        "x": 1676,
+        "y": 270,
+        "w": 83,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Recall Periódico de Pacientes FinalizadosInativaPeriódico1 passo(s) · 0 inscrição(ões) ativa(s)",
+        "role": null,
+        "aria": null,
+        "x": 417,
+        "y": 355,
+        "w": 1247,
+        "h": 46,
+        "font": "14px"
+      },
+      {
+        "text": "Editar",
+        "role": null,
+        "aria": null,
+        "x": 1676,
+        "y": 362,
+        "w": 83,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Passos (2)",
+        "role": "tab",
+        "aria": null,
+        "x": 421,
+        "y": 495,
+        "w": 96,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Inscrições (1)",
+        "role": "tab",
+        "aria": null,
+        "x": 517,
+        "y": 495,
+        "w": 113,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Histórico",
+        "role": null,
+        "aria": null,
+        "x": 1476,
+        "y": 556,
+        "w": 77,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Reativar",
+        "role": null,
+        "aria": null,
+        "x": 1557,
+        "y": 556,
+        "w": 98,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Cancelar",
+        "role": null,
+        "aria": null,
+        "x": 1659,
+        "y": 556,
+        "w": 100,
+        "h": 32,
+        "font": "12px"
+      }
+    ]
+  },
+  {
+    "file": "complemento-followup-historico.png",
+    "profile": "prod",
+    "baseURL": "https://aceleraflow-remix.lovable.app",
+    "capturedAt": "2026-10-16T16:57:19.740Z",
+    "route": "/nurture",
+    "font": "Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "controls": [
+      {
+        "text": "Abrir ou fechar menu lateral",
+        "role": null,
+        "aria": "Alternar menu lateral",
+        "x": 272,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "Últimos 30 dias",
+        "role": "combobox",
+        "aria": "Selecionar período do filtro global",
+        "x": 1386,
+        "y": 9.5,
+        "w": 170,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Abrir assistente IA",
+        "x": 1564,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Mudar para tema claro",
+        "x": 1616,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "27",
+        "role": null,
+        "aria": "Notificações (27 pendentes)",
+        "x": 1668,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "AFAdministrador Clínica FT",
+        "role": null,
+        "aria": "Menu de Administrador Clínica FT",
+        "x": 1720,
+        "y": 7.5,
+        "w": 184,
+        "h": 40,
+        "font": "14px"
+      },
+      {
+        "text": "Acompanhamento automático",
+        "role": null,
+        "aria": null,
+        "x": 400,
+        "y": 80,
+        "w": 427,
+        "h": 32,
+        "font": "28px"
+      },
+      {
+        "text": "Nova sequência",
+        "role": null,
+        "aria": null,
+        "x": 1637,
+        "y": 93,
+        "w": 139,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Confirmação de Avaliação AgendadaInativaMudança de etapa2 passo(s) · 0 inscrição(ões) ativa(s)",
+        "role": null,
+        "aria": null,
+        "x": 417,
+        "y": 171,
+        "w": 1247,
+        "h": 46,
+        "font": "14px"
+      },
+      {
+        "text": "Editar",
+        "role": null,
+        "aria": null,
+        "x": 1676,
+        "y": 178,
+        "w": 83,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Reativação de Proposta ParadaInativaEstagnado2 passo(s) · 0 inscrição(ões) ativa(s)",
+        "role": null,
+        "aria": null,
+        "x": 417,
+        "y": 263,
+        "w": 1247,
+        "h": 46,
+        "font": "14px"
+      },
+      {
+        "text": "Editar",
+        "role": null,
+        "aria": null,
+        "x": 1676,
+        "y": 270,
+        "w": 83,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Recall Periódico de Pacientes FinalizadosInativaPeriódico1 passo(s) · 0 inscrição(ões) ativa(s)",
+        "role": null,
+        "aria": null,
+        "x": 417,
+        "y": 355,
+        "w": 1247,
+        "h": 46,
+        "font": "14px"
+      },
+      {
+        "text": "Editar",
+        "role": null,
+        "aria": null,
+        "x": 1676,
+        "y": 362,
+        "w": 83,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Passos (2)",
+        "role": "tab",
+        "aria": null,
+        "x": 421,
+        "y": 495,
+        "w": 96,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Inscrições (1)",
+        "role": "tab",
+        "aria": null,
+        "x": 517,
+        "y": 495,
+        "w": 113,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Histórico",
+        "role": null,
+        "aria": null,
+        "x": 1476,
+        "y": 556,
+        "w": 77,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Reativar",
+        "role": null,
+        "aria": null,
+        "x": 1557,
+        "y": 556,
+        "w": 98,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Cancelar",
+        "role": null,
+        "aria": null,
+        "x": 1659,
+        "y": 556,
+        "w": 100,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Histórico de acompanhamento",
+        "role": null,
+        "aria": null,
+        "x": 729,
+        "y": 393,
+        "w": 462,
+        "h": 18,
+        "font": "18px"
+      },
+      {
+        "text": "Nenhuma execução registrada",
+        "role": null,
+        "aria": null,
+        "x": 849.46875,
+        "y": 566,
+        "w": 221.046875,
+        "h": 24,
+        "font": "16px"
+      },
+      {
+        "text": "Fechar janela",
+        "role": null,
+        "aria": null,
+        "x": 1183,
+        "y": 385,
+        "w": 16,
+        "h": 16,
+        "font": "14px"
+      }
+    ]
+  }
+]

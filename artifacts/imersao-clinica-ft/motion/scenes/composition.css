@@ -1,0 +1,7 @@
+html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:#0b101a;font-family:Inter,sans-serif}
+#main,.shot{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;background:#0b101a}
+/* A legenda ocupa a margem editorial; a captura nunca desenha pixels nessa área. */
+.capture-viewport{position:absolute;left:0;top:0;width:1920px;height:810px;overflow:hidden}
+.camera{position:absolute;left:0;top:0;transform-origin:0 0;will-change:transform}
+.camera img{display:block;max-width:none}
+.provenance{position:absolute;left:360px;width:1200px;color:#f3f6fc;font-size:42px;line-height:1.3;font-weight:450;letter-spacing:-.35px;text-align:center;white-space:pre-line;text-shadow:0 2px 9px #000;will-change:transform}

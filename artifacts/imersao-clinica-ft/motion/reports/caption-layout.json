@@ -1,0 +1,34 @@
+[
+  {
+    "arquivo": "scenes/index.html",
+    "quadrosPercorridos": 1800,
+    "quadrosComLegenda": 1530,
+    "quadrosComVideoJaLegendado": 270,
+    "distanciaMinimaPx": 45,
+    "sobreposicoes": 0,
+    "ocorrencias": [],
+    "buscaDeterministica": {
+      "ok": true,
+      "samples": 24,
+      "elements": 133,
+      "canvases": 0,
+      "mismatches": []
+    }
+  },
+  {
+    "arquivo": "scenes/kanban-recording.html",
+    "quadrosPercorridos": 270,
+    "quadrosComLegenda": 270,
+    "quadrosComVideoJaLegendado": 0,
+    "distanciaMinimaPx": 37,
+    "sobreposicoes": 0,
+    "ocorrencias": [],
+    "buscaDeterministica": {
+      "ok": true,
+      "samples": 24,
+      "elements": 6,
+      "canvases": 0,
+      "mismatches": []
+    }
+  }
+]

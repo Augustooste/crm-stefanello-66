@@ -1,0 +1,230 @@
+{
+  "status": "COMPROVADO_PRODUCAO_SIMULADA",
+  "api_url": "https://dpdtgddkvdgswndzuofv.supabase.co",
+  "channel_id": "af9d157e-bc0d-4ca3-a471-6dbf11ba2111",
+  "conversation_id": "a924c735-15c3-4cf5-b1d4-0a89a7b96b2d",
+  "contact_id": "5ffc5ce7-db42-4b64-9851-bee047951a7b",
+  "turns": [
+    {
+      "message_id": "1c10baaf-b50e-4a76-8c31-458e4d154ce2",
+      "content": "Sou Mariana Lopes. Quais serviços vocês oferecem? Como funciona a avaliação odontológica e qual é o valor dessa primeira consulta?",
+      "sent_at": "2026-10-16T16:42:08.624Z",
+      "ai_messages": [
+        {
+          "id": "b75f6378-0aa2-478a-b41a-bde26a6e5ca9",
+          "sender": "ai",
+          "content": "Olá, Mariana! Oferecemos implantes, facetas, clareamento, ortodontia e clínico geral. 🦷",
+          "created_at": "2026-10-16T16:42:22.877308+00:00"
+        },
+        {
+          "id": "db405ac7-204b-4531-87e6-28a596ab5150",
+          "sender": "ai",
+          "content": "Na avaliação, o dentista examina sua saúde bucal e planeja o tratamento ideal para você.\nQual tratamento você procura e já fez alguma avaliação antes?",
+          "created_at": "2026-10-16T16:42:25.704797+00:00"
+        }
+      ],
+      "observed_at": "2026-10-16T16:42:35.173Z"
+    },
+    {
+      "message_id": "abc42259-fb7e-4589-aa29-cd5c894d1a17",
+      "content": "Moro em Campinas e prefiro marcar a avaliação na terça ou quinta depois das 18h.",
+      "sent_at": "2026-10-16T16:42:35.347Z",
+      "ai_messages": [],
+      "expected_no_ai_reply": true,
+      "outcome": "transferência para humano"
+    },
+    {
+      "message_id": "d88a4d3e-2342-41dc-9ff7-4678e5fcdbbd",
+      "content": "Meu e-mail é mariana.lopes.demo@example.com. Prefiro que a recepção retorne pelo WhatsApp para combinar o agendamento.",
+      "sent_at": "2026-10-16T16:50:03.526Z",
+      "ai_messages": [],
+      "expected_no_ai_reply": true,
+      "outcome": "conversa preservada com atendimento humano"
+    }
+  ],
+  "started_at": "2026-10-16T16:42:06.491Z",
+  "tenant_id": "acc0f11d-2d6e-4cc3-82a6-5b04ccfdd8ac",
+  "initial_contact_name": "Cliente simulado",
+  "human_edit": {
+    "field": "name",
+    "previous_value": "Cliente simulado",
+    "value": "Mariana Lopes",
+    "provenance": "nome definido pela recepção",
+    "actor_id": "c915f9bd-c550-4894-b9a5-31a421662c5d",
+    "changed_at": "2026-10-16T16:42:08.259Z"
+  },
+  "initial_message_ids": [
+    "b7822d45-08f2-4322-a22f-521e6a627f73",
+    "31cce552-84b5-4dce-882f-3fb8e9ef5db6",
+    "f6d4a0bc-5fe6-432a-8e96-8c147bda4547"
+  ],
+  "handoff": {
+    "observed_at": "2026-10-16T16:49:56.964Z",
+    "ai_active": false,
+    "awaiting_human": true,
+    "provenance": "transferência genuína da IA para a recepção; não reativada"
+  },
+  "human_reply": {
+    "id": "a014dc8a-34c9-4778-bfc7-c49da96944de",
+    "sender": "agent",
+    "content": "Oi, Mariana! Aqui é a recepção da Clínica FT. Temos quinta às 18h30 para a avaliação. Posso confirmar?",
+    "created_at": "2026-10-16T16:50:13.209813+00:00",
+    "provenance": "resposta da recepção enviada uma vez pela UI no canal Simulação"
+  },
+  "extractions": [
+    {
+      "id": "8f855be3-bf70-4376-9bcb-0175a68942b3",
+      "field_name": "email",
+      "field_type": "native",
+      "extracted_value": "mariana.lopes.demo@example.com",
+      "confidence": 1,
+      "source_message_ids": ["d88a4d3e-2342-41dc-9ff7-4678e5fcdbbd"],
+      "applied": true,
+      "created_at": "2026-10-16T16:53:04.932154+00:00"
+    },
+    {
+      "id": "fb4a7c8a-beea-4711-9ee4-95dc0a32813c",
+      "field_name": "canal_preferido",
+      "field_type": "custom",
+      "extracted_value": "WhatsApp",
+      "confidence": 1,
+      "source_message_ids": ["d88a4d3e-2342-41dc-9ff7-4678e5fcdbbd"],
+      "applied": true,
+      "created_at": "2026-10-16T16:53:04.932154+00:00"
+    },
+    {
+      "id": "b1bfc0a3-a372-4678-906a-f89863d50e1f",
+      "field_name": "address_city",
+      "field_type": "native",
+      "extracted_value": "Campinas",
+      "confidence": 1,
+      "source_message_ids": ["abc42259-fb7e-4589-aa29-cd5c894d1a17"],
+      "applied": true,
+      "created_at": "2026-10-16T16:46:09.000411+00:00"
+    },
+    {
+      "id": "b71f284c-503c-4762-bcf5-f08dc553f430",
+      "field_name": "servico_interesse",
+      "field_type": "custom",
+      "extracted_value": "Avaliação odontológica",
+      "confidence": 1,
+      "source_message_ids": ["1c10baaf-b50e-4a76-8c31-458e4d154ce2"],
+      "applied": false,
+      "created_at": "2026-10-16T16:46:09.000411+00:00"
+    },
+    {
+      "id": "488a1f10-9479-4a82-a40b-7fe618825118",
+      "field_name": "periodo_preferido",
+      "field_type": "custom",
+      "extracted_value": "Terça ou quinta depois das 18h",
+      "confidence": 1,
+      "source_message_ids": ["abc42259-fb7e-4589-aa29-cd5c894d1a17"],
+      "applied": false,
+      "created_at": "2026-10-16T16:46:09.000411+00:00"
+    },
+    {
+      "id": "deee1f97-899d-424d-8a3f-d82a428d0e00",
+      "field_name": "servico_interesse",
+      "field_type": "custom",
+      "extracted_value": "Avaliação odontológica",
+      "confidence": 1,
+      "source_message_ids": ["b7822d45-08f2-4322-a22f-521e6a627f73"],
+      "applied": true,
+      "created_at": "2026-10-16T14:33:05.389917+00:00"
+    },
+    {
+      "id": "92ac4f6a-a246-4001-981e-51d08c06d208",
+      "field_name": "periodo_preferido",
+      "field_type": "custom",
+      "extracted_value": "Terça ou quinta depois das 18h",
+      "confidence": 1,
+      "source_message_ids": ["b7822d45-08f2-4322-a22f-521e6a627f73"],
+      "applied": true,
+      "created_at": "2026-10-16T14:33:05.389917+00:00"
+    }
+  ],
+  "contact": {
+    "id": "5ffc5ce7-db42-4b64-9851-bee047951a7b",
+    "name": "Mariana Lopes",
+    "email": "mariana.lopes.demo@example.com",
+    "address_city": "Campinas",
+    "custom_fields": {
+      "canal_preferido": "WhatsApp",
+      "periodo_preferido": "Terça ou quinta depois das 18h",
+      "servico_interesse": "Avaliação odontológica"
+    },
+    "ai_memory": {
+      "personality": null,
+      "preferences": [
+        "Atendimento às terças ou quintas-feiras",
+        "Horário após às 18h",
+        "Retorno via WhatsApp"
+      ],
+      "history_summary": "Mariana Lopes, residente em Campinas, buscou informações sobre avaliação odontológica e valores de consulta. Em interação recente, a cliente forneceu seu endereço de e-mail e formalizou o desejo de ser contatada via WhatsApp para agendamentos. A clínica propôs um horário para quinta-feira às 18h30, seguindo a preferência manifestada anteriormente. A cliente continua mantendo contato para finalizar a marcação do serviço.",
+      "important_dates": [],
+      "relationship_notes": null,
+      "last_consolidated_at": "2026-10-16T16:53:04.999436+00:00"
+    }
+  },
+  "summaries": [
+    {
+      "id": "63e6c8ed-1ac4-4754-a525-29602f5d20ab",
+      "summary": "A cliente forneceu seu e-mail de contato e solicitou que o agendamento seja tratado via WhatsApp. A recepção ofereceu um horário na quinta-feira às 18h30 conforme solicitado.",
+      "messages_covered": 2
+    },
+    {
+      "id": "c45a094e-1126-4d4e-8f7a-6686d129529e",
+      "summary": "Mariana Lopes solicitou informações sobre os serviços da clínica e detalhes sobre a avaliação odontológica. Ela informou sua localização em Campinas e confirmou sua disponibilidade de horários.",
+      "messages_covered": 4
+    },
+    {
+      "id": "a9354d27-f761-41ed-9a41-0dab786f9ab2",
+      "summary": "A cliente Mariana Lopes solicitou o agendamento de uma avaliação odontológica. Ela informou sua disponibilidade restrita a terças e quintas-feiras no período noturno.",
+      "messages_covered": 3
+    }
+  ],
+  "deals": [
+    {
+      "id": "b2cc2be8-adcb-4bae-86a4-5fca6896613b",
+      "title": "Contato Cliente simulado",
+      "stage_id": "662c7763-88ad-4234-8165-3c4bc1386a05",
+      "status": "open"
+    }
+  ],
+  "qualifications": [
+    {
+      "id": "21fcc7c0-02c7-449f-a474-469d33bbac63",
+      "deal_id": "b2cc2be8-adcb-4bae-86a4-5fca6896613b",
+      "confidence": 0.6,
+      "based_on_messages": 3,
+      "executive_summary": "Lead qualificada e com alta intenção de agendamento (Mariana Lopes). Já demonstrou necessidade específica de avaliação e informou restrições de horários (terça/quinta pós-18h), porém ainda não detalhou o tratamento nem confirmou orçamento."
+    },
+    {
+      "id": "70629f62-e714-4cf8-be5b-47f652e8c9a3",
+      "deal_id": "b2cc2be8-adcb-4bae-86a4-5fca6896613b",
+      "confidence": 0.8,
+      "based_on_messages": 7,
+      "executive_summary": "Lead demonstra alto interesse em agendar avaliação inicial, especificando localização (Campinas) e disponibilidade de horário, mas ainda busca clareza sobre custos e não especificou o tratamento desejado."
+    },
+    {
+      "id": "343268ca-649e-4734-8955-f45e205afc59",
+      "deal_id": "b2cc2be8-adcb-4bae-86a4-5fca6896613b",
+      "confidence": 0.85,
+      "based_on_messages": 9,
+      "executive_summary": "Lead demonstra alto interesse e intenção clara de agendamento, tendo fornecido disponibilidade de horários, localização e canal de contato preferencial. O deal está em estágio avançado de agendamento, aguardando apenas a confirmação final da data proposta pela recepção e a clarificação sobre o custo da avaliação."
+    }
+  ],
+  "conversation": {
+    "id": "a924c735-15c3-4cf5-b1d4-0a89a7b96b2d",
+    "ai_active": false,
+    "awaiting_human": false,
+    "last_error": null
+  },
+  "observed_at": "2026-10-16T16:53:14.519Z",
+  "validation_correction": {
+    "previous_error": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "cause": "A validação temporária esperava awaiting_human=true após a resposta humana. messaging-send limpa esse sinal e mantém ai_active=false; a condição foi corrigida sem alterar dados de produção.",
+    "source": "supabase/functions/messaging-send/index.ts:228"
+  },
+  "capture_note": "Nome definido pela recepção; transferência genuína para humano; uma resposta humana via UI em transporte simulado; sem reativação da IA, criação manual de negócio ou worker forçado."
+}

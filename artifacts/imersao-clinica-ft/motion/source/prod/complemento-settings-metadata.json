@@ -1,0 +1,1612 @@
+[
+  {
+    "file": "complemento-assistente-topo.png",
+    "profile": "prod",
+    "baseURL": "https://aceleraflow-remix.lovable.app",
+    "capturedAt": "2026-10-16T16:49:48.011Z",
+    "route": "/configuracoes",
+    "font": "Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "controls": [
+      {
+        "text": "Abrir ou fechar menu lateral",
+        "role": null,
+        "aria": "Alternar menu lateral",
+        "x": 272,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "Últimos 30 dias",
+        "role": "combobox",
+        "aria": "Selecionar período do filtro global",
+        "x": 1386,
+        "y": 9.5,
+        "w": 170,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Abrir assistente IA",
+        "x": 1564,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Mudar para tema claro",
+        "x": 1616,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "28",
+        "role": null,
+        "aria": "Notificações (28 pendentes)",
+        "x": 1668,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "AFAdministrador Clínica FT",
+        "role": null,
+        "aria": "Menu de Administrador Clínica FT",
+        "x": 1720,
+        "y": 7.5,
+        "w": 184,
+        "h": 40,
+        "font": "14px"
+      },
+      {
+        "text": "Configurações",
+        "role": null,
+        "aria": null,
+        "x": 400,
+        "y": 80,
+        "w": 230,
+        "h": 32,
+        "font": "28px"
+      },
+      {
+        "text": "Aparência",
+        "role": "tab",
+        "aria": null,
+        "x": 404,
+        "y": 166,
+        "w": 92,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Notificações",
+        "role": "tab",
+        "aria": null,
+        "x": 500,
+        "y": 166,
+        "w": 109,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Empresa",
+        "role": "tab",
+        "aria": null,
+        "x": 613,
+        "y": 166,
+        "w": 82,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Perfil do negócio",
+        "role": "tab",
+        "aria": null,
+        "x": 699,
+        "y": 166,
+        "w": 137,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Funil de vendas",
+        "role": "tab",
+        "aria": null,
+        "x": 840,
+        "y": 166,
+        "w": 130,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Etiquetas",
+        "role": "tab",
+        "aria": null,
+        "x": 974,
+        "y": 166,
+        "w": 87,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Equipe",
+        "role": "tab",
+        "aria": null,
+        "x": 1065,
+        "y": 166,
+        "w": 70,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "IA",
+        "role": "tab",
+        "aria": null,
+        "x": 1139,
+        "y": 166,
+        "w": 38,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Visualização",
+        "role": "tab",
+        "aria": null,
+        "x": 1181,
+        "y": 166,
+        "w": 110,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Integrações e Plugins",
+        "role": "tab",
+        "aria": null,
+        "x": 1295,
+        "y": 166,
+        "w": 169,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Supressões",
+        "role": "tab",
+        "aria": null,
+        "x": 1468,
+        "y": 166,
+        "w": 103,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Erros do app",
+        "role": "tab",
+        "aria": null,
+        "x": 1575,
+        "y": 166,
+        "w": 109,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Incidentes",
+        "role": "tab",
+        "aria": null,
+        "x": 404,
+        "y": 198,
+        "w": 94,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Ambiente",
+        "role": "tab",
+        "aria": null,
+        "x": 502,
+        "y": 198,
+        "w": 88,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Assistente",
+        "role": "tab",
+        "aria": null,
+        "x": 404,
+        "y": 250,
+        "w": 96,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Conhecimento",
+        "role": "tab",
+        "aria": null,
+        "x": 504,
+        "y": 250,
+        "w": 119,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Features",
+        "role": "tab",
+        "aria": null,
+        "x": 627,
+        "y": 250,
+        "w": 81,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Falhas",
+        "role": "tab",
+        "aria": null,
+        "x": 712,
+        "y": 250,
+        "w": 68,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Assistente de IA ativa",
+        "role": null,
+        "aria": null,
+        "x": 1567,
+        "y": 309,
+        "w": 148,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": "switch",
+        "aria": "Ativar assistente de IA",
+        "x": 1727,
+        "y": 317,
+        "w": 36,
+        "h": 20,
+        "font": "14px"
+      },
+      {
+        "text": "Configuração",
+        "role": "tab",
+        "aria": null,
+        "x": 404,
+        "y": 384,
+        "w": 220,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Área de teste",
+        "role": "tab",
+        "aria": null,
+        "x": 624,
+        "y": 384,
+        "w": 220,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Prompt base",
+        "role": null,
+        "aria": null,
+        "x": 425,
+        "y": 457,
+        "w": 1326,
+        "h": 16,
+        "font": "16px"
+      },
+      {
+        "text": "Salvar prompt",
+        "role": null,
+        "aria": null,
+        "x": 1593,
+        "y": 780.5,
+        "w": 158,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Modo de envio",
+        "role": null,
+        "aria": null,
+        "x": 425,
+        "y": 890.5,
+        "w": 1326,
+        "h": 16,
+        "font": "16px"
+      },
+      {
+        "text": "",
+        "role": "radio",
+        "aria": null,
+        "x": 438,
+        "y": 969.5,
+        "w": 16,
+        "h": 16,
+        "font": "14px"
+      },
+      {
+        "text": "Automático",
+        "role": null,
+        "aria": null,
+        "x": 466,
+        "y": 969.5,
+        "w": 76,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": "radio",
+        "aria": null,
+        "x": 438,
+        "y": 1043.5,
+        "w": 16,
+        "h": 16,
+        "font": "14px"
+      },
+      {
+        "text": "Rascunho para aprovação",
+        "role": null,
+        "aria": null,
+        "x": 466,
+        "y": 1043.5,
+        "w": 173,
+        "h": 17,
+        "font": "14px"
+      }
+    ]
+  },
+  {
+    "file": "complemento-02-configuracao-ia.png",
+    "profile": "prod",
+    "baseURL": "https://aceleraflow-remix.lovable.app",
+    "capturedAt": "2026-10-16T16:49:48.142Z",
+    "route": "/configuracoes",
+    "font": "Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "controls": [
+      {
+        "text": "Abrir ou fechar menu lateral",
+        "role": null,
+        "aria": "Alternar menu lateral",
+        "x": 272,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "Últimos 30 dias",
+        "role": "combobox",
+        "aria": "Selecionar período do filtro global",
+        "x": 1386,
+        "y": 9.5,
+        "w": 170,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Abrir assistente IA",
+        "x": 1564,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Mudar para tema claro",
+        "x": 1616,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "28",
+        "role": null,
+        "aria": "Notificações (28 pendentes)",
+        "x": 1668,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "AFAdministrador Clínica FT",
+        "role": null,
+        "aria": "Menu de Administrador Clínica FT",
+        "x": 1720,
+        "y": 7.5,
+        "w": 184,
+        "h": 40,
+        "font": "14px"
+      },
+      {
+        "text": "Configurações",
+        "role": null,
+        "aria": null,
+        "x": 400,
+        "y": 80,
+        "w": 230,
+        "h": 32,
+        "font": "28px"
+      },
+      {
+        "text": "Aparência",
+        "role": "tab",
+        "aria": null,
+        "x": 404,
+        "y": 166,
+        "w": 92,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Notificações",
+        "role": "tab",
+        "aria": null,
+        "x": 500,
+        "y": 166,
+        "w": 109,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Empresa",
+        "role": "tab",
+        "aria": null,
+        "x": 613,
+        "y": 166,
+        "w": 82,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Perfil do negócio",
+        "role": "tab",
+        "aria": null,
+        "x": 699,
+        "y": 166,
+        "w": 137,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Funil de vendas",
+        "role": "tab",
+        "aria": null,
+        "x": 840,
+        "y": 166,
+        "w": 130,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Etiquetas",
+        "role": "tab",
+        "aria": null,
+        "x": 974,
+        "y": 166,
+        "w": 87,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Equipe",
+        "role": "tab",
+        "aria": null,
+        "x": 1065,
+        "y": 166,
+        "w": 70,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "IA",
+        "role": "tab",
+        "aria": null,
+        "x": 1139,
+        "y": 166,
+        "w": 38,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Visualização",
+        "role": "tab",
+        "aria": null,
+        "x": 1181,
+        "y": 166,
+        "w": 110,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Integrações e Plugins",
+        "role": "tab",
+        "aria": null,
+        "x": 1295,
+        "y": 166,
+        "w": 169,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Supressões",
+        "role": "tab",
+        "aria": null,
+        "x": 1468,
+        "y": 166,
+        "w": 103,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Erros do app",
+        "role": "tab",
+        "aria": null,
+        "x": 1575,
+        "y": 166,
+        "w": 109,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Incidentes",
+        "role": "tab",
+        "aria": null,
+        "x": 404,
+        "y": 198,
+        "w": 94,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Ambiente",
+        "role": "tab",
+        "aria": null,
+        "x": 502,
+        "y": 198,
+        "w": 88,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Assistente",
+        "role": "tab",
+        "aria": null,
+        "x": 404,
+        "y": 250,
+        "w": 96,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Conhecimento",
+        "role": "tab",
+        "aria": null,
+        "x": 504,
+        "y": 250,
+        "w": 119,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Features",
+        "role": "tab",
+        "aria": null,
+        "x": 627,
+        "y": 250,
+        "w": 81,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Falhas",
+        "role": "tab",
+        "aria": null,
+        "x": 712,
+        "y": 250,
+        "w": 68,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Assistente de IA ativa",
+        "role": null,
+        "aria": null,
+        "x": 1567,
+        "y": 309,
+        "w": 148,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": "switch",
+        "aria": "Ativar assistente de IA",
+        "x": 1727,
+        "y": 317,
+        "w": 36,
+        "h": 20,
+        "font": "14px"
+      },
+      {
+        "text": "Configuração",
+        "role": "tab",
+        "aria": null,
+        "x": 404,
+        "y": 384,
+        "w": 220,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Área de teste",
+        "role": "tab",
+        "aria": null,
+        "x": 624,
+        "y": 384,
+        "w": 220,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Prompt base",
+        "role": null,
+        "aria": null,
+        "x": 425,
+        "y": 457,
+        "w": 1326,
+        "h": 16,
+        "font": "16px"
+      },
+      {
+        "text": "Salvar prompt",
+        "role": null,
+        "aria": null,
+        "x": 1593,
+        "y": 780.5,
+        "w": 158,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Modo de envio",
+        "role": null,
+        "aria": null,
+        "x": 425,
+        "y": 890.5,
+        "w": 1326,
+        "h": 16,
+        "font": "16px"
+      },
+      {
+        "text": "",
+        "role": "radio",
+        "aria": null,
+        "x": 438,
+        "y": 969.5,
+        "w": 16,
+        "h": 16,
+        "font": "14px"
+      },
+      {
+        "text": "Automático",
+        "role": null,
+        "aria": null,
+        "x": 466,
+        "y": 969.5,
+        "w": 76,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": "radio",
+        "aria": null,
+        "x": 438,
+        "y": 1043.5,
+        "w": 16,
+        "h": 16,
+        "font": "14px"
+      },
+      {
+        "text": "Rascunho para aprovação",
+        "role": null,
+        "aria": null,
+        "x": 466,
+        "y": 1043.5,
+        "w": 173,
+        "h": 17,
+        "font": "14px"
+      }
+    ]
+  },
+  {
+    "file": "complemento-03-comportamento-ia.png",
+    "profile": "prod",
+    "baseURL": "https://aceleraflow-remix.lovable.app",
+    "capturedAt": "2026-10-16T16:49:48.278Z",
+    "route": "/configuracoes",
+    "font": "Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "controls": [
+      {
+        "text": "Abrir ou fechar menu lateral",
+        "role": null,
+        "aria": "Alternar menu lateral",
+        "x": 272,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "Últimos 30 dias",
+        "role": "combobox",
+        "aria": "Selecionar período do filtro global",
+        "x": 1386,
+        "y": 9.5,
+        "w": 170,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Abrir assistente IA",
+        "x": 1564,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Mudar para tema claro",
+        "x": 1616,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "28",
+        "role": null,
+        "aria": "Notificações (28 pendentes)",
+        "x": 1668,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "AFAdministrador Clínica FT",
+        "role": null,
+        "aria": "Menu de Administrador Clínica FT",
+        "x": 1720,
+        "y": 7.5,
+        "w": 184,
+        "h": 40,
+        "font": "14px"
+      },
+      {
+        "text": "Salvar prompt",
+        "role": null,
+        "aria": null,
+        "x": 1593,
+        "y": 139.5,
+        "w": 158,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Modo de envio",
+        "role": null,
+        "aria": null,
+        "x": 425,
+        "y": 249.5,
+        "w": 1326,
+        "h": 16,
+        "font": "16px"
+      },
+      {
+        "text": "",
+        "role": "radio",
+        "aria": null,
+        "x": 438,
+        "y": 328.5,
+        "w": 16,
+        "h": 16,
+        "font": "14px"
+      },
+      {
+        "text": "Automático",
+        "role": null,
+        "aria": null,
+        "x": 466,
+        "y": 328.5,
+        "w": 76,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": "radio",
+        "aria": null,
+        "x": 438,
+        "y": 402.5,
+        "w": 16,
+        "h": 16,
+        "font": "14px"
+      },
+      {
+        "text": "Rascunho para aprovação",
+        "role": null,
+        "aria": null,
+        "x": 466,
+        "y": 402.5,
+        "w": 173,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "Comportamento das respostas",
+        "role": null,
+        "aria": null,
+        "x": 425,
+        "y": 559.5,
+        "w": 1326,
+        "h": 16,
+        "font": "16px"
+      },
+      {
+        "text": "Máximo de blocos por resposta",
+        "role": null,
+        "aria": null,
+        "x": 425,
+        "y": 627.5,
+        "w": 212,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "Intervalo entre blocos (ms)",
+        "role": null,
+        "aria": null,
+        "x": 872.328125,
+        "y": 627.5,
+        "w": 179,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "Janela de agrupamento (ms)",
+        "role": null,
+        "aria": null,
+        "x": 1319.65625,
+        "y": 627.5,
+        "w": 191,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "Salvar comportamento",
+        "role": null,
+        "aria": null,
+        "x": 1569,
+        "y": 775.5,
+        "w": 182,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": "radio",
+        "aria": null,
+        "x": 438,
+        "y": 920.5,
+        "w": 16,
+        "h": 16,
+        "font": "14px"
+      },
+      {
+        "text": "Sempre em texto",
+        "role": null,
+        "aria": null,
+        "x": 466,
+        "y": 920.5,
+        "w": 113,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": "radio",
+        "aria": null,
+        "x": 438,
+        "y": 994.5,
+        "w": 16,
+        "h": 16,
+        "font": "14px"
+      },
+      {
+        "text": "Espelhar o cliente",
+        "role": null,
+        "aria": null,
+        "x": 466,
+        "y": 994.5,
+        "w": 119,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": "radio",
+        "aria": null,
+        "x": 438,
+        "y": 1068.5,
+        "w": 16,
+        "h": 16,
+        "font": "14px"
+      },
+      {
+        "text": "Sempre em áudio",
+        "role": null,
+        "aria": null,
+        "x": 466,
+        "y": 1068.5,
+        "w": 116,
+        "h": 17,
+        "font": "14px"
+      }
+    ]
+  },
+  {
+    "file": "complemento-comportamento-modalidades.png",
+    "profile": "prod",
+    "baseURL": "https://aceleraflow-remix.lovable.app",
+    "capturedAt": "2026-10-16T16:49:48.377Z",
+    "route": "/configuracoes",
+    "font": "Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "controls": [
+      {
+        "text": "Abrir ou fechar menu lateral",
+        "role": null,
+        "aria": "Alternar menu lateral",
+        "x": 272,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "Últimos 30 dias",
+        "role": "combobox",
+        "aria": "Selecionar período do filtro global",
+        "x": 1386,
+        "y": 9.5,
+        "w": 170,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Abrir assistente IA",
+        "x": 1564,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Mudar para tema claro",
+        "x": 1616,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "28",
+        "role": null,
+        "aria": "Notificações (28 pendentes)",
+        "x": 1668,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "AFAdministrador Clínica FT",
+        "role": null,
+        "aria": "Menu de Administrador Clínica FT",
+        "x": 1720,
+        "y": 7.5,
+        "w": 184,
+        "h": 40,
+        "font": "14px"
+      },
+      {
+        "text": "Comportamento das respostas",
+        "role": null,
+        "aria": null,
+        "x": 425,
+        "y": 50.5,
+        "w": 1326,
+        "h": 16,
+        "font": "16px"
+      },
+      {
+        "text": "Máximo de blocos por resposta",
+        "role": null,
+        "aria": null,
+        "x": 425,
+        "y": 118.5,
+        "w": 212,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "Intervalo entre blocos (ms)",
+        "role": null,
+        "aria": null,
+        "x": 872.328125,
+        "y": 118.5,
+        "w": 179,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "Janela de agrupamento (ms)",
+        "role": null,
+        "aria": null,
+        "x": 1319.65625,
+        "y": 118.5,
+        "w": 191,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "Salvar comportamento",
+        "role": null,
+        "aria": null,
+        "x": 1569,
+        "y": 266.5,
+        "w": 182,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": "radio",
+        "aria": null,
+        "x": 438,
+        "y": 411.5,
+        "w": 16,
+        "h": 16,
+        "font": "14px"
+      },
+      {
+        "text": "Sempre em texto",
+        "role": null,
+        "aria": null,
+        "x": 466,
+        "y": 411.5,
+        "w": 113,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": "radio",
+        "aria": null,
+        "x": 438,
+        "y": 485.5,
+        "w": 16,
+        "h": 16,
+        "font": "14px"
+      },
+      {
+        "text": "Espelhar o cliente",
+        "role": null,
+        "aria": null,
+        "x": 466,
+        "y": 485.5,
+        "w": 119,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": "radio",
+        "aria": null,
+        "x": 438,
+        "y": 559.5,
+        "w": 16,
+        "h": 16,
+        "font": "14px"
+      },
+      {
+        "text": "Sempre em áudio",
+        "role": null,
+        "aria": null,
+        "x": 466,
+        "y": 559.5,
+        "w": 116,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "Palavras de transferência (padrão)",
+        "role": null,
+        "aria": null,
+        "x": 425,
+        "y": 682.5,
+        "w": 1326,
+        "h": 16,
+        "font": "16px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Remover falar com humano",
+        "x": 541,
+        "y": 754.5,
+        "w": 12,
+        "h": 12,
+        "font": "12px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Remover atendente",
+        "x": 638,
+        "y": 754.5,
+        "w": 12,
+        "h": 12,
+        "font": "12px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Remover pessoa real",
+        "x": 743,
+        "y": 754.5,
+        "w": 12,
+        "h": 12,
+        "font": "12px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Remover agendar",
+        "x": 830,
+        "y": 754.5,
+        "w": 12,
+        "h": 12,
+        "font": "12px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Remover marcar",
+        "x": 912,
+        "y": 754.5,
+        "w": 12,
+        "h": 12,
+        "font": "12px"
+      },
+      {
+        "text": "Adicionar",
+        "role": null,
+        "aria": null,
+        "x": 817,
+        "y": 784.5,
+        "w": 96,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Salvar",
+        "role": null,
+        "aria": null,
+        "x": 1645,
+        "y": 784.5,
+        "w": 106,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Comportamento por estágio do funil",
+        "role": null,
+        "aria": null,
+        "x": 425,
+        "y": 894.5,
+        "w": 1326,
+        "h": 16,
+        "font": "16px"
+      },
+      {
+        "text": "",
+        "role": "switch",
+        "aria": "Ativar IA no estágio Novo Paciente",
+        "x": 1722.984375,
+        "y": 1079.5,
+        "w": 36,
+        "h": 20,
+        "font": "14px"
+      }
+    ]
+  },
+  {
+    "file": "complemento-playground.png",
+    "profile": "prod",
+    "baseURL": "https://aceleraflow-remix.lovable.app",
+    "capturedAt": "2026-10-16T16:49:48.507Z",
+    "route": "/configuracoes",
+    "font": "Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "controls": [
+      {
+        "text": "Abrir ou fechar menu lateral",
+        "role": null,
+        "aria": "Alternar menu lateral",
+        "x": 272,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "Últimos 30 dias",
+        "role": "combobox",
+        "aria": "Selecionar período do filtro global",
+        "x": 1386,
+        "y": 9.5,
+        "w": 170,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Abrir assistente IA",
+        "x": 1564,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Mudar para tema claro",
+        "x": 1616,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "28",
+        "role": null,
+        "aria": "Notificações (28 pendentes)",
+        "x": 1668,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "AFAdministrador Clínica FT",
+        "role": null,
+        "aria": "Menu de Administrador Clínica FT",
+        "x": 1720,
+        "y": 7.5,
+        "w": 184,
+        "h": 40,
+        "font": "14px"
+      },
+      {
+        "text": "Configurações",
+        "role": null,
+        "aria": null,
+        "x": 400,
+        "y": 80,
+        "w": 230,
+        "h": 32,
+        "font": "28px"
+      },
+      {
+        "text": "Aparência",
+        "role": "tab",
+        "aria": null,
+        "x": 404,
+        "y": 166,
+        "w": 92,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Notificações",
+        "role": "tab",
+        "aria": null,
+        "x": 500,
+        "y": 166,
+        "w": 109,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Empresa",
+        "role": "tab",
+        "aria": null,
+        "x": 613,
+        "y": 166,
+        "w": 82,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Perfil do negócio",
+        "role": "tab",
+        "aria": null,
+        "x": 699,
+        "y": 166,
+        "w": 137,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Funil de vendas",
+        "role": "tab",
+        "aria": null,
+        "x": 840,
+        "y": 166,
+        "w": 130,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Etiquetas",
+        "role": "tab",
+        "aria": null,
+        "x": 974,
+        "y": 166,
+        "w": 87,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Equipe",
+        "role": "tab",
+        "aria": null,
+        "x": 1065,
+        "y": 166,
+        "w": 70,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "IA",
+        "role": "tab",
+        "aria": null,
+        "x": 1139,
+        "y": 166,
+        "w": 38,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Visualização",
+        "role": "tab",
+        "aria": null,
+        "x": 1181,
+        "y": 166,
+        "w": 110,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Integrações e Plugins",
+        "role": "tab",
+        "aria": null,
+        "x": 1295,
+        "y": 166,
+        "w": 169,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Supressões",
+        "role": "tab",
+        "aria": null,
+        "x": 1468,
+        "y": 166,
+        "w": 103,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Erros do app",
+        "role": "tab",
+        "aria": null,
+        "x": 1575,
+        "y": 166,
+        "w": 109,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Incidentes",
+        "role": "tab",
+        "aria": null,
+        "x": 404,
+        "y": 198,
+        "w": 94,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Ambiente",
+        "role": "tab",
+        "aria": null,
+        "x": 502,
+        "y": 198,
+        "w": 88,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Assistente",
+        "role": "tab",
+        "aria": null,
+        "x": 404,
+        "y": 250,
+        "w": 96,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Conhecimento",
+        "role": "tab",
+        "aria": null,
+        "x": 504,
+        "y": 250,
+        "w": 119,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Features",
+        "role": "tab",
+        "aria": null,
+        "x": 627,
+        "y": 250,
+        "w": 81,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Falhas",
+        "role": "tab",
+        "aria": null,
+        "x": 712,
+        "y": 250,
+        "w": 68,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Assistente de IA ativa",
+        "role": null,
+        "aria": null,
+        "x": 1567,
+        "y": 309,
+        "w": 148,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": "switch",
+        "aria": "Ativar assistente de IA",
+        "x": 1727,
+        "y": 317,
+        "w": 36,
+        "h": 20,
+        "font": "14px"
+      },
+      {
+        "text": "Configuração",
+        "role": "tab",
+        "aria": null,
+        "x": 404,
+        "y": 384,
+        "w": 220,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Área de teste",
+        "role": "tab",
+        "aria": null,
+        "x": 624,
+        "y": 384,
+        "w": 220,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Área de teste",
+        "role": null,
+        "aria": null,
+        "x": 425,
+        "y": 457,
+        "w": 1326,
+        "h": 16,
+        "font": "16px"
+      },
+      {
+        "text": "Estágio simulado",
+        "role": null,
+        "aria": null,
+        "x": 425,
+        "y": 610,
+        "w": 115,
+        "h": 22,
+        "font": "14px"
+      },
+      {
+        "text": "Sem estágio (apenas prompt base)",
+        "role": "combobox",
+        "aria": null,
+        "x": 552,
+        "y": 603,
+        "w": 256,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Limpar conversa",
+        "role": null,
+        "aria": null,
+        "x": 1629,
+        "y": 605,
+        "w": 122,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Enviar",
+        "role": null,
+        "aria": null,
+        "x": 1633,
+        "y": 1026,
+        "w": 105,
+        "h": 36,
+        "font": "14px"
+      }
+    ]
+  }
+]

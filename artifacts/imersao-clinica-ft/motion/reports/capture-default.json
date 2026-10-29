@@ -1,0 +1,21 @@
+{
+  "formatacao": {
+    "comando": "pnpm exec prettier --write scripts/imersao-clinica-ft/capture-screenshots.mjs",
+    "exitCode": 0
+  },
+  "sintaxe": {
+    "comando": "node --check scripts/imersao-clinica-ft/capture-screenshots.mjs",
+    "exitCode": 0
+  },
+  "execucao": {
+    "comando": "IMERSAO_BASE_URL=http://127.0.0.1:5173 node --env-file=/home/freedom/.config/aceleraflow-imersao/credentials.env scripts/imersao-clinica-ft/capture-screenshots.mjs --profile branch --only dashboard --out /tmp/check-default",
+    "exitCode": 0,
+    "resultado": "1/1 telas verificadas no perfil branch",
+    "capturadoEm": "2026-10-15T20:33:27.349Z",
+    "imagem": "/tmp/check-default/09-dashboard.png",
+    "relatorio": "/tmp/check-default/resultado-dashboard.json",
+    "viewportDeclarado": { "width": 1440, "height": 900 },
+    "dimensoesMedidasPorFfprobe": { "width": 1440, "height": 900 }
+  },
+  "escopo": "Sem opção adicional de viewport. VIEWPORT importado do helper preservado; apenas formatação no script compartilhado. Nenhuma captura original foi sobrescrita."
+}

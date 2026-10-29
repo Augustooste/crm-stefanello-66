@@ -1,0 +1,95 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+.output
+.vinxi
+.tanstack/**
+.nitro
+*.local
+
+# Wrangler / Cloudflare
+.wrangler/
+.dev.vars
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Env
+.env
+.env.*
+!.env.example
+!.env.e2e.example
+
+# Ferramentas locais
+.serena/
+coverage/
+coverage-*/
+
+# Capturas HAR (debug de rede, local)
+*.har
+
+# Capturas mitmproxy (debug de tráfego MCP, local)
+*.db
+
+# Dump do repo gerado pelo repomix (6+ MB, derivado)
+repomix-output.xml
+
+# Supabase CLI local (supabase start/db reset)
+supabase/.branches/
+supabase/.temp/
+
+# Playwright
+playwright-report/
+test-results/
+.env.e2e
+
+# QA visual e relatórios de análise — artefatos locais, não versionados.
+# Screenshots de comparação (medflow x aceleraflow) e backlogs gerados por
+# varredura: são ponto-no-tempo, pesados, e regeneráveis a partir do código.
+docs/qa-visual/
+docs/BACKLOG-paridade-227-itens.md
+
+# Evidência local ponto-no-tempo; não apagar nem publicar como fonte do produto.
+.playwright-mcp/
+screenshots/
+scripts/audit-2026-07-27-*
+docs/AUDITORIA-INDEPENDENTE-MVP-2026-07-27.md
+docs/PLANO-SANEAMENTO-REPO-2026-07-27.md
+docs/aceleraflow-review-2026-07-07.html
+docs/branches-deletadas-2026-07-28.md
+docs/full-audit-2707.md
+docs/prd-kanban.md
+docs/relatorio-medflow-vs-aceleraflow.html
+
+# Config pessoal de agente — nunca versionar (o bot da Lovable subiu isso em 27/07).
+.agents/
+
+# Documentação interna: auditorias, code reviews e relatórios com dado de
+# cliente e mapa do schema. Fora do git porque o projeto vai ficar remixável no
+# lovable.dev, e remix copia a última versão dos ARQUIVOS do projeto ("a copy
+# contains your code"). Os arquivos continuam no disco, só não são versionados.
+docs/*
+# Exceção: documentação técnica de integração, sem dado de cliente, que precisa
+# viajar com o código (inclusive no remix).
+!docs/integrations/
+
+# Cache de compilação TypeScript (derivado, regerado a cada build)
+tsconfig.tsbuildinfo
+*.tsbuildinfo

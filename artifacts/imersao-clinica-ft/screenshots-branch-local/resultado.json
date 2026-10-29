@@ -1,0 +1,76 @@
+{
+  "profile": "branch",
+  "baseURL": "http://127.0.0.1:5173",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "capturadoEm": "2026-10-15T19:24:23.816Z",
+  "onboarding": "Estado aplicado; o wizard não foi reexecutado.",
+  "autenticacao": "Sem trace, vídeo, HAR, storageState em disco ou screenshot do login.",
+  "results": [
+    {
+      "etapa": 1,
+      "titulo": "[VISUAL] F1: Onboarding aplicado, sem reexecutar o wizard",
+      "arquivo": "01-onboarding.png",
+      "resultado": "PASSOU",
+      "rota": "/configuracoes"
+    },
+    {
+      "etapa": 2,
+      "titulo": "[REAL] F2: Prompt base, prompts por estágio e modo de envio",
+      "arquivo": "02-config-ia.png",
+      "resultado": "PASSOU",
+      "rota": "/configuracoes"
+    },
+    {
+      "etapa": 3,
+      "titulo": "[REAL] F3: Preferências de resposta e voz do perfil escolhido",
+      "arquivo": "03-comportamento.png",
+      "resultado": "PASSOU",
+      "rota": "/configuracoes"
+    },
+    {
+      "etapa": 4,
+      "titulo": "[INTEGRAÇÃO SIMULADA] F4: Conversa demonstrativa da Mariana",
+      "arquivo": "04-whatsapp-inbox.png",
+      "resultado": "PASSOU",
+      "rota": "/inbox"
+    },
+    {
+      "etapa": 5,
+      "titulo": "[REAL] F5: Mariana, memória e qualificação persistidas",
+      "arquivo": "05-ficha-cliente.png",
+      "resultado": "PASSOU",
+      "rota": "/contatos/1cd2cd98-3a71-56e5-a761-adb330504446"
+    },
+    {
+      "etapa": 6,
+      "titulo": "[VISUAL] F6: Estágios e negócio da Mariana no Kanban",
+      "arquivo": "06-kanban.png",
+      "resultado": "PASSOU",
+      "rota": "/pipeline"
+    },
+    {
+      "etapa": 7,
+      "titulo": "[REAL] F7: Decisões e autonomia com confiança 0,80",
+      "arquivo": "07-decisoes.png",
+      "resultado": "PASSOU",
+      "rota": "/pipeline"
+    },
+    {
+      "etapa": 8,
+      "titulo": "[REAL] F8: Três sequências demonstrativas de acompanhamento",
+      "arquivo": "08-follow-up.png",
+      "resultado": "PASSOU",
+      "rota": "/nurture"
+    },
+    {
+      "etapa": 9,
+      "titulo": "[REAL] F9: Indicadores numéricos do dashboard",
+      "arquivo": "09-dashboard.png",
+      "resultado": "PASSOU",
+      "rota": "/app"
+    }
+  ]
+}

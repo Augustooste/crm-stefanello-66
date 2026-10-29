@@ -1,0 +1,21 @@
+{
+  "profile": "branch",
+  "baseURL": "http://127.0.0.1:5173",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "capturadoEm": "2026-10-15T19:42:28.897Z",
+  "somente": "autonomia-aprovacao",
+  "onboarding": "Estado aplicado; o wizard não foi reexecutado.",
+  "autenticacao": "Sem trace, vídeo, HAR, storageState em disco ou screenshot do login.",
+  "results": [
+    {
+      "etapa": 7,
+      "titulo": "[REAL] F7: Decisões e autonomia com confiança 0,80",
+      "arquivo": "07-autonomia-aprovacao.png",
+      "resultado": "PASSOU",
+      "rota": "/pipeline"
+    }
+  ]
+}

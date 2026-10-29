@@ -1,0 +1,58 @@
+# pnpm 11 não lê mais `pnpm.onlyBuiltDependencies` do package.json — a decisão
+# de quais deps podem rodar build script (postinstall) vive aqui. esbuild
+# precisa do postinstall pra baixar o binário nativo; sem isto o CI falha em
+# `pnpm install --frozen-lockfile` com ERR_PNPM_IGNORED_BUILDS.
+allowBuilds:
+  esbuild: true
+# Espelha `minimumReleaseAgeExcludes` do `bunfig.toml`. Precisa ser por NOME, não
+# por versão fixa: a plataforma Lovable bumpa estes pacotes sozinha (o agente
+# commita direto na main) e publica no mesmo dia, então todo bump caía no guarda
+# de 24h e derrubava `pnpm install --frozen-lockfile` no CI — enquanto o build do
+# Lovable, que lê o bunfig, passava. Pinar a versão aqui garantia quebrar de novo
+# no próximo bump. Confirmar com o usuário antes de acrescentar qualquer entrada.
+minimumReleaseAgeExclude:
+  - '@lovable.dev/vite-tanstack-config'
+  - '@lovable.dev/vite-plugin-dev-server-bridge'
+  - '@lovable.dev/vite-plugin-hmr-gate'
+
+# Mesma razão do `allowBuilds` acima: pnpm 11 parou de ler o bloco `pnpm` do
+# package.json, e `overrides` tinha ficado para trás na migração. Sintoma em
+# pnpm 11.17: `[ERR_PNPM_LOCKFILE_CONFIG_MISMATCH] current "overrides"
+# configuration doesn't match value found in lockfile` — o pnpm enxergava zero
+# overrides e o lockfile tinha seis. Pior que o erro: `pnpm install` SEM
+# `--frozen-lockfile` regravava o lockfile sem estes pins, desfazendo em
+# silêncio os 6 alertas de Dependabot que eles fecham (v1.1.0).
+#
+# Estes pins fecham alertas do Dependabot, e por isso mesmo viram a causa deles
+# quando ficam parados: o advisory novo sai e o pin segura a versão vulnerável.
+# Foi o que aconteceu em 06/08/2026 — 13 alertas abertos, todos por pin defasado
+# ou por pacote que faltava pinar. Ao mexer aqui, conferir a lista aberta em
+# `gh api /repos/felipetruman/aceleraflow/dependabot/alerts` e regravar o
+# lockfile no MESMO commit (`pnpm install --lockfile-only`), senão o CI cai em
+# ERR_PNPM_LOCKFILE_CONFIG_MISMATCH.
+#
+# ⚠️ ESPELHAR EM `package.json` > `overrides`. Este bloco só governa o
+# `pnpm-lock.yaml` — que é o que o nosso CI e o Dependabot leem. O build da
+# Lovable instala com bun, que lê o `bun.lock` e ignora este arquivo por
+# completo. Pinar só aqui deixa produção rodando a versão vulnerável com os
+# alertas do GitHub verdes. Foi o estado do repo até 06/08/2026.
+# Exceção conhecida: `brace-expansion` NÃO tem espelho, porque precisa de duas
+# versões (1.x para `minimatch@3`, 5.x para `minimatch@10`) e o bun avisa
+# `Bun currently does not support nested "overrides"` — um override plano
+# forçaria as duas árvores para a mesma major e quebraria o build.
+overrides:
+  brace-expansion@1: 1.1.18
+  brace-expansion@5: 5.0.9
+  postcss: 8.5.23
+  esbuild: 0.28.1
+  # Desce do jsdom do Vitest. Não é dependência direta, então só dá para
+  # corrigir por aqui. Qualificado por major (mesmo padrão do brace-expansion
+  # acima). Os pins de hono, @hono/node-server, fast-uri e ip-address saíram em
+  # 04/09/2026 junto com `@lovable.dev/mcp-js`, de onde desciam.
+  undici@7: 7.29.1
+  # GHSA-5p4m-2wfm-xmqj (high): consumo quadrático de CPU no `!!omap`. Desce de
+  # `@eslint/eslintrc`, `@redocly/openapi-core` (openapi-typescript) e `xmlbuilder2`.
+  js-yaml@4: 4.3.2
+  nanoid@3: 3.3.18
+  browserslist@4: 4.28.7
+  baseline-browser-mapping@2: 2.11.0

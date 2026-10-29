@@ -1,0 +1,21 @@
+{
+  "profile": "branch",
+  "baseURL": "http://127.0.0.1:5173",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "capturadoEm": "2026-10-15T19:42:34.257Z",
+  "somente": "dashboard",
+  "onboarding": "Estado aplicado; o wizard não foi reexecutado.",
+  "autenticacao": "Sem trace, vídeo, HAR, storageState em disco ou screenshot do login.",
+  "results": [
+    {
+      "etapa": 9,
+      "titulo": "[REAL] F9: Indicadores numéricos do dashboard",
+      "arquivo": "09-dashboard.png",
+      "resultado": "PASSOU",
+      "rota": "/app"
+    }
+  ]
+}

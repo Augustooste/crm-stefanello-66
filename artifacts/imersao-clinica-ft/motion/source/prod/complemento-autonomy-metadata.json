@@ -1,0 +1,2582 @@
+[
+  {
+    "file": "complemento-07-autonomia-aprovacao.png",
+    "profile": "prod",
+    "baseURL": "https://aceleraflow-remix.lovable.app",
+    "capturedAt": "2026-10-16T16:54:25.461Z",
+    "route": "/pipeline",
+    "font": "Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "controls": [
+      {
+        "text": "Abrir ou fechar menu lateral",
+        "role": null,
+        "aria": "Alternar menu lateral",
+        "x": 272,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "Últimos 30 dias",
+        "role": "combobox",
+        "aria": "Selecionar período do filtro global",
+        "x": 1386,
+        "y": 9.5,
+        "w": 170,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Abrir assistente IA",
+        "x": 1564,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Mudar para tema claro",
+        "x": 1616,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "27",
+        "role": null,
+        "aria": "Notificações (27 pendentes)",
+        "x": 1668,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "AFAdministrador Clínica FT",
+        "role": null,
+        "aria": "Menu de Administrador Clínica FT",
+        "x": 1720,
+        "y": 7.5,
+        "w": 184,
+        "h": 40,
+        "font": "14px"
+      },
+      {
+        "text": "Funil",
+        "role": null,
+        "aria": null,
+        "x": 400,
+        "y": 80,
+        "w": 175,
+        "h": 32,
+        "font": "28px"
+      },
+      {
+        "text": "Autonomia",
+        "role": null,
+        "aria": null,
+        "x": 1324,
+        "y": 91,
+        "w": 133,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Exportar CSV",
+        "role": null,
+        "aria": null,
+        "x": 1465,
+        "y": 91,
+        "w": 151,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Novo negócio",
+        "role": null,
+        "aria": null,
+        "x": 1624,
+        "y": 91,
+        "w": 152,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Funil de vendas (padrão)",
+        "role": "combobox",
+        "aria": "Selecionar quadro",
+        "x": 413,
+        "y": 168,
+        "w": 220,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Gerenciar quadros",
+        "x": 637,
+        "y": 168,
+        "w": 36,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Visualização em quadro",
+        "x": 1694,
+        "y": 170,
+        "w": 32,
+        "h": 32,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Visualização em tabela",
+        "x": 1728,
+        "y": 170,
+        "w": 32,
+        "h": 32,
+        "font": "14px"
+      },
+      {
+        "text": "Responsável",
+        "role": null,
+        "aria": null,
+        "x": 413,
+        "y": 239,
+        "w": 72,
+        "h": 18,
+        "font": "12px"
+      },
+      {
+        "text": "Todos",
+        "role": "combobox",
+        "aria": null,
+        "x": 493,
+        "y": 230,
+        "w": 200,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 616,
+        "y": 474,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 646,
+        "y": 474,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Avaliação ortodôntica | Diego RochaDiego RochaR$ 180Parado no estágio (+10d)Atividade atrasadademo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Avaliação ortodôntica | Diego Rocha",
+        "x": 422,
+        "y": 482,
+        "w": 244,
+        "h": 252,
+        "font": "14px"
+      },
+      {
+        "text": "IA pausada",
+        "role": null,
+        "aria": "IA pausada — abrir detalhes da IA",
+        "x": 422,
+        "y": 742,
+        "w": 244,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "Ganhar",
+        "role": null,
+        "aria": null,
+        "x": 422,
+        "y": 781,
+        "w": 120,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "Perder",
+        "role": null,
+        "aria": null,
+        "x": 546,
+        "y": 781,
+        "w": 120,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 616,
+        "y": 835,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 646,
+        "y": 835,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Clareamento | Carolina SantosCarolina SantosR$ 1.200Parado no estágio (+10d)Atividade atrasadademo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Clareamento | Carolina Santos",
+        "x": 422,
+        "y": 843,
+        "w": 244,
+        "h": 252,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 920,
+        "y": 474,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 950,
+        "y": 474,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Contato Cliente simuladoMariana LopesR$ 0Sem atividade agendadasimulator",
+        "role": null,
+        "aria": "Arrastar Contato Cliente simulado",
+        "x": 726,
+        "y": 482,
+        "w": 244,
+        "h": 140,
+        "font": "14px"
+      },
+      {
+        "text": "IA: 1 pendência",
+        "role": null,
+        "aria": "IA: 1 pendência — abrir detalhes da IA",
+        "x": 726,
+        "y": 630,
+        "w": 244,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "Ganhar",
+        "role": null,
+        "aria": null,
+        "x": 726,
+        "y": 669,
+        "w": 120,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "Perder",
+        "role": null,
+        "aria": null,
+        "x": 850,
+        "y": 669,
+        "w": 120,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 920,
+        "y": 723,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 950,
+        "y": 723,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Avaliação odontológica | Gabriela CostaGabriela CostaR$ 150Parado no estágio (+10d)Atividade atrasadademo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Avaliação odontológica | Gabriela Costa",
+        "x": 726,
+        "y": 731,
+        "w": 244,
+        "h": 252,
+        "font": "14px"
+      },
+      {
+        "text": "IA pausada",
+        "role": null,
+        "aria": "IA pausada — abrir detalhes da IA",
+        "x": 726,
+        "y": 991,
+        "w": 244,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "Ganhar",
+        "role": null,
+        "aria": null,
+        "x": 726,
+        "y": 1030,
+        "w": 120,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "Perder",
+        "role": null,
+        "aria": null,
+        "x": 850,
+        "y": 1030,
+        "w": 120,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 1224,
+        "y": 474,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 1254,
+        "y": 474,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Avaliação ortodôntica | Isabela MeloIsabela MeloR$ 180Parado no estágio (+10d)Atividade hojedemo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Avaliação ortodôntica | Isabela Melo",
+        "x": 1030,
+        "y": 482,
+        "w": 244,
+        "h": 252,
+        "font": "14px"
+      },
+      {
+        "text": "IA pausada",
+        "role": null,
+        "aria": "IA pausada — abrir detalhes da IA",
+        "x": 1030,
+        "y": 742,
+        "w": 244,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "Ganhar",
+        "role": null,
+        "aria": null,
+        "x": 1030,
+        "y": 781,
+        "w": 120,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "Perder",
+        "role": null,
+        "aria": null,
+        "x": 1154,
+        "y": 781,
+        "w": 120,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 1224,
+        "y": 835,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 1254,
+        "y": 835,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Clareamento | Henrique DiasHenrique DiasR$ 1.200Parado no estágio (+10d)Atividade atrasadademo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Clareamento | Henrique Dias",
+        "x": 1030,
+        "y": 843,
+        "w": 244,
+        "h": 252,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 1528,
+        "y": 474,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 1558,
+        "y": 474,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Avaliação de implante | Lucas NunesLucas NunesR$ 200Parado no estágio (+10d)Sem atividade agendadademo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Avaliação de implante | Lucas Nunes",
+        "x": 1334,
+        "y": 482,
+        "w": 244,
+        "h": 252,
+        "font": "14px"
+      },
+      {
+        "text": "IA pausada",
+        "role": null,
+        "aria": "IA pausada — abrir detalhes da IA",
+        "x": 1334,
+        "y": 742,
+        "w": 244,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "Ganhar",
+        "role": null,
+        "aria": null,
+        "x": 1334,
+        "y": 781,
+        "w": 120,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "Perder",
+        "role": null,
+        "aria": null,
+        "x": 1458,
+        "y": 781,
+        "w": 120,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 1528,
+        "y": 835,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 1558,
+        "y": 835,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Avaliação odontológica | Karina RamosKarina RamosR$ 150Parado no estágio (+10d)Atividade atrasadademo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Avaliação odontológica | Karina Ramos",
+        "x": 1334,
+        "y": 843,
+        "w": 244,
+        "h": 252,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 1832,
+        "y": 474,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 1862,
+        "y": 474,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Reabilitação odontológica | Olívia BarrosOlívia BarrosR$ 4.500Parado no estágio (+10d)Sem atividade agendadademo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Reabilitação odontológica | Olívia Barros",
+        "x": 1638,
+        "y": 482,
+        "w": 244,
+        "h": 252,
+        "font": "14px"
+      },
+      {
+        "text": "IA pausada",
+        "role": null,
+        "aria": "IA pausada — abrir detalhes da IA",
+        "x": 1638,
+        "y": 742,
+        "w": 244,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "Ganhar",
+        "role": null,
+        "aria": null,
+        "x": 1638,
+        "y": 781,
+        "w": 120,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "Perder",
+        "role": null,
+        "aria": null,
+        "x": 1762,
+        "y": 781,
+        "w": 120,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 1832,
+        "y": 835,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 1862,
+        "y": 835,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Plano ortodôntico | Nicolas ReisNicolas ReisR$ 3.200Parado no estágio (+10d)Sem atividade agendadademo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Plano ortodôntico | Nicolas Reis",
+        "x": 1638,
+        "y": 843,
+        "w": 244,
+        "h": 252,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 2136,
+        "y": 474,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 2166,
+        "y": 474,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Plano ortodôntico | Rafael CardosoRafael CardosoR$ 3.200demo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Plano ortodôntico | Rafael Cardoso",
+        "x": 1942,
+        "y": 482,
+        "w": 244,
+        "h": 192,
+        "font": "14px"
+      },
+      {
+        "text": "IA pausada",
+        "role": null,
+        "aria": "IA pausada — abrir detalhes da IA",
+        "x": 1942,
+        "y": 682,
+        "w": 244,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 2136,
+        "y": 736,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 2166,
+        "y": 736,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Clareamento | Queila MouraQueila MouraR$ 1.200demo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Clareamento | Queila Moura",
+        "x": 1942,
+        "y": 744,
+        "w": 244,
+        "h": 192,
+        "font": "14px"
+      },
+      {
+        "text": "IA pausada",
+        "role": null,
+        "aria": "IA pausada — abrir detalhes da IA",
+        "x": 1942,
+        "y": 944,
+        "w": 244,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 2136,
+        "y": 998,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 2166,
+        "y": 998,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Limpeza preventiva | Paulo TeixeiraPaulo TeixeiraR$ 250demo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Limpeza preventiva | Paulo Teixeira",
+        "x": 1942,
+        "y": 1006,
+        "w": 244,
+        "h": 192,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 2440,
+        "y": 474,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 2470,
+        "y": 474,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Avaliação odontológica | Úrsula AzevedoÚrsula AzevedoR$ 150demo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Avaliação odontológica | Úrsula Azevedo",
+        "x": 2246,
+        "y": 482,
+        "w": 244,
+        "h": 192,
+        "font": "14px"
+      },
+      {
+        "text": "IA pausada",
+        "role": null,
+        "aria": "IA pausada — abrir detalhes da IA",
+        "x": 2246,
+        "y": 682,
+        "w": 244,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 2440,
+        "y": 736,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 2470,
+        "y": 736,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Avaliação de implante | Tiago PintoTiago PintoR$ 200demo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Avaliação de implante | Tiago Pinto",
+        "x": 2246,
+        "y": 744,
+        "w": 244,
+        "h": 192,
+        "font": "14px"
+      },
+      {
+        "text": "IA pausada",
+        "role": null,
+        "aria": "IA pausada — abrir detalhes da IA",
+        "x": 2246,
+        "y": 944,
+        "w": 244,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 2440,
+        "y": 998,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 2470,
+        "y": 998,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Clareamento | Sofia MendesSofia MendesR$ 1.200demo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Clareamento | Sofia Mendes",
+        "x": 2246,
+        "y": 1006,
+        "w": 244,
+        "h": 192,
+        "font": "14px"
+      },
+      {
+        "text": "Modo",
+        "role": null,
+        "aria": null,
+        "x": 711,
+        "y": -2.203125,
+        "w": 38,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "Manual",
+        "role": "combobox",
+        "aria": "Modo da transição Proposta → Novo Paciente",
+        "x": 711,
+        "y": 17.796875,
+        "w": 150,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Confiança de referência %",
+        "role": null,
+        "aria": null,
+        "x": 873,
+        "y": -2.203125,
+        "w": 177,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": "switch",
+        "aria": "Aprovação da transição Proposta → Novo Paciente",
+        "x": 1065,
+        "y": -4.203125,
+        "w": 36,
+        "h": 20,
+        "font": "14px"
+      },
+      {
+        "text": "Aprovação humana",
+        "role": null,
+        "aria": null,
+        "x": 1109,
+        "y": -1.203125,
+        "w": 128,
+        "h": 14,
+        "font": "14px"
+      },
+      {
+        "text": "Salvar",
+        "role": null,
+        "aria": null,
+        "x": 1277,
+        "y": 19.796875,
+        "w": 61,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Modo",
+        "role": null,
+        "aria": null,
+        "x": 711,
+        "y": 165.796875,
+        "w": 38,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "Manual",
+        "role": "combobox",
+        "aria": "Modo da transição Ganho → Novo Paciente",
+        "x": 711,
+        "y": 185.796875,
+        "w": 150,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Confiança de referência %",
+        "role": null,
+        "aria": null,
+        "x": 873,
+        "y": 165.796875,
+        "w": 177,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": "switch",
+        "aria": "Aprovação da transição Ganho → Novo Paciente",
+        "x": 1065,
+        "y": 163.796875,
+        "w": 36,
+        "h": 20,
+        "font": "14px"
+      },
+      {
+        "text": "Aprovação humana",
+        "role": null,
+        "aria": null,
+        "x": 1109,
+        "y": 166.796875,
+        "w": 128,
+        "h": 14,
+        "font": "14px"
+      },
+      {
+        "text": "Salvar",
+        "role": null,
+        "aria": null,
+        "x": 1277,
+        "y": 187.796875,
+        "w": 61,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Modo",
+        "role": null,
+        "aria": null,
+        "x": 711,
+        "y": 333.796875,
+        "w": 38,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "Manual",
+        "role": "combobox",
+        "aria": "Modo da transição Perdido → Novo Paciente",
+        "x": 711,
+        "y": 353.796875,
+        "w": 150,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Confiança de referência %",
+        "role": null,
+        "aria": null,
+        "x": 873,
+        "y": 333.796875,
+        "w": 177,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": "switch",
+        "aria": "Aprovação da transição Perdido → Novo Paciente",
+        "x": 1065,
+        "y": 331.796875,
+        "w": 36,
+        "h": 20,
+        "font": "14px"
+      },
+      {
+        "text": "Aprovação humana",
+        "role": null,
+        "aria": null,
+        "x": 1109,
+        "y": 334.796875,
+        "w": 128,
+        "h": 14,
+        "font": "14px"
+      },
+      {
+        "text": "Salvar",
+        "role": null,
+        "aria": null,
+        "x": 1277,
+        "y": 355.796875,
+        "w": 61,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Modo",
+        "role": null,
+        "aria": null,
+        "x": 711,
+        "y": 501.796875,
+        "w": 38,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "Autônomo",
+        "role": "combobox",
+        "aria": "Modo da transição Em Atendimento → Qualificado",
+        "x": 711,
+        "y": 521.796875,
+        "w": 150,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Confiança mínima %",
+        "role": null,
+        "aria": null,
+        "x": 873,
+        "y": 501.796875,
+        "w": 137,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": "switch",
+        "aria": "Aprovação da transição Em Atendimento → Qualificado",
+        "x": 1065,
+        "y": 499.796875,
+        "w": 36,
+        "h": 20,
+        "font": "14px"
+      },
+      {
+        "text": "Aprovação humana",
+        "role": null,
+        "aria": null,
+        "x": 1109,
+        "y": 502.796875,
+        "w": 128,
+        "h": 14,
+        "font": "14px"
+      },
+      {
+        "text": "Salvar",
+        "role": null,
+        "aria": null,
+        "x": 1277,
+        "y": 523.796875,
+        "w": 61,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Modo",
+        "role": null,
+        "aria": null,
+        "x": 711,
+        "y": 669.796875,
+        "w": 38,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "Manual",
+        "role": "combobox",
+        "aria": "Modo da transição Em Atendimento → Avaliação Agendada",
+        "x": 711,
+        "y": 689.796875,
+        "w": 150,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Confiança de referência %",
+        "role": null,
+        "aria": null,
+        "x": 873,
+        "y": 669.796875,
+        "w": 177,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": "switch",
+        "aria": "Aprovação da transição Em Atendimento → Avaliação Agendada",
+        "x": 1065,
+        "y": 667.796875,
+        "w": 36,
+        "h": 20,
+        "font": "14px"
+      },
+      {
+        "text": "Aprovação humana",
+        "role": null,
+        "aria": null,
+        "x": 1109,
+        "y": 670.796875,
+        "w": 128,
+        "h": 14,
+        "font": "14px"
+      },
+      {
+        "text": "Salvar",
+        "role": null,
+        "aria": null,
+        "x": 1277,
+        "y": 691.796875,
+        "w": 61,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Modo",
+        "role": null,
+        "aria": null,
+        "x": 711,
+        "y": 837.796875,
+        "w": 38,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "Manual",
+        "role": "combobox",
+        "aria": "Modo da transição Em Atendimento → Proposta",
+        "x": 711,
+        "y": 857.796875,
+        "w": 150,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Confiança de referência %",
+        "role": null,
+        "aria": null,
+        "x": 873,
+        "y": 837.796875,
+        "w": 177,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": "switch",
+        "aria": "Aprovação da transição Em Atendimento → Proposta",
+        "x": 1065,
+        "y": 835.796875,
+        "w": 36,
+        "h": 20,
+        "font": "14px"
+      },
+      {
+        "text": "Aprovação humana",
+        "role": null,
+        "aria": null,
+        "x": 1109,
+        "y": 838.796875,
+        "w": 128,
+        "h": 14,
+        "font": "14px"
+      },
+      {
+        "text": "Salvar",
+        "role": null,
+        "aria": null,
+        "x": 1277,
+        "y": 859.796875,
+        "w": 61,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Modo",
+        "role": null,
+        "aria": null,
+        "x": 711,
+        "y": 1005.796875,
+        "w": 38,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "Manual",
+        "role": "combobox",
+        "aria": "Modo da transição Em Atendimento → Ganho",
+        "x": 711,
+        "y": 1025.796875,
+        "w": 150,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Confiança de referência %",
+        "role": null,
+        "aria": null,
+        "x": 873,
+        "y": 1005.796875,
+        "w": 177,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": "switch",
+        "aria": "Aprovação da transição Em Atendimento → Ganho",
+        "x": 1065,
+        "y": 1003.796875,
+        "w": 36,
+        "h": 20,
+        "font": "14px"
+      },
+      {
+        "text": "Aprovação humana",
+        "role": null,
+        "aria": null,
+        "x": 1109,
+        "y": 1006.796875,
+        "w": 128,
+        "h": 14,
+        "font": "14px"
+      },
+      {
+        "text": "Salvar",
+        "role": null,
+        "aria": null,
+        "x": 1277,
+        "y": 1027.796875,
+        "w": 61,
+        "h": 32,
+        "font": "12px"
+      }
+    ]
+  },
+  {
+    "file": "complemento-autonomia-quatro-modos.png",
+    "profile": "prod",
+    "baseURL": "https://aceleraflow-remix.lovable.app",
+    "capturedAt": "2026-10-16T16:54:25.867Z",
+    "route": "/pipeline",
+    "font": "Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "controls": [
+      {
+        "text": "Abrir ou fechar menu lateral",
+        "role": null,
+        "aria": "Alternar menu lateral",
+        "x": 272,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "Últimos 30 dias",
+        "role": "combobox",
+        "aria": "Selecionar período do filtro global",
+        "x": 1386,
+        "y": 9.5,
+        "w": 170,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Abrir assistente IA",
+        "x": 1564,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Mudar para tema claro",
+        "x": 1616,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "27",
+        "role": null,
+        "aria": "Notificações (27 pendentes)",
+        "x": 1668,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "AFAdministrador Clínica FT",
+        "role": null,
+        "aria": "Menu de Administrador Clínica FT",
+        "x": 1720,
+        "y": 7.5,
+        "w": 184,
+        "h": 40,
+        "font": "14px"
+      },
+      {
+        "text": "Funil",
+        "role": null,
+        "aria": null,
+        "x": 400,
+        "y": 80,
+        "w": 175,
+        "h": 32,
+        "font": "28px"
+      },
+      {
+        "text": "Autonomia",
+        "role": null,
+        "aria": null,
+        "x": 1324,
+        "y": 91,
+        "w": 133,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Exportar CSV",
+        "role": null,
+        "aria": null,
+        "x": 1465,
+        "y": 91,
+        "w": 151,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Novo negócio",
+        "role": null,
+        "aria": null,
+        "x": 1624,
+        "y": 91,
+        "w": 152,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Funil de vendas (padrão)",
+        "role": "combobox",
+        "aria": "Selecionar quadro",
+        "x": 413,
+        "y": 168,
+        "w": 220,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Gerenciar quadros",
+        "x": 637,
+        "y": 168,
+        "w": 36,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Visualização em quadro",
+        "x": 1694,
+        "y": 170,
+        "w": 32,
+        "h": 32,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Visualização em tabela",
+        "x": 1728,
+        "y": 170,
+        "w": 32,
+        "h": 32,
+        "font": "14px"
+      },
+      {
+        "text": "Responsável",
+        "role": null,
+        "aria": null,
+        "x": 413,
+        "y": 239,
+        "w": 72,
+        "h": 18,
+        "font": "12px"
+      },
+      {
+        "text": "Todos",
+        "role": "combobox",
+        "aria": null,
+        "x": 493,
+        "y": 230,
+        "w": 200,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 616,
+        "y": 474,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 646,
+        "y": 474,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Avaliação ortodôntica | Diego RochaDiego RochaR$ 180Parado no estágio (+10d)Atividade atrasadademo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Avaliação ortodôntica | Diego Rocha",
+        "x": 422,
+        "y": 482,
+        "w": 244,
+        "h": 252,
+        "font": "14px"
+      },
+      {
+        "text": "IA pausada",
+        "role": null,
+        "aria": "IA pausada — abrir detalhes da IA",
+        "x": 422,
+        "y": 742,
+        "w": 244,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "Ganhar",
+        "role": null,
+        "aria": null,
+        "x": 422,
+        "y": 781,
+        "w": 120,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "Perder",
+        "role": null,
+        "aria": null,
+        "x": 546,
+        "y": 781,
+        "w": 120,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 616,
+        "y": 835,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 646,
+        "y": 835,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Clareamento | Carolina SantosCarolina SantosR$ 1.200Parado no estágio (+10d)Atividade atrasadademo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Clareamento | Carolina Santos",
+        "x": 422,
+        "y": 843,
+        "w": 244,
+        "h": 252,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 920,
+        "y": 474,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 950,
+        "y": 474,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Contato Cliente simuladoMariana LopesR$ 0Sem atividade agendadasimulator",
+        "role": null,
+        "aria": "Arrastar Contato Cliente simulado",
+        "x": 726,
+        "y": 482,
+        "w": 244,
+        "h": 140,
+        "font": "14px"
+      },
+      {
+        "text": "IA: 1 pendência",
+        "role": null,
+        "aria": "IA: 1 pendência — abrir detalhes da IA",
+        "x": 726,
+        "y": 630,
+        "w": 244,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "Ganhar",
+        "role": null,
+        "aria": null,
+        "x": 726,
+        "y": 669,
+        "w": 120,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "Perder",
+        "role": null,
+        "aria": null,
+        "x": 850,
+        "y": 669,
+        "w": 120,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 920,
+        "y": 723,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 950,
+        "y": 723,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Avaliação odontológica | Gabriela CostaGabriela CostaR$ 150Parado no estágio (+10d)Atividade atrasadademo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Avaliação odontológica | Gabriela Costa",
+        "x": 726,
+        "y": 731,
+        "w": 244,
+        "h": 252,
+        "font": "14px"
+      },
+      {
+        "text": "IA pausada",
+        "role": null,
+        "aria": "IA pausada — abrir detalhes da IA",
+        "x": 726,
+        "y": 991,
+        "w": 244,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "Ganhar",
+        "role": null,
+        "aria": null,
+        "x": 726,
+        "y": 1030,
+        "w": 120,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "Perder",
+        "role": null,
+        "aria": null,
+        "x": 850,
+        "y": 1030,
+        "w": 120,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 1224,
+        "y": 474,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 1254,
+        "y": 474,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Avaliação ortodôntica | Isabela MeloIsabela MeloR$ 180Parado no estágio (+10d)Atividade hojedemo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Avaliação ortodôntica | Isabela Melo",
+        "x": 1030,
+        "y": 482,
+        "w": 244,
+        "h": 252,
+        "font": "14px"
+      },
+      {
+        "text": "IA pausada",
+        "role": null,
+        "aria": "IA pausada — abrir detalhes da IA",
+        "x": 1030,
+        "y": 742,
+        "w": 244,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "Ganhar",
+        "role": null,
+        "aria": null,
+        "x": 1030,
+        "y": 781,
+        "w": 120,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "Perder",
+        "role": null,
+        "aria": null,
+        "x": 1154,
+        "y": 781,
+        "w": 120,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 1224,
+        "y": 835,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 1254,
+        "y": 835,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Clareamento | Henrique DiasHenrique DiasR$ 1.200Parado no estágio (+10d)Atividade atrasadademo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Clareamento | Henrique Dias",
+        "x": 1030,
+        "y": 843,
+        "w": 244,
+        "h": 252,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 1528,
+        "y": 474,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 1558,
+        "y": 474,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Avaliação de implante | Lucas NunesLucas NunesR$ 200Parado no estágio (+10d)Sem atividade agendadademo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Avaliação de implante | Lucas Nunes",
+        "x": 1334,
+        "y": 482,
+        "w": 244,
+        "h": 252,
+        "font": "14px"
+      },
+      {
+        "text": "IA pausada",
+        "role": null,
+        "aria": "IA pausada — abrir detalhes da IA",
+        "x": 1334,
+        "y": 742,
+        "w": 244,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "Ganhar",
+        "role": null,
+        "aria": null,
+        "x": 1334,
+        "y": 781,
+        "w": 120,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "Perder",
+        "role": null,
+        "aria": null,
+        "x": 1458,
+        "y": 781,
+        "w": 120,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 1528,
+        "y": 835,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 1558,
+        "y": 835,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Avaliação odontológica | Karina RamosKarina RamosR$ 150Parado no estágio (+10d)Atividade atrasadademo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Avaliação odontológica | Karina Ramos",
+        "x": 1334,
+        "y": 843,
+        "w": 244,
+        "h": 252,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 1832,
+        "y": 474,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 1862,
+        "y": 474,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Reabilitação odontológica | Olívia BarrosOlívia BarrosR$ 4.500Parado no estágio (+10d)Sem atividade agendadademo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Reabilitação odontológica | Olívia Barros",
+        "x": 1638,
+        "y": 482,
+        "w": 244,
+        "h": 252,
+        "font": "14px"
+      },
+      {
+        "text": "IA pausada",
+        "role": null,
+        "aria": "IA pausada — abrir detalhes da IA",
+        "x": 1638,
+        "y": 742,
+        "w": 244,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "Ganhar",
+        "role": null,
+        "aria": null,
+        "x": 1638,
+        "y": 781,
+        "w": 120,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "Perder",
+        "role": null,
+        "aria": null,
+        "x": 1762,
+        "y": 781,
+        "w": 120,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 1832,
+        "y": 835,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 1862,
+        "y": 835,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Plano ortodôntico | Nicolas ReisNicolas ReisR$ 3.200Parado no estágio (+10d)Sem atividade agendadademo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Plano ortodôntico | Nicolas Reis",
+        "x": 1638,
+        "y": 843,
+        "w": 244,
+        "h": 252,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 2136,
+        "y": 474,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 2166,
+        "y": 474,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Plano ortodôntico | Rafael CardosoRafael CardosoR$ 3.200demo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Plano ortodôntico | Rafael Cardoso",
+        "x": 1942,
+        "y": 482,
+        "w": 244,
+        "h": 192,
+        "font": "14px"
+      },
+      {
+        "text": "IA pausada",
+        "role": null,
+        "aria": "IA pausada — abrir detalhes da IA",
+        "x": 1942,
+        "y": 682,
+        "w": 244,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 2136,
+        "y": 736,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 2166,
+        "y": 736,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Clareamento | Queila MouraQueila MouraR$ 1.200demo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Clareamento | Queila Moura",
+        "x": 1942,
+        "y": 744,
+        "w": 244,
+        "h": 192,
+        "font": "14px"
+      },
+      {
+        "text": "IA pausada",
+        "role": null,
+        "aria": "IA pausada — abrir detalhes da IA",
+        "x": 1942,
+        "y": 944,
+        "w": 244,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 2136,
+        "y": 998,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 2166,
+        "y": 998,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Limpeza preventiva | Paulo TeixeiraPaulo TeixeiraR$ 250demo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Limpeza preventiva | Paulo Teixeira",
+        "x": 1942,
+        "y": 1006,
+        "w": 244,
+        "h": 192,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 2440,
+        "y": 474,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 2470,
+        "y": 474,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Avaliação odontológica | Úrsula AzevedoÚrsula AzevedoR$ 150demo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Avaliação odontológica | Úrsula Azevedo",
+        "x": 2246,
+        "y": 482,
+        "w": 244,
+        "h": 192,
+        "font": "14px"
+      },
+      {
+        "text": "IA pausada",
+        "role": null,
+        "aria": "IA pausada — abrir detalhes da IA",
+        "x": 2246,
+        "y": 682,
+        "w": 244,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 2440,
+        "y": 736,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 2470,
+        "y": 736,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Avaliação de implante | Tiago PintoTiago PintoR$ 200demo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Avaliação de implante | Tiago Pinto",
+        "x": 2246,
+        "y": 744,
+        "w": 244,
+        "h": 192,
+        "font": "14px"
+      },
+      {
+        "text": "IA pausada",
+        "role": null,
+        "aria": "IA pausada — abrir detalhes da IA",
+        "x": 2246,
+        "y": 944,
+        "w": 244,
+        "h": 28,
+        "font": "12px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ver resumo do negócio",
+        "x": 2440,
+        "y": 998,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Ações do negócio",
+        "x": 2470,
+        "y": 998,
+        "w": 28,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Clareamento | Sofia MendesSofia MendesR$ 1.200demo_seeddemo_seedWhatsApp",
+        "role": null,
+        "aria": "Arrastar Clareamento | Sofia Mendes",
+        "x": 2246,
+        "y": 1006,
+        "w": 244,
+        "h": 192,
+        "font": "14px"
+      },
+      {
+        "text": "Modo",
+        "role": null,
+        "aria": null,
+        "x": 711,
+        "y": -2.203125,
+        "w": 38,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "Manual",
+        "role": "combobox",
+        "aria": "Modo da transição Proposta → Novo Paciente",
+        "x": 711,
+        "y": 17.796875,
+        "w": 150,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Confiança de referência %",
+        "role": null,
+        "aria": null,
+        "x": 873,
+        "y": -2.203125,
+        "w": 177,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": "switch",
+        "aria": "Aprovação da transição Proposta → Novo Paciente",
+        "x": 1065,
+        "y": -4.203125,
+        "w": 36,
+        "h": 20,
+        "font": "14px"
+      },
+      {
+        "text": "Aprovação humana",
+        "role": null,
+        "aria": null,
+        "x": 1109,
+        "y": -1.203125,
+        "w": 128,
+        "h": 14,
+        "font": "14px"
+      },
+      {
+        "text": "Salvar",
+        "role": null,
+        "aria": null,
+        "x": 1277,
+        "y": 19.796875,
+        "w": 61,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Modo",
+        "role": null,
+        "aria": null,
+        "x": 711,
+        "y": 165.796875,
+        "w": 38,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "Manual",
+        "role": "combobox",
+        "aria": "Modo da transição Ganho → Novo Paciente",
+        "x": 711,
+        "y": 185.796875,
+        "w": 150,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Confiança de referência %",
+        "role": null,
+        "aria": null,
+        "x": 873,
+        "y": 165.796875,
+        "w": 177,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": "switch",
+        "aria": "Aprovação da transição Ganho → Novo Paciente",
+        "x": 1065,
+        "y": 163.796875,
+        "w": 36,
+        "h": 20,
+        "font": "14px"
+      },
+      {
+        "text": "Aprovação humana",
+        "role": null,
+        "aria": null,
+        "x": 1109,
+        "y": 166.796875,
+        "w": 128,
+        "h": 14,
+        "font": "14px"
+      },
+      {
+        "text": "Salvar",
+        "role": null,
+        "aria": null,
+        "x": 1277,
+        "y": 187.796875,
+        "w": 61,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Modo",
+        "role": null,
+        "aria": null,
+        "x": 711,
+        "y": 333.796875,
+        "w": 38,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "Manual",
+        "role": "combobox",
+        "aria": "Modo da transição Perdido → Novo Paciente",
+        "x": 711,
+        "y": 353.796875,
+        "w": 150,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Confiança de referência %",
+        "role": null,
+        "aria": null,
+        "x": 873,
+        "y": 333.796875,
+        "w": 177,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": "switch",
+        "aria": "Aprovação da transição Perdido → Novo Paciente",
+        "x": 1065,
+        "y": 331.796875,
+        "w": 36,
+        "h": 20,
+        "font": "14px"
+      },
+      {
+        "text": "Aprovação humana",
+        "role": null,
+        "aria": null,
+        "x": 1109,
+        "y": 334.796875,
+        "w": 128,
+        "h": 14,
+        "font": "14px"
+      },
+      {
+        "text": "Salvar",
+        "role": null,
+        "aria": null,
+        "x": 1277,
+        "y": 355.796875,
+        "w": 61,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Modo",
+        "role": null,
+        "aria": null,
+        "x": 711,
+        "y": 501.796875,
+        "w": 38,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "Autônomo",
+        "role": "combobox",
+        "aria": "Modo da transição Em Atendimento → Qualificado",
+        "x": 711,
+        "y": 521.796875,
+        "w": 150,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Confiança mínima %",
+        "role": null,
+        "aria": null,
+        "x": 873,
+        "y": 501.796875,
+        "w": 137,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": "switch",
+        "aria": "Aprovação da transição Em Atendimento → Qualificado",
+        "x": 1065,
+        "y": 499.796875,
+        "w": 36,
+        "h": 20,
+        "font": "14px"
+      },
+      {
+        "text": "Aprovação humana",
+        "role": null,
+        "aria": null,
+        "x": 1109,
+        "y": 502.796875,
+        "w": 128,
+        "h": 14,
+        "font": "14px"
+      },
+      {
+        "text": "Salvar",
+        "role": null,
+        "aria": null,
+        "x": 1277,
+        "y": 523.796875,
+        "w": 61,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Modo",
+        "role": null,
+        "aria": null,
+        "x": 711,
+        "y": 669.796875,
+        "w": 38,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "Manual",
+        "role": "combobox",
+        "aria": "Modo da transição Em Atendimento → Avaliação Agendada",
+        "x": 711,
+        "y": 689.796875,
+        "w": 150,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Confiança de referência %",
+        "role": null,
+        "aria": null,
+        "x": 873,
+        "y": 669.796875,
+        "w": 177,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": "switch",
+        "aria": "Aprovação da transição Em Atendimento → Avaliação Agendada",
+        "x": 1065,
+        "y": 667.796875,
+        "w": 36,
+        "h": 20,
+        "font": "14px"
+      },
+      {
+        "text": "Aprovação humana",
+        "role": null,
+        "aria": null,
+        "x": 1109,
+        "y": 670.796875,
+        "w": 128,
+        "h": 14,
+        "font": "14px"
+      },
+      {
+        "text": "Salvar",
+        "role": null,
+        "aria": null,
+        "x": 1277,
+        "y": 691.796875,
+        "w": 61,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Modo",
+        "role": null,
+        "aria": null,
+        "x": 711,
+        "y": 837.796875,
+        "w": 38,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "Manual",
+        "role": "combobox",
+        "aria": "Modo da transição Em Atendimento → Proposta",
+        "x": 711,
+        "y": 857.796875,
+        "w": 150,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Confiança de referência %",
+        "role": null,
+        "aria": null,
+        "x": 873,
+        "y": 837.796875,
+        "w": 177,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": "switch",
+        "aria": "Aprovação da transição Em Atendimento → Proposta",
+        "x": 1065,
+        "y": 835.796875,
+        "w": 36,
+        "h": 20,
+        "font": "14px"
+      },
+      {
+        "text": "Aprovação humana",
+        "role": null,
+        "aria": null,
+        "x": 1109,
+        "y": 838.796875,
+        "w": 128,
+        "h": 14,
+        "font": "14px"
+      },
+      {
+        "text": "Salvar",
+        "role": null,
+        "aria": null,
+        "x": 1277,
+        "y": 859.796875,
+        "w": 61,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Modo",
+        "role": null,
+        "aria": null,
+        "x": 711,
+        "y": 1005.796875,
+        "w": 38,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "Manual",
+        "role": "combobox",
+        "aria": "Modo da transição Em Atendimento → Ganho",
+        "x": 711,
+        "y": 1025.796875,
+        "w": 150,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Confiança de referência %",
+        "role": null,
+        "aria": null,
+        "x": 873,
+        "y": 1005.796875,
+        "w": 177,
+        "h": 17,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": "switch",
+        "aria": "Aprovação da transição Em Atendimento → Ganho",
+        "x": 1065,
+        "y": 1003.796875,
+        "w": 36,
+        "h": 20,
+        "font": "14px"
+      },
+      {
+        "text": "Aprovação humana",
+        "role": null,
+        "aria": null,
+        "x": 1109,
+        "y": 1006.796875,
+        "w": 128,
+        "h": 14,
+        "font": "14px"
+      },
+      {
+        "text": "Salvar",
+        "role": null,
+        "aria": null,
+        "x": 1277,
+        "y": 1027.796875,
+        "w": 61,
+        "h": 32,
+        "font": "12px"
+      }
+    ]
+  }
+]

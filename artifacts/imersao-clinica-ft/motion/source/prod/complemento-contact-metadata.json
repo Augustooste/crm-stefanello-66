@@ -1,0 +1,582 @@
+[
+  {
+    "file": "complemento-05-ficha-cliente.png",
+    "profile": "prod",
+    "baseURL": "https://aceleraflow-remix.lovable.app",
+    "capturedAt": "2026-10-16T16:57:05.958Z",
+    "route": "/contatos/5ffc5ce7-db42-4b64-9851-bee047951a7b",
+    "font": "Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "controls": [
+      {
+        "text": "Abrir ou fechar menu lateral",
+        "role": null,
+        "aria": "Alternar menu lateral",
+        "x": 272,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "Últimos 30 dias",
+        "role": "combobox",
+        "aria": "Selecionar período do filtro global",
+        "x": 1386,
+        "y": 9.5,
+        "w": 170,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Abrir assistente IA",
+        "x": 1564,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Mudar para tema claro",
+        "x": 1616,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "27",
+        "role": null,
+        "aria": "Notificações (27 pendentes)",
+        "x": 1668,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "AFAdministrador Clínica FT",
+        "role": null,
+        "aria": "Menu de Administrador Clínica FT",
+        "x": 1720,
+        "y": 7.5,
+        "w": 184,
+        "h": 40,
+        "font": "14px"
+      },
+      {
+        "text": "Mariana Lopes",
+        "role": null,
+        "aria": null,
+        "x": 400,
+        "y": 114,
+        "w": 222,
+        "h": 32,
+        "font": "28px"
+      },
+      {
+        "text": "Ligar com IA",
+        "role": null,
+        "aria": null,
+        "x": 1141,
+        "y": 125,
+        "w": 146,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Agendar compromisso",
+        "role": null,
+        "aria": null,
+        "x": 1295,
+        "y": 125,
+        "w": 213,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Criar negócio",
+        "role": null,
+        "aria": null,
+        "x": 1516,
+        "y": 125,
+        "w": 151,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Editar",
+        "role": null,
+        "aria": null,
+        "x": 1675,
+        "y": 125,
+        "w": 101,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Timeline",
+        "role": "tab",
+        "aria": null,
+        "x": 404,
+        "y": 298,
+        "w": 81,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Dados",
+        "role": "tab",
+        "aria": null,
+        "x": 485,
+        "y": 298,
+        "w": 67,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Conversas",
+        "role": "tab",
+        "aria": null,
+        "x": 552,
+        "y": 298,
+        "w": 95,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Negócios",
+        "role": "tab",
+        "aria": null,
+        "x": 647,
+        "y": 298,
+        "w": 88,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Atividades",
+        "role": "tab",
+        "aria": null,
+        "x": 735,
+        "y": 298,
+        "w": 97,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Memória IA",
+        "role": "tab",
+        "aria": null,
+        "x": 832,
+        "y": 298,
+        "w": 100,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Informações extraídas pela IA",
+        "role": null,
+        "aria": null,
+        "x": 425,
+        "y": 371,
+        "w": 1326,
+        "h": 24,
+        "font": "16px"
+      }
+    ]
+  },
+  {
+    "file": "complemento-ficha-extracao.png",
+    "profile": "prod",
+    "baseURL": "https://aceleraflow-remix.lovable.app",
+    "capturedAt": "2026-10-16T16:57:06.050Z",
+    "route": "/contatos/5ffc5ce7-db42-4b64-9851-bee047951a7b",
+    "font": "Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "controls": [
+      {
+        "text": "Abrir ou fechar menu lateral",
+        "role": null,
+        "aria": "Alternar menu lateral",
+        "x": 272,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "Últimos 30 dias",
+        "role": "combobox",
+        "aria": "Selecionar período do filtro global",
+        "x": 1386,
+        "y": 9.5,
+        "w": 170,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Abrir assistente IA",
+        "x": 1564,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Mudar para tema claro",
+        "x": 1616,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "27",
+        "role": null,
+        "aria": "Notificações (27 pendentes)",
+        "x": 1668,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "AFAdministrador Clínica FT",
+        "role": null,
+        "aria": "Menu de Administrador Clínica FT",
+        "x": 1720,
+        "y": 7.5,
+        "w": 184,
+        "h": 40,
+        "font": "14px"
+      },
+      {
+        "text": "Mariana Lopes",
+        "role": null,
+        "aria": null,
+        "x": 400,
+        "y": 114,
+        "w": 222,
+        "h": 32,
+        "font": "28px"
+      },
+      {
+        "text": "Ligar com IA",
+        "role": null,
+        "aria": null,
+        "x": 1141,
+        "y": 125,
+        "w": 146,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Agendar compromisso",
+        "role": null,
+        "aria": null,
+        "x": 1295,
+        "y": 125,
+        "w": 213,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Criar negócio",
+        "role": null,
+        "aria": null,
+        "x": 1516,
+        "y": 125,
+        "w": 151,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Editar",
+        "role": null,
+        "aria": null,
+        "x": 1675,
+        "y": 125,
+        "w": 101,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Timeline",
+        "role": "tab",
+        "aria": null,
+        "x": 404,
+        "y": 298,
+        "w": 81,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Dados",
+        "role": "tab",
+        "aria": null,
+        "x": 485,
+        "y": 298,
+        "w": 67,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Conversas",
+        "role": "tab",
+        "aria": null,
+        "x": 552,
+        "y": 298,
+        "w": 95,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Negócios",
+        "role": "tab",
+        "aria": null,
+        "x": 647,
+        "y": 298,
+        "w": 88,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Atividades",
+        "role": "tab",
+        "aria": null,
+        "x": 735,
+        "y": 298,
+        "w": 97,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Memória IA",
+        "role": "tab",
+        "aria": null,
+        "x": 832,
+        "y": 298,
+        "w": 100,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Informações extraídas pela IA",
+        "role": null,
+        "aria": null,
+        "x": 425,
+        "y": 371,
+        "w": 1326,
+        "h": 24,
+        "font": "16px"
+      }
+    ]
+  },
+  {
+    "file": "complemento-ficha-qualificacao.png",
+    "profile": "prod",
+    "baseURL": "https://aceleraflow-remix.lovable.app",
+    "capturedAt": "2026-10-16T16:57:06.154Z",
+    "route": "/contatos/5ffc5ce7-db42-4b64-9851-bee047951a7b",
+    "font": "Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "controls": [
+      {
+        "text": "Abrir ou fechar menu lateral",
+        "role": null,
+        "aria": "Alternar menu lateral",
+        "x": 272,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "Últimos 30 dias",
+        "role": "combobox",
+        "aria": "Selecionar período do filtro global",
+        "x": 1386,
+        "y": 9.5,
+        "w": 170,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Abrir assistente IA",
+        "x": 1564,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Mudar para tema claro",
+        "x": 1616,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "27",
+        "role": null,
+        "aria": "Notificações (27 pendentes)",
+        "x": 1668,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "AFAdministrador Clínica FT",
+        "role": null,
+        "aria": "Menu de Administrador Clínica FT",
+        "x": 1720,
+        "y": 7.5,
+        "w": 184,
+        "h": 40,
+        "font": "14px"
+      },
+      {
+        "text": "Qualificação por IA",
+        "role": null,
+        "aria": null,
+        "x": 425,
+        "y": 197,
+        "w": 1326,
+        "h": 24,
+        "font": "16px"
+      },
+      {
+        "text": "Sinais do CRM",
+        "role": null,
+        "aria": null,
+        "x": 425,
+        "y": 1005,
+        "w": 1326,
+        "h": 24,
+        "font": "16px"
+      }
+    ]
+  },
+  {
+    "file": "complemento-ficha-memoria.png",
+    "profile": "prod",
+    "baseURL": "https://aceleraflow-remix.lovable.app",
+    "capturedAt": "2026-10-16T16:57:06.236Z",
+    "route": "/contatos/5ffc5ce7-db42-4b64-9851-bee047951a7b",
+    "font": "Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "controls": [
+      {
+        "text": "Abrir ou fechar menu lateral",
+        "role": null,
+        "aria": "Alternar menu lateral",
+        "x": 272,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "Últimos 30 dias",
+        "role": "combobox",
+        "aria": "Selecionar período do filtro global",
+        "x": 1386,
+        "y": 9.5,
+        "w": 170,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Abrir assistente IA",
+        "x": 1564,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Mudar para tema claro",
+        "x": 1616,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "27",
+        "role": null,
+        "aria": "Notificações (27 pendentes)",
+        "x": 1668,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "AFAdministrador Clínica FT",
+        "role": null,
+        "aria": "Menu de Administrador Clínica FT",
+        "x": 1720,
+        "y": 7.5,
+        "w": 184,
+        "h": 40,
+        "font": "14px"
+      },
+      {
+        "text": "Sinais do CRM",
+        "role": null,
+        "aria": null,
+        "x": 425,
+        "y": 150,
+        "w": 1326,
+        "h": 24,
+        "font": "16px"
+      },
+      {
+        "text": "Veredito de qualificação",
+        "role": null,
+        "aria": null,
+        "x": 425,
+        "y": 420,
+        "w": 1326,
+        "h": 24,
+        "font": "16px"
+      },
+      {
+        "text": "Perfil consolidado",
+        "role": null,
+        "aria": null,
+        "x": 425,
+        "y": 556,
+        "w": 1326,
+        "h": 24,
+        "font": "16px"
+      },
+      {
+        "text": "Resumos de interações recentes",
+        "role": null,
+        "aria": null,
+        "x": 425,
+        "y": 788,
+        "w": 1326,
+        "h": 24,
+        "font": "16px"
+      }
+    ]
+  }
+]

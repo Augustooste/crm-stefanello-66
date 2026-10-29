@@ -1,0 +1,33 @@
+{
+  "resultado": "PASSOU",
+  "baseURL": "https://aceleraflow-remix.lovable.app",
+  "capturadoEm": "2026-10-16T17:07:17.716Z",
+  "tenantId": "acc0f11d-2d6e-4cc3-82a6-5b04ccfdd8ac",
+  "dealId": "b2cc2be8-adcb-4bae-86a4-5fca6896613b",
+  "contactId": "5ffc5ce7-db42-4b64-9851-bee047951a7b",
+  "tituloPreservado": "Contato Cliente simulado",
+  "origem": "Novo Paciente",
+  "destino": "Em Atendimento",
+  "atorVisivel": "Movido pela IA há cerca de 3 horas",
+  "confiancaVisivel": "Confiança: 100%",
+  "limite": "Captura do histórico persistido; não é filmagem da transição.",
+  "acoes": "Somente navegação, leitura e abertura de detalhes; sem desfazer movimento, pausar IA ou corrigir avaliações.",
+  "files": [
+    {
+      "file": "artifacts/imersao-clinica-ft/motion/source/prod/10-kanban-auditoria-ia.png",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "resultado": "PASSOU"
+    },
+    {
+      "file": "artifacts/imersao-clinica-ft/apresentacao/telas/10-kanban-auditoria-ia.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "resultado": "PASSOU"
+    }
+  ]
+}

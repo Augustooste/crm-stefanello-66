@@ -1,0 +1,338 @@
+[
+ {
+  "t": 0,
+  "frame": 0,
+  "type": "show",
+  "label": "#scene-01-onboarding-0"
+ },
+ {
+  "t": 0,
+  "frame": 0,
+  "type": "cut",
+  "label": "Onboarding real: Configuração inicial — Nicho"
+ },
+ {
+  "t": 1.7,
+  "frame": 51,
+  "type": "show",
+  "label": "#scene-01-onboarding-1"
+ },
+ {
+  "t": 1.7,
+  "frame": 51,
+  "type": "cut",
+  "label": "Onboarding real: Nicho odontológico e funil aplicado"
+ },
+ {
+  "t": 4.5,
+  "frame": 135,
+  "type": "show",
+  "label": "#scene-02-configuracao-ia-0"
+ },
+ {
+  "t": 4.5,
+  "frame": 135,
+  "type": "cut",
+  "label": "Configuração da IA: Assistente ativa no workspace"
+ },
+ {
+  "t": 6,
+  "frame": 180,
+  "type": "show",
+  "label": "#scene-02-configuracao-ia-1"
+ },
+ {
+  "t": 6,
+  "frame": 180,
+  "type": "cut",
+  "label": "Configuração da IA: Prompt base real"
+ },
+ {
+  "t": 8,
+  "frame": 240,
+  "type": "show",
+  "label": "#scene-02-configuracao-ia-2"
+ },
+ {
+  "t": 8,
+  "frame": 240,
+  "type": "cut",
+  "label": "Configuração da IA: Área de teste sem envio externo"
+ },
+ {
+  "t": 9.5,
+  "frame": 285,
+  "type": "show",
+  "label": "#scene-02-configuracao-ia-3"
+ },
+ {
+  "t": 9.5,
+  "frame": 285,
+  "type": "cut",
+  "label": "Configuração da IA: Palavras de transferência humana"
+ },
+ {
+  "t": 11.5,
+  "frame": 345,
+  "type": "show",
+  "label": "#scene-03-comportamento-0"
+ },
+ {
+  "t": 11.5,
+  "frame": 345,
+  "type": "cut",
+  "label": "Comportamento das respostas: Janela de agrupamento real"
+ },
+ {
+  "t": 13,
+  "frame": 390,
+  "type": "show",
+  "label": "#scene-03-comportamento-1"
+ },
+ {
+  "t": 13,
+  "frame": 390,
+  "type": "cut",
+  "label": "Comportamento das respostas: Máximo de blocos real"
+ },
+ {
+  "t": 14.5,
+  "frame": 435,
+  "type": "show",
+  "label": "#scene-03-comportamento-2"
+ },
+ {
+  "t": 14.5,
+  "frame": 435,
+  "type": "cut",
+  "label": "Comportamento das respostas: Intervalo entre blocos real"
+ },
+ {
+  "t": 16,
+  "frame": 480,
+  "type": "show",
+  "label": "#scene-03-comportamento-3"
+ },
+ {
+  "t": 16,
+  "frame": 480,
+  "type": "cut",
+  "label": "Comportamento das respostas: Sempre em texto e ausência de ElevenLabs"
+ },
+ {
+  "t": 17.5,
+  "frame": 525,
+  "type": "show",
+  "label": "#scene-04-whatsapp-0"
+ },
+ {
+  "t": 17.5,
+  "frame": 525,
+  "type": "cut",
+  "label": "Conversa da Mariana no canal Simulação: Canal Simulação e IA pausada após transferência"
+ },
+ {
+  "t": 19.2,
+  "frame": 576,
+  "type": "show",
+  "label": "#scene-04-whatsapp-1"
+ },
+ {
+  "t": 19.2,
+  "frame": 576,
+  "type": "cut",
+  "label": "Conversa da Mariana no canal Simulação: Dois blocos genuínos da IA"
+ },
+ {
+  "t": 22.5,
+  "frame": 675,
+  "type": "show",
+  "label": "#scene-05-ficha-0"
+ },
+ {
+  "t": 22.5,
+  "frame": 675,
+  "type": "cut",
+  "label": "Ficha, memória e qualificação: E-mail extraído e vínculo da mensagem-fonte"
+ },
+ {
+  "t": 24.5,
+  "frame": 735,
+  "type": "show",
+  "label": "#scene-05-ficha-1"
+ },
+ {
+  "t": 24.5,
+  "frame": 735,
+  "type": "cut",
+  "label": "Ficha, memória e qualificação: Perfil consolidado de Mariana"
+ },
+ {
+  "t": 26.5,
+  "frame": 795,
+  "type": "show",
+  "label": "#scene-05-ficha-2"
+ },
+ {
+  "t": 26.5,
+  "frame": 795,
+  "type": "cut",
+  "label": "Ficha, memória e qualificação: Qualificação de 85% baseada em nove mensagens"
+ },
+ {
+  "t": 28.5,
+  "frame": 855,
+  "type": "show",
+  "label": "#scene-06-kanban-0"
+ },
+ {
+  "t": 28.5,
+  "frame": 855,
+  "type": "cut",
+  "label": "Registro de produção e movimento histórico: Contato Cliente simulado em Em Atendimento"
+ },
+ {
+  "t": 30,
+  "frame": 900,
+  "type": "show",
+  "label": "#scene-06-kanban-1"
+ },
+ {
+  "t": 30,
+  "frame": 900,
+  "type": "cut",
+  "label": "Registro de produção e movimento histórico: Movido pela IA e conflito detectado preservados"
+ },
+ {
+  "t": 31.5,
+  "frame": 945,
+  "type": "show",
+  "label": "#scene-06-kanban-2"
+ },
+ {
+  "t": 31.5,
+  "frame": 945,
+  "type": "cut",
+  "label": "Registro de produção e movimento histórico: Novo Paciente para Em Atendimento com confiança de 100%"
+ },
+ {
+  "t": 33,
+  "frame": 990,
+  "type": "show",
+  "label": "#scene-06-kanban"
+ },
+ {
+  "t": 33,
+  "frame": 990,
+  "type": "cut",
+  "label": "Registro de produção e movimento histórico"
+ },
+ {
+  "t": 38.7,
+  "frame": 1161,
+  "type": "cut",
+  "label": "Registro de produção e movimento histórico"
+ },
+ {
+  "t": 40.2,
+  "frame": 1206,
+  "type": "cut",
+  "label": "Registro de produção e movimento histórico"
+ },
+ {
+  "t": 42,
+  "frame": 1260,
+  "type": "show",
+  "label": "#scene-07-autonomia-0"
+ },
+ {
+  "t": 42,
+  "frame": 1260,
+  "type": "cut",
+  "label": "Autonomia e confiança: Quatro modos de autonomia"
+ },
+ {
+  "t": 44,
+  "frame": 1320,
+  "type": "show",
+  "label": "#scene-07-autonomia-1"
+ },
+ {
+  "t": 44,
+  "frame": 1320,
+  "type": "cut",
+  "label": "Autonomia e confiança: Confiança mínima de 80%"
+ },
+ {
+  "t": 46.5,
+  "frame": 1395,
+  "type": "show",
+  "label": "#scene-07-autonomia-2"
+ },
+ {
+  "t": 46.5,
+  "frame": 1395,
+  "type": "cut",
+  "label": "Autonomia e confiança: Alerta real de prazo na fila de decisões"
+ },
+ {
+  "t": 49,
+  "frame": 1470,
+  "type": "show",
+  "label": "#scene-08-followup-0"
+ },
+ {
+  "t": 49,
+  "frame": 1470,
+  "type": "cut",
+  "label": "Follow-up com condição e histórico: Sequência de avaliação inativa"
+ },
+ {
+  "t": 51,
+  "frame": 1530,
+  "type": "show",
+  "label": "#scene-08-followup-1"
+ },
+ {
+  "t": 51,
+  "frame": 1530,
+  "type": "cut",
+  "label": "Follow-up com condição e histórico: Condição de 24 horas após o passo anterior"
+ },
+ {
+  "t": 53,
+  "frame": 1590,
+  "type": "show",
+  "label": "#scene-08-followup-2"
+ },
+ {
+  "t": 53,
+  "frame": 1590,
+  "type": "cut",
+  "label": "Follow-up com condição e histórico: Histórico de João Farias sem execução registrada"
+ },
+ {
+  "t": 55,
+  "frame": 1650,
+  "type": "show",
+  "label": "#scene-09-dashboard-0"
+ },
+ {
+  "t": 55,
+  "frame": 1650,
+  "type": "cut",
+  "label": "Métricas reais do workspace: Dezesseis negócios ativos do workspace"
+ },
+ {
+  "t": 57.5,
+  "frame": 1725,
+  "type": "show",
+  "label": "#scene-09-dashboard-1"
+ },
+ {
+  "t": 57.5,
+  "frame": 1725,
+  "type": "cut",
+  "label": "Métricas reais do workspace: Um auto-avanço e nenhuma sugestão pendente"
+ }
+]

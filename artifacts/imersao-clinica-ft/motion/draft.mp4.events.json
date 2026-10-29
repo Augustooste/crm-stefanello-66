@@ -1,0 +1,302 @@
+[
+ {
+  "t": 0,
+  "frame": 0,
+  "type": "show",
+  "label": "#scene-01-onboarding-0"
+ },
+ {
+  "t": 0,
+  "frame": 0,
+  "type": "cut",
+  "label": "Onboarding real: Configuração inicial — Nicho"
+ },
+ {
+  "t": 1.7,
+  "frame": 51,
+  "type": "show",
+  "label": "#scene-01-onboarding-1"
+ },
+ {
+  "t": 1.7,
+  "frame": 51,
+  "type": "cut",
+  "label": "Onboarding real: Nicho odontológico e funil aplicado"
+ },
+ {
+  "t": 5,
+  "frame": 150,
+  "type": "show",
+  "label": "#scene-02-configuracao-ia-0"
+ },
+ {
+  "t": 5,
+  "frame": 150,
+  "type": "cut",
+  "label": "Configuração da IA: Assistente ativa"
+ },
+ {
+  "t": 6.5,
+  "frame": 195,
+  "type": "show",
+  "label": "#scene-02-configuracao-ia-1"
+ },
+ {
+  "t": 6.5,
+  "frame": 195,
+  "type": "cut",
+  "label": "Configuração da IA: Prompt base real"
+ },
+ {
+  "t": 8.5,
+  "frame": 255,
+  "type": "show",
+  "label": "#scene-02-configuracao-ia-2"
+ },
+ {
+  "t": 8.5,
+  "frame": 255,
+  "type": "cut",
+  "label": "Configuração da IA: Área de teste sem envio externo"
+ },
+ {
+  "t": 10,
+  "frame": 300,
+  "type": "show",
+  "label": "#scene-02-configuracao-ia-3"
+ },
+ {
+  "t": 10,
+  "frame": 300,
+  "type": "cut",
+  "label": "Configuração da IA: Palavras de transferência humana"
+ },
+ {
+  "t": 12,
+  "frame": 360,
+  "type": "show",
+  "label": "#scene-03-comportamento-0"
+ },
+ {
+  "t": 12,
+  "frame": 360,
+  "type": "cut",
+  "label": "Comportamento das respostas: Janela de agrupamento real"
+ },
+ {
+  "t": 13.5,
+  "frame": 405,
+  "type": "show",
+  "label": "#scene-03-comportamento-1"
+ },
+ {
+  "t": 13.5,
+  "frame": 405,
+  "type": "cut",
+  "label": "Comportamento das respostas: Máximo de blocos real"
+ },
+ {
+  "t": 15,
+  "frame": 450,
+  "type": "show",
+  "label": "#scene-03-comportamento-2"
+ },
+ {
+  "t": 15,
+  "frame": 450,
+  "type": "cut",
+  "label": "Comportamento das respostas: Intervalo entre blocos real"
+ },
+ {
+  "t": 16.5,
+  "frame": 495,
+  "type": "show",
+  "label": "#scene-03-comportamento-3"
+ },
+ {
+  "t": 16.5,
+  "frame": 495,
+  "type": "cut",
+  "label": "Comportamento das respostas: Modalidades e ausência de ElevenLabs"
+ },
+ {
+  "t": 18,
+  "frame": 540,
+  "type": "show",
+  "label": "#scene-04-whatsapp-0"
+ },
+ {
+  "t": 18,
+  "frame": 540,
+  "type": "cut",
+  "label": "Conversa da Mariana no canal Simulação: Identificação explícita de simulação"
+ },
+ {
+  "t": 19.7,
+  "frame": 591,
+  "type": "show",
+  "label": "#scene-04-whatsapp-1"
+ },
+ {
+  "t": 19.7,
+  "frame": 591,
+  "type": "cut",
+  "label": "Conversa da Mariana no canal Simulação: Blocos reais da Clara"
+ },
+ {
+  "t": 23,
+  "frame": 690,
+  "type": "show",
+  "label": "#scene-05-ficha-0"
+ },
+ {
+  "t": 23,
+  "frame": 690,
+  "type": "cut",
+  "label": "Ficha, memória e qualificação: Campo extraído e vínculo da mensagem-fonte"
+ },
+ {
+  "t": 25,
+  "frame": 750,
+  "type": "show",
+  "label": "#scene-05-ficha-1"
+ },
+ {
+  "t": 25,
+  "frame": 750,
+  "type": "cut",
+  "label": "Ficha, memória e qualificação: Perfil consolidado de Mariana"
+ },
+ {
+  "t": 27,
+  "frame": 810,
+  "type": "show",
+  "label": "#scene-05-ficha-2"
+ },
+ {
+  "t": 27,
+  "frame": 810,
+  "type": "cut",
+  "label": "Ficha, memória e qualificação: Qualificação baseada nas mensagens"
+ },
+ {
+  "t": 29,
+  "frame": 870,
+  "type": "show",
+  "label": "#scene-06-kanban"
+ },
+ {
+  "t": 29,
+  "frame": 870,
+  "type": "cut",
+  "label": "Avanço autônomo e auditoria reais"
+ },
+ {
+  "t": 34.7,
+  "frame": 1041,
+  "type": "cut",
+  "label": "Avanço autônomo e auditoria reais"
+ },
+ {
+  "t": 36.2,
+  "frame": 1086,
+  "type": "cut",
+  "label": "Avanço autônomo e auditoria reais"
+ },
+ {
+  "t": 38,
+  "frame": 1140,
+  "type": "show",
+  "label": "#scene-07-autonomia-0"
+ },
+ {
+  "t": 38,
+  "frame": 1140,
+  "type": "cut",
+  "label": "Autonomia e confiança: Quatro modos de autonomia"
+ },
+ {
+  "t": 40,
+  "frame": 1200,
+  "type": "show",
+  "label": "#scene-07-autonomia-1"
+ },
+ {
+  "t": 40,
+  "frame": 1200,
+  "type": "cut",
+  "label": "Autonomia e confiança: Confiança mínima de 80%"
+ },
+ {
+  "t": 42.5,
+  "frame": 1275,
+  "type": "show",
+  "label": "#scene-07-autonomia-2"
+ },
+ {
+  "t": 42.5,
+  "frame": 1275,
+  "type": "cut",
+  "label": "Autonomia e confiança: Fila pendente sem aprovar nem rejeitar"
+ },
+ {
+  "t": 45,
+  "frame": 1350,
+  "type": "show",
+  "label": "#scene-08-followup-0"
+ },
+ {
+  "t": 45,
+  "frame": 1350,
+  "type": "cut",
+  "label": "Follow-up com condição e histórico: Sequência ativa de avaliação"
+ },
+ {
+  "t": 47,
+  "frame": 1410,
+  "type": "show",
+  "label": "#scene-08-followup-1"
+ },
+ {
+  "t": 47,
+  "frame": 1410,
+  "type": "cut",
+  "label": "Follow-up com condição e histórico: Condição de 24 horas após o passo anterior"
+ },
+ {
+  "t": 49,
+  "frame": 1470,
+  "type": "show",
+  "label": "#scene-08-followup-2"
+ },
+ {
+  "t": 49,
+  "frame": 1470,
+  "type": "cut",
+  "label": "Follow-up com condição e histórico: Histórico real da inscrição de Karina Ramos"
+ },
+ {
+  "t": 51,
+  "frame": 1530,
+  "type": "show",
+  "label": "#scene-09-dashboard-0"
+ },
+ {
+  "t": 51,
+  "frame": 1530,
+  "type": "cut",
+  "label": "Métricas reais do workspace: Negócios ativos do workspace"
+ },
+ {
+  "t": 53.5,
+  "frame": 1605,
+  "type": "show",
+  "label": "#scene-09-dashboard-1"
+ },
+ {
+  "t": 53.5,
+  "frame": 1605,
+  "type": "cut",
+  "label": "Métricas reais do workspace: Auto-avanços e sugestões pendentes reais"
+ }
+]

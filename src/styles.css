@@ -1,0 +1,633 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+/* Dark reconhece tanto `.dark` (convenção shadcn/tw-animate) quanto
+ * `[data-theme="dark"]` (nomenclatura do DS §5). O toggle seta ambos. */
+@custom-variant dark (&:is(.dark *, [data-theme="dark"] *));
+
+/*
+ * Design system Acelera IA v3.2 — direção "Clean" (Inter).
+ * Quiet luxury: sem neon/glow; azul Safira como acento, nunca campo inteiro.
+ * Produto/dashboard = dark premium (§2.3 do DS). Fonte da verdade:
+ * clientes/acelera-ia/design.md
+ * White-label: tenant sobrescreve apenas --primary/--accent.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --text-page-title: 1.75rem;
+  --text-page-title--line-height: 2rem;
+  --text-card-title: 1rem;
+  --text-card-title--line-height: 1.5rem;
+  --text-body: 0.875rem;
+  --text-body--line-height: 1.375rem;
+  --text-caption: 0.75rem;
+  --text-caption--line-height: 1.125rem;
+
+  /* Escala tipográfica completa do DS (§3.2 · ratio 1.25, base 16px).
+   * O corpo do produto usa --text-body (14px, densidade dashboard); estes
+   * degraus cobrem títulos/marketing conforme o spec. */
+  --text-display: 3.815rem; /* 61px */
+  --text-display--line-height: 1.04;
+  --text-h1: 3.052rem; /* 49px */
+  --text-h1--line-height: 1.14;
+  --text-h2: 2.441rem; /* 39px */
+  --text-h2--line-height: 1.14;
+  --text-h3: 1.953rem; /* 31px */
+  --text-h3--line-height: 1.14;
+  --text-h4: 1.563rem; /* 25px */
+  --text-h4--line-height: 1.14;
+  --text-h5: 1.25rem; /* 20px */
+  --text-h5--line-height: 1.14;
+  --text-lead: 1.125rem; /* 18px (§3.2 "lg") */
+  --text-lead--line-height: 1.6;
+  --text-sm: 0.875rem; /* 14px */
+  --text-kicker: 0.6875rem; /* 11px */
+
+  /* Espaçamento do DS (§4 · base 4px) */
+  --spacing-sp-1: 4px;
+  --spacing-sp-2: 8px;
+  --spacing-sp-3: 12px;
+  --spacing-sp-4: 16px;
+  --spacing-sp-5: 24px;
+  --spacing-sp-6: 32px;
+  --spacing-sp-7: 48px;
+  --spacing-sp-8: 72px;
+
+  --radius-pill: 9999px;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-surface-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-text-subtle: var(--text-subtle);
+  --color-info: var(--info);
+  --color-info-foreground: var(--info-foreground);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  /* --r-base do DS (14px) */
+  --radius: 0.875rem;
+  /* DS §4 · nomes exatos do spec — @theme inline não emite custom props p/
+   * namespaces que o Tailwind não reconhece, por isso ficam num :root plano. */
+  --r-sm: calc(var(--radius) - 4px);
+  --r-base: var(--radius);
+  --r-lg: calc(var(--radius) + 4px);
+  --r-pill: 9999px;
+
+  /* ─── Semânticas modo claro (DS §2.2 · default) ─────────── */
+  --background: #ffffff;
+  --surface: #f7f9fc;
+  --surface-2: #eef2f8; /* DS §2.2 · inset / elevado */
+  --foreground: #15233b;
+
+  --card: #f7f9fc;
+  --card-foreground: #15233b;
+  --popover: #ffffff;
+  --popover-foreground: #15233b;
+
+  /* Brand (ponto de override white-label) */
+  --primary: #1e63c8;
+  --primary-foreground: #ffffff;
+
+  --secondary: #eef2f8;
+  --secondary-foreground: #15233b;
+
+  --muted: #eef2f8;
+  --muted-foreground: #5b6b7f;
+
+  --accent: #eaf1fb;
+  --accent-foreground: #1e63c8;
+  --brand-soft: #eaf1fb;
+
+  --success: #188056; /* DS §2.2 · escurecido do #1e9e6a: 3.24:1 sobre --surface não passava AA */
+  --success-foreground: #ffffff;
+  --warning: #c9821a;
+  --warning-foreground: #0a1424;
+  --destructive: #d14343;
+  --destructive-foreground: #ffffff;
+
+  --border: #e4eaf2;
+  --input: #c9d3e0;
+  --ring: #1e63c8;
+
+  /* Paleta de marca nos gráficos */
+  --chart-1: #1e63c8;
+  --chart-2: #7ba6e6;
+  --chart-3: #1e9e6a;
+  --chart-4: #c9821a;
+  --chart-5: #d14343;
+
+  --sidebar: #f7f9fc;
+  --sidebar-foreground: #15233b;
+  --sidebar-primary: #1e63c8;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #eaf1fb;
+  --sidebar-accent-foreground: #1e63c8;
+  --sidebar-border: #e4eaf2;
+  --sidebar-ring: #1e63c8;
+
+  /* Glass (DS §2.4 · modo claro) */
+  --glass-fill: rgba(15, 35, 70, 0.04);
+  --glass-border: rgba(15, 35, 70, 0.1);
+  --glass-hi: rgba(255, 255, 255, 0.5);
+  --glass-blur: 22px; /* DS §2.4 */
+
+  /* Aliases legados (telas antigas) → valores DS */
+  --gradient-primary: var(--grad-brand);
+  --gradient-motion: var(--grad-brand);
+  --gradient-motion-h: linear-gradient(90deg, #154494 0%, #1e63c8 100%);
+
+  /* ─── Camada 1 · Primitivas (DS §2.1 · nunca no componente) ─── */
+  --blue-50: #eaf1fb;
+  --blue-100: #d3e2f7;
+  --blue-200: #a9c6ef;
+  --blue-300: #7ba6e6;
+  --blue-400: #5a97ee; /* Brilho */
+  --blue-500: #2e78e6;
+  --blue-600: #1e63c8; /* Safira (marca) */
+  --blue-700: #154494; /* brand-hover */
+  --blue-800: #0e3360;
+  --blue-900: #061b36;
+  --blue-950: #05152b;
+
+  --neutral-0: #ffffff;
+  --neutral-50: #f7f9fc;
+  --neutral-100: #eef2f8;
+  --neutral-200: #e4eaf2;
+  --neutral-300: #c9d3e0; /* platina */
+  --neutral-400: #a8b5c6;
+  --neutral-500: #8493a6;
+  --neutral-550: #65758c; /* legenda AA */
+  --neutral-600: #5b6b7f;
+  --neutral-700: #3a4760;
+  --neutral-800: #1c2740;
+  --neutral-900: #15233b; /* tinta de texto no claro */
+  --neutral-950: #0a1424;
+
+  --green-600: #1e9e6a;
+  --green-400: #34d399;
+  --amber-600: #c9821a;
+  --amber-400: #f5b544;
+  --red-600: #d14343;
+  --red-400: #f47272;
+  --platina: #c9d3e0;
+
+  /* Semânticos complementares do DS não cobertos pela convenção shadcn */
+  --text-subtle: #65758c; /* §2.2 · legendas/captions (AA ≥4.5:1) */
+  --brand-hover: #154494; /* §2.2 · hover da marca */
+  --border-strong: #c9d3e0; /* §2.2 · divisor forte / platina */
+  --info: #1e63c8;
+  --info-foreground: #ffffff;
+
+  /* Movimento (§4) */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --t: 0.25s;
+  --t-fast: 0.15s;
+
+  /* Largura máx. de conteúdo (§4) */
+  --maxw: 1180px;
+
+  --grad-brand: linear-gradient(135deg, #154494 0%, #1e63c8 100%);
+  --grad-deep: radial-gradient(130% 130% at 85% -10%, #1b2e50 0%, #0d1524 52%, #090d18 100%);
+  --grad-platina: linear-gradient(120deg, #1e63c8 0%, #c9d3e0 120%);
+  --grad-sky: linear-gradient(
+    155deg,
+    #eaf1fb 0%,
+    #cbddf7 50%,
+    #a9c6ef 100%
+  ); /* DS §2.4 v3.2 · campo tonal claro de azul */
+
+  --shadow-sm: 0 1px 2px rgba(10, 20, 36, 0.06);
+  --shadow-md: 0 8px 24px -8px rgba(10, 20, 36, 0.14);
+  --shadow-lg: 0 24px 60px -16px rgba(6, 27, 54, 0.3);
+  --shadow-soft: var(--shadow-sm);
+  --shadow-glass: var(--shadow-md);
+  --shadow-elevated: var(--shadow-lg);
+  --shadow-glow: var(--shadow-md); /* glow morreu no v3; alias mantém hovers */
+  --shadow-glow-strong: var(--shadow-lg);
+
+  --inset-glass-top: inset 0 1px 0 var(--glass-hi);
+
+  --ease-out: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── Dark premium (DS §2.3 · produto/dashboard) ────────────────────── */
+.dark,
+[data-theme="dark"] {
+  --background: #0a0f1a;
+  --surface: #111826;
+  --surface-2: #18202f; /* DS §2.3 · inset / elevado */
+  --foreground: #eaf1fb;
+
+  --card: #111826;
+  --card-foreground: #eaf1fb;
+  --popover: #18202f;
+  --popover-foreground: #eaf1fb;
+
+  --primary: #1e63c8;
+  --primary-foreground: #ffffff;
+
+  --secondary: #18202f;
+  --secondary-foreground: #eaf1fb;
+
+  --muted: #18202f;
+  --muted-foreground: #98aac4;
+
+  --accent: rgba(90, 151, 238, 0.12);
+  --accent-foreground: #5a97ee;
+  --brand-soft: rgba(90, 151, 238, 0.12);
+
+  --success: #34d399;
+  --success-foreground: #05152b;
+  --warning: #f5b544;
+  --warning-foreground: #05152b;
+  --destructive: #f47272;
+  --destructive-foreground: #05152b;
+
+  --border: rgba(255, 255, 255, 0.07);
+  --border-strong: rgba(255, 255, 255, 0.14);
+  --input: rgba(255, 255, 255, 0.14);
+  --ring: #5a97ee;
+
+  --text-subtle: #67788f; /* §2.3 */
+  --brand-hover: #2e78e6; /* §2.3 */
+  --info: #5a97ee;
+  --info-foreground: #05152b;
+
+  --chart-1: #5a97ee;
+  --chart-2: #c9d3e0;
+  --chart-3: #34d399;
+  --chart-4: #f5b544;
+  --chart-5: #f47272;
+
+  --sidebar: #0a0f1a;
+  --sidebar-foreground: #eaf1fb;
+  --sidebar-primary: #1e63c8;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(90, 151, 238, 0.1);
+  --sidebar-accent-foreground: #5a97ee;
+  --sidebar-border: rgba(255, 255, 255, 0.07);
+  --sidebar-ring: #5a97ee;
+
+  --glass-fill: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-hi: rgba(255, 255, 255, 0.1);
+
+  /* No dark, gradiente de texto usa Brilho → platina (legível no quase-preto) */
+  --gradient-motion: linear-gradient(135deg, #5a97ee 0%, #c9d3e0 100%);
+  --gradient-motion-h: linear-gradient(90deg, #5a97ee 0%, #c9d3e0 100%);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html,
+  body {
+    font-family: var(--font-sans);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-size: var(--text-body);
+    line-height: var(--text-body--line-height);
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3 {
+    letter-spacing: -0.03em;
+  }
+
+  :focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0 2px var(--color-background),
+      0 0 0 4px var(--color-ring);
+    border-radius: var(--radius-sm);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* ─── Utilities do DS adaptadas ao produto ──────────────────────────── */
+
+@utility t-kicker {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent-foreground);
+}
+
+@utility t-mono {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  font-variant-numeric: tabular-nums;
+}
+
+@utility t-ital {
+  font-family: var(--font-sans);
+  font-style: italic;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  background: var(--gradient-motion-h);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+@utility t-gradient {
+  background: var(--gradient-motion);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glow do brandbook antigo → elevação quiet luxury */
+@utility glow-primary {
+  box-shadow: var(--shadow-lg);
+}
+
+@utility glow-soft {
+  box-shadow: var(--shadow-md);
+}
+
+@utility glass-minimal {
+  background: var(--glass-fill);
+  border: 1px solid var(--glass-border);
+}
+
+@utility glass-standard {
+  background: var(--glass-fill);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(16px) saturate(140%);
+  box-shadow: var(--shadow-md), var(--inset-glass-top);
+}
+
+@utility glass-premium {
+  background: var(--glass-fill);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(22px) saturate(160%);
+  box-shadow: var(--shadow-lg), var(--inset-glass-top);
+}
+
+/* ─── Skin "Power" (opcional) — estética AMOLED + neon glow azul + Lexend.
+ * Ortogonal a light/dark: quando ativo, força o visual escuro do Power
+ * independentemente do tema. Ativado por data-skin="power"
+ * no <html> (toggle em Configurações → Aparência → Visual, persistido em
+ * localStorage "skin"). Clean v3.0 continua default.
+ * Fonte de verdade dos tokens: docs/DESIGN-SYSTEM-ACELERA-IA.md */
+[data-skin="power"] {
+  --font-sans: "Lexend", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --radius: 1.25rem; /* 20px base; cards/botões usam --radius-xl (24px) */
+
+  --background: #000000;
+  --surface: #0a0a0a;
+  --foreground: #ffffff;
+
+  --card: #141416;
+  --card-foreground: #ffffff;
+  --popover: #0d0d0d;
+  --popover-foreground: #ffffff;
+
+  --primary: #3d98ff;
+  --primary-foreground: #000000;
+
+  --secondary: #1a1a1a;
+  --secondary-foreground: #ffffff;
+
+  --muted: #1a1a1a;
+  --muted-foreground: #b3b3b3;
+
+  --accent: rgba(61, 152, 255, 0.12);
+  --accent-foreground: #3d98ff;
+
+  --success: #34d399;
+  --success-foreground: #05152b;
+  --warning: #f5b544;
+  --warning-foreground: #05152b;
+  --destructive: #ef4343;
+  --destructive-foreground: #05152b; /* branco sobre o vermelho neon dava 3.78:1; a tinta escura dá 4.84:1 */
+
+  /* Bordas em branco translúcido (como o .dark de produção) — azul a 12% sobre
+   * preto puro fica quase invisível (~1.1:1); branco dá affordance de limite. */
+  --border: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.22);
+  --input: rgba(255, 255, 255, 0.16);
+  --ring: #3d98ff;
+
+  --text-subtle: #8493a6;
+  --brand-hover: #5aa8ff;
+  --info: #3d98ff;
+  --info-foreground: #000000;
+
+  --chart-1: #3d98ff;
+  --chart-2: #00e0ff;
+  --chart-3: #00cc88;
+  --chart-4: #7ba6e6;
+  --chart-5: #0055ff;
+
+  --sidebar: rgba(0, 0, 0, 0.92);
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #3d98ff;
+  --sidebar-primary-foreground: #000000;
+  --sidebar-accent: rgba(61, 152, 255, 0.1);
+  --sidebar-accent-foreground: #3d98ff;
+  --sidebar-border: rgba(61, 152, 255, 0.12);
+  --sidebar-ring: #3d98ff;
+
+  /* Glass neon */
+  --glass-fill: rgba(20, 20, 20, 0.88);
+  --glass-border: rgba(61, 152, 255, 0.22);
+  --glass-hi: rgba(61, 152, 255, 0.14);
+
+  /* Sombras com glow azul (assinatura do Power) */
+  --shadow-sm: 0 0 0 1px rgba(61, 152, 255, 0.06), 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 0 15px rgba(61, 152, 255, 0.07), 0 4px 20px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 0 40px rgba(61, 152, 255, 0.4);
+  --shadow-soft: var(--shadow-sm);
+  --shadow-glass: var(--shadow-md);
+  --shadow-elevated: var(--shadow-lg);
+  --shadow-glow: 0 0 15px rgba(61, 152, 255, 0.6), 0 0 45px rgba(61, 152, 255, 0.2);
+  --shadow-glow-strong: 0 0 40px rgba(61, 152, 255, 0.4);
+
+  --grad-brand: linear-gradient(135deg, #3d98ff 0%, #0a4fa8 100%);
+  --gradient-motion: linear-gradient(135deg, #3d98ff 0%, #cfe3ff 100%);
+  --gradient-motion-h: linear-gradient(90deg, #3d98ff 0%, #cfe3ff 100%);
+}
+
+/* Glow neon nos CTAs primários (botões/links de ação), sem afetar avatares.
+ * :not(:focus-visible) — esta regra fica fora de @layer e venceria o anel de
+ * foco do Tailwind (em @layer utilities), apagando o indicador de teclado.
+ * Excluir o estado focado deixa o ring de foco aparecer (WCAG 2.4.7). */
+[data-skin="power"] button.bg-primary:not(:focus-visible),
+[data-skin="power"] a.bg-primary:not(:focus-visible) {
+  box-shadow: var(--shadow-glow);
+}
+
+/* ─── Skin "Profundo" (opcional) — o campo escuro do DS (§2.4 --grad-deep)
+ * aplicado à UI: quiet luxury, hairline platina, zero neon. É a alternativa
+ * escura alinhada ao Safira v3.2, ao contrário do Power (Elétrico v1, que o
+ * DS aposentou). Ortogonal a light/dark: quando ativo, força o próprio campo
+ * independentemente do tema. Ativado por data-skin="profundo" no <html>
+ * (toggle em Configurações → Aparência → Visual, persistido em localStorage
+ * "skin"). Fonte de verdade dos tokens: design.md §2.3 (semânticas do dark) e
+ * §2.4 (--grad-deep), no repo clientes/acelera-ia/docs/. */
+[data-skin="profundo"] {
+  /* Base mais funda que a do dark do produto (#0a0f1a): a diferença precisa
+   * ler como skin própria, não como o mesmo dark com outro nome. */
+  --background: #05070d;
+  --surface: rgba(20, 40, 72, 0.55);
+  --surface-2: rgba(27, 46, 80, 0.68);
+  --foreground: #eaf1fb;
+
+  --card: rgba(20, 40, 72, 0.5);
+  --card-foreground: #eaf1fb;
+  --popover: #10203a;
+  --popover-foreground: #eaf1fb;
+
+  /* Safira mantém o par validado com branco (5,6:1); o Brilho fica nos
+   * acentos e no anel de foco, como no dark do produto (DS §2.5). */
+  --primary: #1e63c8;
+  --primary-foreground: #ffffff;
+
+  --secondary: rgba(27, 46, 80, 0.6);
+  --secondary-foreground: #eaf1fb;
+
+  --muted: rgba(27, 46, 80, 0.45);
+  --muted-foreground: #98aac4;
+
+  --accent: rgba(90, 151, 238, 0.12);
+  --accent-foreground: #5a97ee;
+  --brand-soft: rgba(90, 151, 238, 0.12);
+
+  --success: #34d399;
+  --success-foreground: #05152b;
+  --warning: #f5b544;
+  --warning-foreground: #05152b;
+  --destructive: #f47272;
+  --destructive-foreground: #05152b;
+
+  /* Hairline azul = --blue-200 do DS (rgb(169,198,239) = #A9C6EF,
+   * docs/design.md:45), não --neutral-300/platina (#C9D3E0,
+   * docs/design.md:62) como o comentário antigo dizia.
+   * --border é o token que os componentes reais consomem (Tailwind `border`
+   * bare resolve --color-border → --border; ver styles.css:90/329 e
+   * src/components/ui/card.tsx:9) — por isso é ELE, não --border-strong
+   * (hoje sem nenhum uso em componente), que precisa fechar ≥3:1 (WCAG
+   * 1.4.11) contra a superfície mais clara composta na região clara do
+   * --grad-deep (~#1b2e50, onde --card/--surface quase somem no fundo).
+   * --border em 0.5 fecha 3.11:1 (pior caso, alpha 8-bit 0x80 já
+   * arredondado). --border-strong sobe para 0.65 (4.20:1) só para manter
+   * a hierarquia hairline/divisor forte caso passe a ser consumido. */
+  --border: rgba(169, 198, 239, 0.5);
+  --border-strong: rgba(169, 198, 239, 0.65);
+  --input: rgba(201, 211, 224, 0.2);
+  --ring: #5a97ee;
+
+  --text-subtle: #8497b0;
+  --brand-hover: #2e78e6;
+  --info: #5a97ee;
+  --info-foreground: #05152b;
+
+  --chart-1: #5a97ee;
+  --chart-2: #c9d3e0;
+  --chart-3: #34d399;
+  --chart-4: #f5b544;
+  --chart-5: #f47272;
+
+  --sidebar: rgba(6, 27, 54, 0.5);
+  --sidebar-foreground: #eaf1fb;
+  --sidebar-primary: #1e63c8;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: rgba(90, 151, 238, 0.1);
+  --sidebar-accent-foreground: #5a97ee;
+  --sidebar-border: rgba(201, 211, 224, 0.12);
+  --sidebar-ring: #5a97ee;
+
+  --glass-fill: rgba(234, 241, 251, 0.04);
+  --glass-border: rgba(201, 211, 224, 0.14);
+  --glass-hi: rgba(255, 255, 255, 0.06);
+
+  --gradient-motion: linear-gradient(135deg, #5a97ee 0%, #c9d3e0 100%);
+  --gradient-motion-h: linear-gradient(90deg, #5a97ee 0%, #c9d3e0 100%);
+}
+
+/* O que dá o nome ao skin: o campo radial do DS por trás de toda a página.
+ * `fixed` evita a emenda do gradiente ao rolar listas longas.
+ *
+ * Precisa pegar o shell do app (`data-app-shell` em _app.tsx), não só o body:
+ * aquele container tem `bg-background` e ocupa a viewport inteira, então
+ * pintar só o body deixa o gradiente escondido atrás dele — foi assim que a
+ * primeira versão do Profundo saiu indistinguível do dark. O body continua
+ * na regra por causa das telas fora do shell (login, erro). */
+[data-skin="profundo"] body,
+[data-skin="profundo"] [data-app-shell] {
+  background-image: var(--grad-deep);
+  background-attachment: fixed;
+  background-color: transparent;
+}

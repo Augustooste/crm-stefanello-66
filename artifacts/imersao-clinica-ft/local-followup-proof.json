@@ -1,0 +1,151 @@
+{
+  "status": "COMPROVADO_LOCAL",
+  "runId": "a06c5b38-9f6c-4bbb-958a-054e5453441f",
+  "apiUrl": "http://127.0.0.1:54321",
+  "etapas": [
+    {
+      "caso": "horário comercial fechado impede envio",
+      "next_send_at_vencido": "2026-10-15T17:02:39.436Z",
+      "batch": {
+        "httpStatus": 200,
+        "processed": 1,
+        "sent": 0,
+        "completed": 0,
+        "skippedSuppressed": 0,
+        "skippedCancelled": 0,
+        "deferredFrequency": 0,
+        "deferredHandoff": 0,
+        "deferredWindow": 1,
+        "exhausted": 0,
+        "retried": 0,
+        "errors": []
+      },
+      "inscrição": {
+        "id": "4fc8af94-45bd-4e32-9047-7f9ccb5c3cc2",
+        "status": "active",
+        "current_step": 0,
+        "next_send_at": "2026-10-16T18:02:39.589+00:00",
+        "completed_at": null,
+        "attempts": 0
+      }
+    },
+    {
+      "caso": "envio real no simulador e avanço de 48h",
+      "next_send_at_vencido": "2026-10-15T17:02:39.622Z",
+      "batch": {
+        "httpStatus": 200,
+        "processed": 1,
+        "sent": 1,
+        "completed": 0,
+        "skippedSuppressed": 0,
+        "skippedCancelled": 0,
+        "deferredFrequency": 0,
+        "deferredHandoff": 0,
+        "deferredWindow": 0,
+        "exhausted": 0,
+        "retried": 0,
+        "errors": []
+      },
+      "inscrição": {
+        "id": "4fc8af94-45bd-4e32-9047-7f9ccb5c3cc2",
+        "status": "active",
+        "current_step": 1,
+        "next_send_at": "2026-10-17T18:02:39.668+00:00",
+        "completed_at": null,
+        "attempts": 0
+      },
+      "mensagens": [
+        {
+          "id": "e416657a-ff1c-40b2-8e49-967bc3940f03",
+          "conversation_id": "bf4563a0-b47e-4d04-bcac-e86f545a1dcd",
+          "sender": "automation",
+          "status": "sent",
+          "external_id": "simulator:3b5c6b54-ed71-41ae-9c11-2ab04dd597fa",
+          "content": "[Prova local] Olá Pessoa fictícia da prova F8, mensagem do primeiro passo.",
+          "created_at": "2026-10-15T18:02:39.660357+00:00"
+        }
+      ],
+      "histórico": [
+        {
+          "id": "fbebe931-8cc7-4258-b8c6-9d2b0f0e401d",
+          "enrollment_id": "4fc8af94-45bd-4e32-9047-7f9ccb5c3cc2",
+          "step_number": 1,
+          "outcome": "deferred_window",
+          "executed_at": "2026-10-15T18:02:39.595411+00:00",
+          "detail": null
+        },
+        {
+          "id": "df9ea2e9-de44-4704-86f4-2823d7be6635",
+          "enrollment_id": "4fc8af94-45bd-4e32-9047-7f9ccb5c3cc2",
+          "step_number": 1,
+          "outcome": "sent",
+          "executed_at": "2026-10-15T18:02:39.672171+00:00",
+          "detail": null
+        }
+      ]
+    },
+    {
+      "caso": "pausa impede o segundo envio mesmo vencido",
+      "batch": {
+        "httpStatus": 200,
+        "processed": 0,
+        "sent": 0,
+        "completed": 0,
+        "skippedSuppressed": 0,
+        "skippedCancelled": 0,
+        "deferredFrequency": 0,
+        "deferredHandoff": 0,
+        "deferredWindow": 0,
+        "exhausted": 0,
+        "retried": 0,
+        "errors": []
+      },
+      "inscrição": {
+        "id": "4fc8af94-45bd-4e32-9047-7f9ccb5c3cc2",
+        "status": "paused",
+        "current_step": 1,
+        "next_send_at": "2026-10-15T17:02:39.696+00:00",
+        "completed_at": null,
+        "attempts": 0
+      },
+      "total_mensagens": 1
+    },
+    {
+      "caso": "cancelamento impede o segundo envio",
+      "batch": {
+        "httpStatus": 200,
+        "processed": 0,
+        "sent": 0,
+        "completed": 0,
+        "skippedSuppressed": 0,
+        "skippedCancelled": 0,
+        "deferredFrequency": 0,
+        "deferredHandoff": 0,
+        "deferredWindow": 0,
+        "exhausted": 0,
+        "retried": 0,
+        "errors": []
+      },
+      "inscrição": {
+        "id": "4fc8af94-45bd-4e32-9047-7f9ccb5c3cc2",
+        "status": "cancelled",
+        "current_step": 1,
+        "next_send_at": null,
+        "completed_at": "2026-10-15T18:02:39.731111+00:00",
+        "attempts": 0
+      },
+      "total_mensagens": 1
+    }
+  ],
+  "tenantId": "9bcffa3e-1db0-4f89-95d7-16b1712db1a9",
+  "channel": {
+    "id": "38908817-9a4a-42fb-a928-503566810b21",
+    "type": "simulator",
+    "provider_slug": "simulator",
+    "status": "connected"
+  },
+  "sequenceId": "6c343b4b-a3da-4f8c-ae85-453146135c32",
+  "enrollmentId": "4fc8af94-45bd-4e32-9047-7f9ccb5c3cc2",
+  "contactId": "19260c62-7e1a-4b62-b061-8acf5a2275fd",
+  "observedAt": "2026-10-15T18:02:39.753Z"
+}

@@ -1,0 +1,462 @@
+[
+  {
+    "file": "complemento-04-whatsapp-chat.png",
+    "profile": "prod",
+    "baseURL": "https://aceleraflow-remix.lovable.app",
+    "capturedAt": "2026-10-16T16:57:12.998Z",
+    "route": "/inbox",
+    "font": "Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "controls": [
+      {
+        "text": "Abrir ou fechar menu lateral",
+        "role": null,
+        "aria": "Alternar menu lateral",
+        "x": 272,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "Últimos 90 dias",
+        "role": "combobox",
+        "aria": "Selecionar período do filtro global",
+        "x": 1386,
+        "y": 9.5,
+        "w": 170,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Abrir assistente IA",
+        "x": 1564,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Mudar para tema claro",
+        "x": 1616,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "27",
+        "role": null,
+        "aria": "Notificações (27 pendentes)",
+        "x": 1668,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "AFAdministrador Clínica FT",
+        "role": null,
+        "aria": "Menu de Administrador Clínica FT",
+        "x": 1720,
+        "y": 7.5,
+        "w": 184,
+        "h": 40,
+        "font": "14px"
+      },
+      {
+        "text": "Conversas",
+        "role": null,
+        "aria": null,
+        "x": 400,
+        "y": 80,
+        "w": 294,
+        "h": 32,
+        "font": "28px"
+      },
+      {
+        "text": "Nova simulação",
+        "role": null,
+        "aria": null,
+        "x": 1184,
+        "y": 91,
+        "w": 141,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Exportar CSV",
+        "role": null,
+        "aria": null,
+        "x": 1333,
+        "y": 91,
+        "w": 151,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Visão geral",
+        "role": "tab",
+        "aria": null,
+        "x": 1500,
+        "y": 106,
+        "w": 120,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Lista",
+        "role": "tab",
+        "aria": null,
+        "x": 1620,
+        "y": 106,
+        "w": 77,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Foco",
+        "role": "tab",
+        "aria": null,
+        "x": 1697,
+        "y": 106,
+        "w": 75,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Todos os canais",
+        "role": "combobox",
+        "aria": "Filtrar por canal",
+        "x": 413,
+        "y": 211,
+        "w": 163.5,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Todas",
+        "role": "combobox",
+        "aria": "Filtrar por situação da IA",
+        "x": 584.5,
+        "y": 211,
+        "w": 163.5,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "MLMariana LopesSIMULAÇÃO13:50Você: Oi, Mariana! Aqui é a recepção da Clínica FT. Temos quinta às 18h30 para a avaliação. Posso confirmar?IA pausada",
+        "role": null,
+        "aria": null,
+        "x": 401,
+        "y": 256,
+        "w": 359,
+        "h": 97,
+        "font": "14px"
+      },
+      {
+        "text": "MLMariana Lopes13:14Perfeito, fico no aguardo pelo WhatsApp.IA pausada",
+        "role": null,
+        "aria": null,
+        "x": 401,
+        "y": 353,
+        "w": 359,
+        "h": 97,
+        "font": "14px"
+      },
+      {
+        "text": "Mariana Lopes",
+        "role": null,
+        "aria": null,
+        "x": 829,
+        "y": 171,
+        "w": 106.765625,
+        "h": 24,
+        "font": "16px"
+      },
+      {
+        "text": "Retorno",
+        "role": null,
+        "aria": null,
+        "x": 1326,
+        "y": 171,
+        "w": 101,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Reativar IA",
+        "role": null,
+        "aria": null,
+        "x": 1435,
+        "y": 171,
+        "w": 89,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Reabrir",
+        "role": null,
+        "aria": null,
+        "x": 1532,
+        "y": 171,
+        "w": 68,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Excluir conversa",
+        "role": null,
+        "aria": "Excluir conversa",
+        "x": 1608,
+        "y": 171,
+        "w": 151,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Enviar",
+        "role": null,
+        "aria": "Enviar mensagem",
+        "x": 1658,
+        "y": 935,
+        "w": 105,
+        "h": 36,
+        "font": "14px"
+      }
+    ]
+  },
+  {
+    "file": "complemento-conversa-blocos-ia.png",
+    "profile": "prod",
+    "baseURL": "https://aceleraflow-remix.lovable.app",
+    "capturedAt": "2026-10-16T16:57:13.095Z",
+    "route": "/inbox",
+    "font": "Inter, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+    "controls": [
+      {
+        "text": "Abrir ou fechar menu lateral",
+        "role": null,
+        "aria": "Alternar menu lateral",
+        "x": 272,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "Últimos 90 dias",
+        "role": "combobox",
+        "aria": "Selecionar período do filtro global",
+        "x": 1386,
+        "y": 9.5,
+        "w": 170,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Abrir assistente IA",
+        "x": 1564,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "",
+        "role": null,
+        "aria": "Mudar para tema claro",
+        "x": 1616,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "27",
+        "role": null,
+        "aria": "Notificações (27 pendentes)",
+        "x": 1668,
+        "y": 5.5,
+        "w": 44,
+        "h": 44,
+        "font": "14px"
+      },
+      {
+        "text": "AFAdministrador Clínica FT",
+        "role": null,
+        "aria": "Menu de Administrador Clínica FT",
+        "x": 1720,
+        "y": 7.5,
+        "w": 184,
+        "h": 40,
+        "font": "14px"
+      },
+      {
+        "text": "Conversas",
+        "role": null,
+        "aria": null,
+        "x": 400,
+        "y": 80,
+        "w": 294,
+        "h": 32,
+        "font": "28px"
+      },
+      {
+        "text": "Nova simulação",
+        "role": null,
+        "aria": null,
+        "x": 1184,
+        "y": 91,
+        "w": 141,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Exportar CSV",
+        "role": null,
+        "aria": null,
+        "x": 1333,
+        "y": 91,
+        "w": 151,
+        "h": 36,
+        "font": "14px"
+      },
+      {
+        "text": "Visão geral",
+        "role": "tab",
+        "aria": null,
+        "x": 1500,
+        "y": 106,
+        "w": 120,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Lista",
+        "role": "tab",
+        "aria": null,
+        "x": 1620,
+        "y": 106,
+        "w": 77,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Foco",
+        "role": "tab",
+        "aria": null,
+        "x": 1697,
+        "y": 106,
+        "w": 75,
+        "h": 28,
+        "font": "14px"
+      },
+      {
+        "text": "Todos os canais",
+        "role": "combobox",
+        "aria": "Filtrar por canal",
+        "x": 413,
+        "y": 211,
+        "w": 163.5,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Todas",
+        "role": "combobox",
+        "aria": "Filtrar por situação da IA",
+        "x": 584.5,
+        "y": 211,
+        "w": 163.5,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "MLMariana LopesSIMULAÇÃO13:50Você: Oi, Mariana! Aqui é a recepção da Clínica FT. Temos quinta às 18h30 para a avaliação. Posso confirmar?IA pausada",
+        "role": null,
+        "aria": null,
+        "x": 401,
+        "y": 256,
+        "w": 359,
+        "h": 97,
+        "font": "14px"
+      },
+      {
+        "text": "MLMariana Lopes13:14Perfeito, fico no aguardo pelo WhatsApp.IA pausada",
+        "role": null,
+        "aria": null,
+        "x": 401,
+        "y": 353,
+        "w": 359,
+        "h": 97,
+        "font": "14px"
+      },
+      {
+        "text": "Mariana Lopes",
+        "role": null,
+        "aria": null,
+        "x": 829,
+        "y": 171,
+        "w": 106.765625,
+        "h": 24,
+        "font": "16px"
+      },
+      {
+        "text": "Retorno",
+        "role": null,
+        "aria": null,
+        "x": 1326,
+        "y": 171,
+        "w": 101,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Reativar IA",
+        "role": null,
+        "aria": null,
+        "x": 1435,
+        "y": 171,
+        "w": 89,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Reabrir",
+        "role": null,
+        "aria": null,
+        "x": 1532,
+        "y": 171,
+        "w": 68,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Excluir conversa",
+        "role": null,
+        "aria": "Excluir conversa",
+        "x": 1608,
+        "y": 171,
+        "w": 151,
+        "h": 32,
+        "font": "12px"
+      },
+      {
+        "text": "Enviar",
+        "role": null,
+        "aria": "Enviar mensagem",
+        "x": 1658,
+        "y": 935,
+        "w": 105,
+        "h": 36,
+        "font": "14px"
+      }
+    ]
+  }
+]

@@ -1,0 +1,132 @@
+name: pgTAP
+
+# Separado do ci.yml em 2026-07-27 por causa do budget de Actions: este é o job
+# mais caro do repo (sobe Postgres via `supabase start`, com Docker). Como
+# workflow próprio ele aceita `paths` — filtro que o GitHub não oferece a nível
+# de job. Rodava em TODO push e TODO PR antes disso, inclusive nos que só
+# tocavam frontend.
+#
+# O filtro é `supabase/**`, e isso inclui `supabase/functions/**` de propósito,
+# não por descuido — apesar de edge function não ser schema nem suite, e de ser
+# o diretório de maior churn do repo. Motivo: `supabase start` (abaixo) é o
+# ÚNICO detector da classe de bug em que o bundler do Supabase CLI resolve um
+# import escrito dentro de comentário. `deno check`, `deno fmt` e eslint passam
+# verdes com esse bug, que por isso ficou 18 dias no ar (2026-07-09 a 07-27) e
+# derrubava o `supabase start` inteiro. Estreitar o filtro para
+# `supabase/migrations/**` + `supabase/tests/database/**` economizaria Actions e
+# removeria o detector exatamente do diretório onde o bug mora. O custo é
+# consciente.
+#
+# O próprio arquivo entra no filtro para que mudança neste workflow seja
+# exercitada por ela mesma.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "supabase/**"
+      - ".github/workflows/pgtap.yml"
+  pull_request:
+    paths:
+      - "supabase/**"
+      - ".github/workflows/pgtap.yml"
+
+concurrency:
+  group: pgtap-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+# Só leitura: o job baixa a CLI e sobe Postgres, nunca escreve no repo. Sem este
+# bloco o GITHUB_TOKEN herda o default da organização, que pode ser read/write.
+permissions:
+  contents: read
+
+jobs:
+  # Gate barato (Node puro, sem Docker) que roda ANTES do pgTAP: qualquer
+  # mudança em supabase/config.toml ou nas migrations passa por aqui primeiro.
+  # Motivo: o remix chegou com o config.toml truncado, sem os blocos
+  # `verify_jwt = false` das functions de webhook/cron — falha silenciosa que
+  # nenhum teste de banco pega e que só aparece em produção como 401 do
+  # provedor. Falhar em ~10s aqui evita queimar o job caro logo abaixo.
+  seguranca:
+    name: segurança (config.toml)
+    runs-on: ${{ vars.CI_RUNNER || 'ubuntu-latest' }}
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Contrato de verify_jwt no config.toml
+        run: node scripts/check-config-toml.mjs
+
+  # Gate estrito das suites em supabase/tests/database. Baseline local da
+  # promoção em 2026-07-28: Files=41, Tests=800, zero falhas.
+  # As suites de RBAC/RLS (paridade_rls_checklist, rbac_smoke_admin_agent,
+  # grants_baseline_anon) entram aqui por estarem no diretório — é este job que
+  # revalida políticas e privilégios a cada alteração em supabase/**.
+  pgtap:
+    name: pgTAP (strict)
+    needs: seguranca
+    # Mesma variável do job `test` (#174): `gh variable set CI_RUNNER --body
+    # local-32c` liga a máquina local, apagar a variável devolve ao hospedado.
+    runs-on: ${{ vars.CI_RUNNER || 'ubuntu-latest' }}
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # A máquina local roda um stack de desenvolvimento DESTE MESMO projeto
+      # (containers `supabase_*_rhxtaugweogswzndakro`, portas 54321-54327).
+      # `supabase start` deriva nome de container e portas do config.toml, então
+      # sem isolar ele reaproveitaria o stack de dev: as suites rodariam contra o
+      # banco de trabalho (escrevendo nele) e SEM aplicar as migrations do PR —
+      # verde ou vermelho sem valor nenhum, além do estrago no banco local.
+      # Namespace próprio + portas deslocadas resolvem os dois.
+      #
+      # No runner hospedado nada disso existe e o step é pulado.
+      - name: Isola o stack do CI do stack de dev (runner local)
+        if: runner.environment == 'self-hosted'
+        run: |
+          sed -i 's/^project_id = .*/project_id = "aceleraflow-ci"/' supabase/config.toml
+          cat >> supabase/config.toml <<'TOML'
+
+          [api]
+          port = 55321
+
+          [db]
+          port = 55322
+
+          [studio]
+          port = 55323
+
+          [inbucket]
+          port = 55324
+
+          [analytics]
+          port = 55327
+          TOML
+
+      # Versão PINADA, não `latest`: este job é o detector do bug de bundler, e
+      # detector que muda de comportamento entre runs sem ninguém saber não é
+      # detector. Bump é decisão explícita, com o placar abaixo revalidado.
+      - uses: supabase/setup-cli@v1
+        with:
+          version: 2.110.0
+
+      # Sobe Postgres local e APLICA as migrations. Se o schema não construir,
+      # ESTE step falha (job vermelho por schema quebrado).
+      - name: Sobe DB local + aplica migrations
+        run: supabase start
+
+      - name: pgTAP suites
+        run: supabase test db --local supabase/tests/database
+
+      # Runner hospedado é descartado ao fim do job; a máquina local não. Sem
+      # este stop os ~10 containers do stack de CI ficam de pé entre runs,
+      # segurando porta e RAM. Roda mesmo com o job vermelho — é justamente o
+      # caso em que sobra lixo. Aponta para o namespace `aceleraflow-ci` do
+      # step de isolamento, nunca para o stack de dev.
+      - name: Derruba o stack do CI (runner local)
+        if: always() && runner.environment == 'self-hosted'
+        run: supabase stop --no-backup

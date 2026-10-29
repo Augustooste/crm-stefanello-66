@@ -1,0 +1,284 @@
+name: CI
+
+# `paths-ignore` porque commit só de documentação não pode consumir minuto de
+# Actions (o budget da conta estourou em 2026-07-27 e travou todo o CI). Não é
+# `[skip ci]` na mensagem de commit de propósito: `main` não tem branch
+# protection e o Lovable commita direto nela — uma convenção que depende de
+# alguém lembrar de escrever a tag acaba pulando um commit de código.
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "docs/**"
+      - "**.md"
+  pull_request:
+    paths-ignore:
+      - "docs/**"
+      - "**.md"
+
+# Cancela runs anteriores da mesma branch/PR quando um push novo chega.
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # Lint e format check em job PRÓPRIO, não como primeiro step do `test`.
+  # Enquanto eram steps do `test`, um erro de formatação abortava o job inteiro
+  # e typecheck, suíte completa e build nunca rodavam — o PR aparecia vermelho
+  # "por lint" sem que nenhuma validação real tivesse acontecido. Aconteceu em
+  # 2026-07-24: um commit do Lovable direto na main colapsou 4 rotas MCP em
+  # linha única e cegou o CI de todo mundo até alguém reformatar.
+  # Nota: `main` não tem branch protection neste repo (o Lovable commita direto
+  # nela), então nenhum check é required de verdade — nem antes deste split. O
+  # gate é o processo de review, não o GitHub. Se um dia houver required checks,
+  # `lint` precisa entrar na lista junto com `test`.
+  lint:
+    name: lint
+    # Mesma variável do job `test` (#174): `gh variable set CI_RUNNER --body
+    # local-32c` liga a máquina local, apagar a variável devolve ao hospedado.
+    runs-on: ${{ vars.CI_RUNNER || 'ubuntu-latest' }}
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # Histórico completo: o check de "erro do Supabase descartado" compara
+          # com o ancestral comum da base (`origin/main...HEAD`). No checkout raso
+          # padrão (depth 1) esse ancestral não existe no grafo local e o git
+          # responde `fatal: no merge base`.
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.17.0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: pnpm
+
+      # Node puro, sem install — roda antes pra falhar rápido. O bot da Lovable
+      # commita direto em `package.json` e `bun.lock` (o lockfile do build dela);
+      # se ele apagar o espelho do pin em `package.json` ou bumpar `bun.lock` sem
+      # regravar o pin, a versão vulnerável continua no deploy com o pin só no
+      # papel. Dependabot não lê `bun.lock`, então esse drift é invisível sem
+      # este check. Histórico: PR #210.
+      - name: Check lockfile pins
+        run: node scripts/check-lockfile-pins.mjs
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Format check
+        run: pnpm format:check
+
+      # Ratchet: reprova escrita do Supabase com o retorno descartado APENAS em
+      # linha que a PR escreveu. O codebase herdou ~50 ocorrências (rastreadas em
+      # docs/code-review/10-code-review-e2e-2026-08-10.md); reprovar todas deixaria
+      # o CI vermelho e a regra seria desligada. Aqui o passivo fica e o
+      # sangramento para. Alcança supabase/functions/**, que o `pnpm lint` ignora.
+      - name: Erro do Supabase descartado (linhas novas)
+        run: |
+          git fetch --no-tags origin "${{ github.base_ref || 'main' }}"
+          node scripts/lint-erro-descartado.mjs "origin/${{ github.base_ref || 'main' }}"
+
+  test:
+    name: test
+    # Runner por variável de repositório, não hardcoded: `gh variable set
+    # CI_RUNNER --body local-32c` liga a máquina local; apagar a variável (ou
+    # trocar por ubuntu-latest) devolve tudo ao runner hospedado. Rollback de
+    # um comando, sem PR, para o dia em que a máquina estiver desligada.
+    #
+    # Por que sair do ubuntu-latest: o step da suíte levava 525s dos 589s do
+    # job (medido no run do PR #172). O runner hospedado tem 2 vCPUs e o Vitest
+    # paraleliza por core — a mesma suíte roda em 42s numa máquina de 32.
+    # Sharding em matriz resolveria o relógio, mas multiplicaria os minutos
+    # cobrados num repo privado; o runner local custa zero.
+    runs-on: ${{ vars.CI_RUNNER || 'ubuntu-latest' }}
+    timeout-minutes: 30
+    env:
+      SUITE_CONCURRENCY: "2"
+      SUITE_MAX_RETRIES: "2"
+      # Teto de workers do Vitest. Sem isto o pool abre um worker por core e,
+      # numa máquina de trabalho (32 cores, ~31GB já em uso), o jsdom de cada
+      # worker come RAM até thrashing. O sintoma não seria "CI lento", seria
+      # teste instável — que é o modo de falha mais caro de diagnosticar.
+      # Ignorado no runner hospedado, que tem menos cores que este teto.
+      VITEST_MAX_THREADS: "12"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          # Sem campo "packageManager" no package.json para ancorar — pin explícito
+          # na versão verificada localmente (compatível com lockfileVersion '9.0').
+          # Era 11.12.0, versão que o próprio pnpm despublicou como quebrada
+          # ("This release is broken. Please upgrade to v11.13.1 or newer") e que
+          # divergia do 11.17.0 rodado localmente — divergência que escondeu o
+          # `overrides` órfão no package.json até 2026-07-27.
+          version: 11.17.0
+
+      - uses: actions/setup-node@v4
+        with:
+          # @tanstack/react-start declara engines.node >=22.12.0 — requisito real
+          # do stack, não escolha de estilo (Node 20 quebra o build).
+          node-version: "22"
+          cache: pnpm
+
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: "2.9.3"
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Full test suite (Vitest + Deno)
+        run: pnpm test:full
+
+      - name: Production build
+        run: pnpm build
+
+      - name: Upload coverage
+        if: always()
+        # Não-fatal: quando a cota de storage de artifacts da conta estoura,
+        # o upload-artifact falha (CreateArtifact) e derrubaria o job inteiro.
+        # Coverage é diagnóstico, não gate de merge — a suíte de testes acima
+        # é o que reprova o PR.
+        continue-on-error: true
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage
+          path: coverage/
+          retention-days: 7
+          if-no-files-found: ignore
+
+  # A suíte Playwright existia desde sempre e NENHUM workflow a chamava — cinco
+  # specs escritos, revisados e mergeados que nunca rodaram uma vez em CI.
+  #
+  # Este job roda a parte que não depende de conta de teste. `e2e/auth.spec.ts`
+  # tem dois testes sem credencial ("rota protegida redireciona anônimo" e
+  # "credenciais inválidas mostram mensagem em PT-BR"); os dois exercitam o
+  # guard de rota e o tratamento de erro de login, e ficam vermelhos se alguém
+  # quebrar qualquer um dos dois. O app sobe sem nenhum secret porque
+  # `vite.config.ts` traz fallback de VITE_SUPABASE_URL/PUBLISHABLE_KEY.
+  #
+  # O terceiro teste do arquivo (login válido) auto-pula: `.env.e2e` não é
+  # versionado e E2E_USER_* não existe como secret. Idem os specs de
+  # onboarding, workspace-switch, pipeline-automation e app-routes-smoke, que
+  # seguem SEM cobertura de CI — ver o step de guard abaixo e o e2e/README.md.
+  e2e:
+    name: e2e (specs sem credencial)
+    runs-on: ${{ vars.CI_RUNNER || 'ubuntu-latest' }}
+    # Informativo, não obrigatório (decisão do dono do repo em 28/09/2026): o
+    # job roda e reporta, mas nunca reprova o workflow nem bloqueia merge.
+    continue-on-error: true
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.17.0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # Sem `--with-deps` de propósito: no runner auto-hospedado o apt-get
+      # pediria sudo e derrubaria o job. Mesmo comando do script
+      # `test:e2e:install` que o repo já usava localmente.
+      - name: Install Chromium
+        run: pnpm exec playwright install chromium
+
+      # PRONTO MAS NÃO LIGADO: `onboarding.spec.ts` ainda não entra na lista de
+      # specs abaixo. Rodando local com a conta de QA ele trava 60s em
+      # `getByRole("button", { name: "Entendi" })` do `ConsentModal` — o modal de
+      # consentimento aparece para conta nova e o helper `signIn` não o dispensa.
+      # É lacuna do spec, não do reset: este passo já funciona (HTTP 204 medido).
+      # Ligar = corrigir o spec e acrescentar o arquivo na linha do `playwright
+      # test`, com o piso do guard subindo para 7.
+      #
+      # `onboarding.spec.ts` COMPLETA o wizard, então consome o próprio estado —
+      # sem reset ele roda uma vez e se auto-pula para sempre (o Lovable dá um
+      # banco único por projeto, não há staging). O reset é uma função dedicada
+      # (`public.e2e_reset_onboarding`, migration 20260810200000) que só aceita
+      # e-mail `@aceleraflow.test` e só mexe no tenant do próprio chamador: o CI
+      # não precisa da service_role key para isso.
+      # PASSO DE RESET REMOVIDO (achado `14 · H2`). Ele autenticava e chamava
+      # `e2e_reset_onboarding()` — escrita no banco de PRODUÇÃO — a cada push,
+      # enquanto `onboarding.spec.ts` nem entra na linha do `playwright test`.
+      # Mutação de produção sem leitor. A migration 20260810200000 e os secrets
+      # `E2E_NEW_USER_*` continuam prontos: o passo volta no mesmo commit que
+      # ligar a spec (que hoje trava no `ConsentModal`), nunca antes.
+      - name: E2E (auth + workspace-switch + rbac + integrações)
+        env:
+          # Sobe o `pnpm dev` pelo webServer do playwright.config.ts — em CI não
+          # existe app rodando, e sem esta variável o webServer fica `undefined`
+          # e todo teste falha em connection refused.
+          E2E_START_SERVER: "1"
+          PLAYWRIGHT_JSON_OUTPUT_NAME: e2e-results.json
+          # Contas de QA dedicadas (tenants `e2e.admin` e `e2e.membro`), criadas
+          # em 10/08. `e2e.membro` é `agent` no workspace do admin e `admin` no
+          # próprio — é essa assimetria que o teste de permissão por aba exerce.
+          E2E_USER_EMAIL: ${{ secrets.E2E_USER_EMAIL }}
+          E2E_USER_PASSWORD: ${{ secrets.E2E_USER_PASSWORD }}
+          E2E_USER2_EMAIL: ${{ secrets.E2E_USER2_EMAIL }}
+          E2E_USER2_PASSWORD: ${{ secrets.E2E_USER2_PASSWORD }}
+          E2E_NEW_USER_EMAIL: ${{ secrets.E2E_NEW_USER_EMAIL }}
+          E2E_NEW_USER_PASSWORD: ${{ secrets.E2E_NEW_USER_PASSWORD }}
+        run: pnpm exec playwright test e2e/auth.spec.ts e2e/workspace-switch.spec.ts e2e/rbac-smoke.spec.ts e2e/integracoes-smoke.spec.ts --reporter=list,json
+
+      # Um spec que auto-pula por falta de credencial sai com EXIT 0. Sem este
+      # check, renomear um teste, apagar um teste ou introduzir um `test.skip`
+      # deixaria o job verde executando ZERO teste — que é exatamente o modo de
+      # falha que fez a suíte inteira passar meses sem rodar. O piso é 5, que é
+      # o número MEDIDO localmente com as contas de QA configuradas: 4 de
+      # auth.spec.ts + o de permissão por aba do workspace-switch. O sexto
+      # (troca de workspace pela UI) auto-pula quando o seletor "trocar empresa"
+      # não aparece, e `skipped` segue permitido — o piso trava é o `expected`.
+      # Se as secrets sumirem, o job cai para 2 executados e reprova aqui.
+      - name: Guard anti-skip silencioso
+        run: |
+          node --input-type=commonjs -e '
+            const s = JSON.parse(require("fs").readFileSync("e2e-results.json", "utf8")).stats;
+            console.log("stats:", JSON.stringify(s));
+            // `expected` NÃO conta o teste que passou só na retentativa — esse cai
+            // em `flaky`. Medido no runner: expected=4, flaky=1, unexpected=0, ou
+            // seja, os 5 rodaram e passaram, e mesmo assim `expected < 5` reprovava.
+            // O que importa aqui é "quantos exercitaram o app", e falha real é
+            // `unexpected`, que tem o próprio check.
+            const executados = s.expected + s.flaky;
+            if (s.unexpected > 0) {
+              console.error(`::error::e2e teve ${s.unexpected} teste(s) reprovado(s).`);
+              process.exit(1);
+            }
+            // Piso subiu de 6 para 12 ao entrarem rbac-smoke (7 testes: 3 de
+            // admin + 4 de atendente) e integracoes-smoke (4, sendo 1 que
+            // auto-pula quando o tenant não tem integração conectada). Piso
+            // conservador de propósito — o gate real de defeito é `unexpected`
+            // acima; este aqui só impede a suíte de ficar verde sem rodar.
+            // Sem as contas de QA (secrets E2E_USER_*) só 2 testes rodam: vira
+            // aviso, não reprovação -- e2e é informativo neste repo.
+            if (executados < 12) {
+              console.log(`::warning::e2e executou ${executados} teste(s); com as contas de QA seriam 12. Secrets E2E_USER_* ausentes?`);
+            }
+          '
+
+      - name: Upload relatório e2e
+        if: always()
+        continue-on-error: true
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 7
+          if-no-files-found: ignore

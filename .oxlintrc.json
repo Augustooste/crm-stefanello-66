@@ -1,0 +1,61 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "react"],
+  "categories": {
+    "correctness": "error"
+  },
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "ignorePatterns": [
+    "dist",
+    ".output",
+    ".vinxi",
+    "playwright-report",
+    "test-results",
+    ".playwright-mcp",
+    ".claude/**",
+    "supabase/functions/**",
+    "scripts/audit-2026-07-27-*",
+    "src/routeTree.gen.ts",
+    "src/integrations/supabase/types.ts",
+    "src/integrations/supabase/client.ts",
+    "src/integrations/supabase/client.server.ts",
+    "src/integrations/supabase/auth-middleware.ts",
+    "src/integrations/supabase/auth-attacher.ts",
+    "src/integrations/supabase/previewAuthStorage.ts",
+    "src/integrations/agent-platform/schema.gen.ts",
+    "src/integrations/agent-platform/enums.gen.ts",
+    "src/routes/mcp.ts",
+    "src/routes/[.mcp]/list-tools.ts",
+    "src/routes/[.mcp]/invoke-tool/$tool.ts",
+    "src/routes/[.well-known]/oauth-protected-resource.ts"
+  ],
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/exhaustive-deps": "warn",
+    "react/only-export-components": [
+      "warn",
+      {
+        "allowConstantExport": true
+      }
+    ],
+    "react/react-in-jsx-scope": "off",
+    "no-unused-vars": "off",
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": [
+          {
+            "name": "server-only",
+            "message": "TanStack Start does not use the Next.js `server-only` package. Rename the module to `*.server.ts` or mark it with `@tanstack/react-start/server-only`."
+          }
+        ]
+      }
+    ],
+    "react/set-state-in-effect": "off",
+    "react/incompatible-library": "off",
+    "react/purity": "off"
+  }
+}

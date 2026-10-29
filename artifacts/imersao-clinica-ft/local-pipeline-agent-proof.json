@@ -1,0 +1,59 @@
+{
+  "status": "COMPROVADO_LOCAL",
+  "run_id": "00012029-1170-40e4-a240-0eec6db26795",
+  "api_url": "http://127.0.0.1:54321",
+  "tenant_id": "5efc2f0a-7d63-4e6a-8948-6389008b9956",
+  "board_id": "ad3d9389-5863-4735-986e-3a88e6e902eb",
+  "deal_id": "b2e4caff-bafe-4228-b7cc-24e01d23423c",
+  "from_stage_id": "5c303307-d0cd-4423-bf93-07ea3f57821c",
+  "to_stage_id": "def1cc03-502a-4a7b-aeb1-9bdc21bc4ee1",
+  "enabled_at": "2026-10-15T18:41:46.55038+00:00",
+  "event_id": "8a8b7420-8d73-413d-b6c3-a82615efa61f",
+  "event_created_at": "2026-10-15T18:41:54.625584+00:00",
+  "batch": {
+    "claimed": 1,
+    "delivered": 1,
+    "failed": 0
+  },
+  "commands": [
+    {
+      "id": "3d255c5c-eaf3-41e3-a781-97459ce3f881",
+      "status": "accepted",
+      "decision": "auto_move",
+      "actor_type": "ai",
+      "confidence": 1,
+      "model_version": "gemini-2.5-flash",
+      "policy_snapshot": {
+        "deal_mode": "inherit",
+        "board_mode": "autonomous",
+        "effective_mode": "autonomous",
+        "min_confidence": 0.8,
+        "transition_mode": "autonomous",
+        "cooldown_minutes": 0,
+        "required_signals": {
+          "payment.approved": true
+        },
+        "reversal_threshold": 0.25,
+        "max_daily_transitions": 5,
+        "requires_human_approval": false
+      },
+      "correlation_id": "8a8b7420-8d73-413d-b6c3-a82615efa61f"
+    }
+  ],
+  "history": [
+    {
+      "id": "54030de8-a16f-443e-98a0-a49bf038e027",
+      "from_stage_id": "5c303307-d0cd-4423-bf93-07ea3f57821c",
+      "to_stage_id": "def1cc03-502a-4a7b-aeb1-9bdc21bc4ee1",
+      "actor_type": "ai",
+      "confidence": 1,
+      "trigger_event": "payment.approved",
+      "correlation_id": "8a8b7420-8d73-413d-b6c3-a82615efa61f",
+      "idempotency_key": "pipeline:payment.approved:8a8b7420-8d73-413d-b6c3-a82615efa61f:b2e4caff-bafe-4228-b7cc-24e01d23423c"
+    }
+  ],
+  "history_id": "54030de8-a16f-443e-98a0-a49bf038e027",
+  "command_id": "3d255c5c-eaf3-41e3-a781-97459ce3f881",
+  "actor_type": "ai",
+  "observed_at": "2026-10-15T18:41:56.242Z"
+}

@@ -1,0 +1,133 @@
+{
+ "file": "/home/freedom/freedomdigitalhub/clientes/acelera-ia/.worktrees/aceleraflow-remix-imersao-clinica-ft/artifacts/imersao-clinica-ft/motion/scenes/index.html",
+ "width": 1920,
+ "height": 1080,
+ "duration": 60,
+ "samples": [
+  0.85,
+  3.1,
+  5.25,
+  7,
+  8.75,
+  10.5,
+  12.25,
+  13.75,
+  15.25,
+  16.75,
+  18.35,
+  20.85,
+  23.5,
+  25.5,
+  27.5,
+  29.25,
+  30.75,
+  32.25,
+  35.85,
+  37.5,
+  39.45,
+  41.1,
+  43,
+  45.25,
+  47.75,
+  50,
+  52,
+  54,
+  56.25,
+  58.75
+ ],
+ "rules": [
+  {
+   "id": "C1",
+   "name": "corner/edge micro-label",
+   "status": "PASS",
+   "hits": []
+  },
+  {
+   "id": "C2",
+   "name": "tracked uppercase label",
+   "status": "PASS",
+   "hits": []
+  },
+  {
+   "id": "C3",
+   "name": "chapter / counter index",
+   "status": "PASS",
+   "hits": []
+  },
+  {
+   "id": "C4",
+   "name": "production metadata (BPM/FPS/timecode/version)",
+   "status": "PASS",
+   "hits": []
+  },
+  {
+   "id": "C5",
+   "name": "mono micro-label",
+   "status": "PASS",
+   "hits": []
+  },
+  {
+   "id": "C6",
+   "name": "header/footer bar or row",
+   "status": "PASS",
+   "hits": []
+  },
+  {
+   "id": "C7",
+   "name": "kicker above headline",
+   "status": "PASS",
+   "hits": []
+  },
+  {
+   "id": "D1",
+   "name": "deck layout (left-anchored headline block)",
+   "status": "PASS",
+   "hits": []
+  },
+  {
+   "id": "P1",
+   "name": "progress bar",
+   "status": "PASS",
+   "hits": []
+  },
+  {
+   "id": "T1",
+   "name": "letter-typed headline",
+   "status": "PASS",
+   "hits": []
+  },
+  {
+   "id": "V1",
+   "name": "greeting header",
+   "status": "PASS",
+   "hits": []
+  },
+  {
+   "id": "V2",
+   "name": "label . value line",
+   "status": "PASS",
+   "hits": []
+  },
+  {
+   "id": "V3",
+   "name": "status dot beside text",
+   "status": "PASS",
+   "hits": []
+  },
+  {
+   "id": "V4",
+   "name": "zinc-grey text",
+   "status": "PASS",
+   "hits": []
+  },
+  {
+   "id": "V5",
+   "name": "vibe-coded UI card (cluster)",
+   "status": "PASS",
+   "hits": []
+  }
+ ],
+ "exemptions": [],
+ "gate": "PASS",
+ "failed": []
+}
