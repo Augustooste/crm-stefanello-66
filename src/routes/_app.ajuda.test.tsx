@@ -21,7 +21,7 @@ describe("página de ajuda (/_app/ajuda)", () => {
     renderWithQueryClient(<AjudaPage />);
 
     expect(screen.getByRole("heading", { name: "Ajuda" })).toBeInTheDocument();
-    expect(screen.getByText("Guia rápido de uso do CRM IA")).toBeInTheDocument();
+    expect(screen.getByText("Guia rápido de uso do Stefanello")).toBeInTheDocument();
   });
 
   it("lista as seções principais do app", () => {

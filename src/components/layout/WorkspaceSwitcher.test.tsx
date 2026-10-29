@@ -47,7 +47,7 @@ describe("WorkspaceSwitcher", () => {
       isLoading: false,
     } as never);
     render(<WorkspaceSwitcher />);
-    expect(screen.queryByText("CRM IA")).not.toBeInTheDocument();
+    expect(screen.queryByText("Stefanello")).not.toBeInTheDocument();
     expect(screen.getByText("Carregando…")).toHaveAttribute("aria-busy", "true");
   });
 
@@ -58,7 +58,7 @@ describe("WorkspaceSwitcher", () => {
       isLoading: false,
     } as never);
     render(<WorkspaceSwitcher />);
-    expect(screen.getByText("CRM IA")).toBeInTheDocument();
-    expect(screen.getByText("CRM IA")).not.toHaveAttribute("aria-busy");
+    expect(screen.getByText("Stefanello")).toBeInTheDocument();
+    expect(screen.getByText("Stefanello")).not.toHaveAttribute("aria-busy");
   });
 });

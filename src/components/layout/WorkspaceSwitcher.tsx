@@ -22,7 +22,7 @@ export function WorkspaceSwitcher() {
         aria-live="polite"
         aria-busy={isPending || undefined}
       >
-        {isPending ? "Carregando…" : "CRM IA"}
+        {isPending ? "Carregando…" : "Stefanello"}
       </span>
     );
   }

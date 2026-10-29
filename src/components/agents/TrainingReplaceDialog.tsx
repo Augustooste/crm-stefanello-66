@@ -64,7 +64,7 @@ export function TrainingReplaceDialog({
           </AlertDialogTitle>
           <AlertDialogDescription>
             O provedor de agentes não permite atualizar este tipo de treinamento — só o de texto.
-            Para substituir, o CRM IA primeiro <strong>exclui definitivamente</strong> o treinamento
+            Para substituir, o Stefanello primeiro <strong>exclui definitivamente</strong> o treinamento
             atual e, na sequência, abre o formulário para você cadastrar o novo conteúdo. A exclusão
             não pode ser desfeita.
           </AlertDialogDescription>

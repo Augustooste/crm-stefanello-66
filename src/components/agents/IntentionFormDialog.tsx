@@ -2,7 +2,7 @@
 // POST /v2/agent/{agentId}/intentions · PUT /v2/intention/{intentionId}
 // (ver contracts/agent-platform/CONTRACT_MATRIX.md §1.5 e divergência D7).
 //
-// O CRM IA NUNCA chama a URL cadastrada aqui — quem executa o webhook
+// O Stefanello NUNCA chama a URL cadastrada aqui — quem executa o webhook
 // durante a conversa é o próprio provedor de agentes. Este formulário só salva a
 // configuração da intenção.
 import { useEffect, useState } from "react";
@@ -126,7 +126,7 @@ export function IntentionFormDialog({
         <DialogHeader>
           <DialogTitle>{isEditing ? "Editar intenção" : "Nova intenção"}</DialogTitle>
           <DialogDescription>
-            Define quando e como o agente deve agir para atender a este objetivo. O CRM IA não
+            Define quando e como o agente deve agir para atender a este objetivo. O Stefanello não
             executa a URL cadastrada — quem chama o webhook durante a conversa é o provedor de
             agentes.
           </DialogDescription>

@@ -4,7 +4,7 @@ import { createContext, useContext } from "react";
 // O contrato do provedor de agentes não expõe se um agente está ativo/inativo em
 // nenhuma resposta (nem `agent.get`, nem `agents.list`) -- só as ações
 // activate/deactivate, que devolvem apenas `{success}`. Por isso o único
-// "status" que o CRM IA pode mostrar é o que o próprio usuário acionou
+// "status" que o Stefanello pode mostrar é o que o próprio usuário acionou
 // nesta aba, durante esta sessão do navegador -- nunca um campo remoto
 // inventado.
 //

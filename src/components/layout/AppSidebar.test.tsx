@@ -173,7 +173,7 @@ describe("AppSidebar", () => {
 
     renderSidebar();
 
-    expect(screen.getAllByText("CRM IA").length).toBeGreaterThan(0);
+    expect(screen.getAllByText("Stefanello").length).toBeGreaterThan(0);
   });
 
   it("usa o nome do tenant quando fornecido pela marca", () => {
@@ -191,7 +191,7 @@ describe("AppSidebar", () => {
 
     const { rerender } = renderSidebar();
 
-    expect(screen.queryByText("CRM IA")).not.toBeInTheDocument();
+    expect(screen.queryByText("Stefanello")).not.toBeInTheDocument();
     expect(screen.queryByText("C")).not.toBeInTheDocument();
     const placeholder = screen.getByText("Carregando…");
     expect(placeholder.closest("[aria-busy='true']")).not.toBeNull();

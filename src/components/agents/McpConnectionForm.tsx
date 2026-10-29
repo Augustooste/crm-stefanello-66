@@ -8,7 +8,7 @@
 // Quando a resposta trouxer `url`, a conexão exige autorização OAuth: só
 // termina com POST /v2/mcp/connect (`mcp.connect`), corpo { code, state }.
 // Esses dois valores vêm da URL para onde o PRÓPRIO PROVEDOR MCP redireciona
-// depois da autorização — o CRM IA não registra rota de callback nesse
+// depois da autorização — o Stefanello não registra rota de callback nesse
 // fluxo, então o usuário copia `code`/`state` manualmente da barra de
 // endereço da página de retorno e cola aqui.
 //
@@ -192,7 +192,7 @@ export function McpConnectionForm({
       >
         <p className="font-medium text-foreground">Autorize o acesso no provedor MCP</p>
         <p className="text-caption text-muted-foreground">
-          Esta conexão exige OAuth. Abra o link abaixo, autorize o CRM IA no provedor e, na página
+          Esta conexão exige OAuth. Abra o link abaixo, autorize o Stefanello no provedor e, na página
           de retorno, copie os valores <code>code</code> e <code>state</code> da URL para os campos
           abaixo.
         </p>

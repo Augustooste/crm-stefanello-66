@@ -25,7 +25,7 @@ describe("head() da rota raiz", () => {
   it("define título e metadados de SEO padrão", async () => {
     const head = await Route.options.head?.({} as never);
     const titleMeta = head?.meta?.find((m) => m && "title" in m);
-    expect(titleMeta).toMatchObject({ title: "CRM IA — Receita em movimento" });
+    expect(titleMeta).toMatchObject({ title: "Stefanello — Laticínios e embutidos" });
     expect(head?.links?.some((l) => l && "rel" in l && l.rel === "icon")).toBe(true);
   });
 });
@@ -43,7 +43,7 @@ describe("NotFoundComponent", () => {
     document.title = "sentinela — não deveria sobreviver ao render";
     const NotFound = Route.options.notFoundComponent as () => ReactElement;
     renderWithQueryClient(<NotFound />);
-    expect(document.title).toBe("Página não encontrada — CRM IA");
+    expect(document.title).toBe("Página não encontrada — Stefanello");
   });
 });
 

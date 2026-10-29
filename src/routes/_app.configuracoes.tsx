@@ -28,18 +28,18 @@ export const Route = createFileRoute("/_app/configuracoes")({
       { title: "Configurações" },
       {
         name: "description",
-        content: "Preferências da conta, da empresa e do time no CRM IA.",
+        content: "Preferências da conta, da empresa e do time no Stefanello.",
       },
       { property: "og:title", content: "Configurações" },
       {
         property: "og:description",
-        content: "Preferências da conta, da empresa e do time no CRM IA.",
+        content: "Preferências da conta, da empresa e do time no Stefanello.",
       },
       { property: "og:url", content: "https://aceleraflow.lovable.app/configuracoes" },
       { name: "twitter:title", content: "Configurações" },
       {
         name: "twitter:description",
-        content: "Preferências da conta, da empresa e do time no CRM IA.",
+        content: "Preferências da conta, da empresa e do time no Stefanello.",
       },
     ],
     links: [{ rel: "canonical", href: "https://aceleraflow.lovable.app/configuracoes" }],

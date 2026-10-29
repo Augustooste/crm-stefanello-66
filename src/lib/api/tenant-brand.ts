@@ -6,7 +6,7 @@ import { useCurrentProfile } from "@/lib/api/session";
 import { applyBrandTheme, parseBrandColors } from "@/lib/brand-theme";
 
 /** Marca padrão do produto: só aparece quando o usuário não tem workspace. */
-const PRODUCT_BRAND = "CRM IA";
+const PRODUCT_BRAND = "Stefanello";
 
 export interface TenantBrand {
   /** Nome do workspace (tenant); `null` sem tenant, com erro ou ainda carregando. */
@@ -82,12 +82,12 @@ export function useTenantBrand(): TenantBrand {
 }
 
 /**
- * Substitui "CRM IA" pelo nome do tenant no título da aba (white-label).
+ * Substitui "Stefanello" pelo nome do tenant no título da aba (white-label).
  * O título que a rota grava é a BASE (só o nome da página, sem marca).
  * O hook acrescenta a marca do workspace ou a marca padrão:
  * - carregando: mostra só a base
  * - com workspace: `base — <nome>`
- * - sem workspace ou erro: `base — CRM IA`
+ * - sem workspace ou erro: `base — Stefanello`
  *
  * Observa o document.title em vez de depender só da troca de rota: se a
  * HeadContent reescreve o título depois deste efeito, o MutationObserver
@@ -117,8 +117,8 @@ export function useTenantTitle() {
     if (!base) return;
 
     // Normalizar a base: remover a marca padrão se estiver presente
-    // (para rotas fora de _app que ainda trazem " - CRM IA" ou " — CRM IA")
-    const normalized = base.replace(/\s*[—-]\s*CRM IA\s*$/, "").trim();
+    // (para rotas fora de _app que ainda trazem " - Stefanello" ou " — Stefanello")
+    const normalized = base.replace(/\s*[—-]\s*Stefanello\s*$/, "").trim();
 
     const brand = brandRef.current;
     let next = normalized;

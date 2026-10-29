@@ -132,7 +132,7 @@
   --popover-foreground: #15233b;
 
   /* Brand (ponto de override white-label) */
-  --primary: #1e63c8;
+  --primary: #a8550f;
   --primary-foreground: #ffffff;
 
   --secondary: #eef2f8;
@@ -141,9 +141,9 @@
   --muted: #eef2f8;
   --muted-foreground: #5b6b7f;
 
-  --accent: #eaf1fb;
-  --accent-foreground: #1e63c8;
-  --brand-soft: #eaf1fb;
+  --accent: #fbf1e4;
+  --accent-foreground: #a8550f;
+  --brand-soft: #fbf1e4;
 
   --success: #188056; /* DS §2.2 · escurecido do #1e9e6a: 3.24:1 sobre --surface não passava AA */
   --success-foreground: #ffffff;
@@ -154,10 +154,10 @@
 
   --border: #e4eaf2;
   --input: #c9d3e0;
-  --ring: #1e63c8;
+  --ring: #a8550f;
 
   /* Paleta de marca nos gráficos */
-  --chart-1: #1e63c8;
+  --chart-1: #a8550f;
   --chart-2: #7ba6e6;
   --chart-3: #1e9e6a;
   --chart-4: #c9821a;
@@ -165,12 +165,12 @@
 
   --sidebar: #f7f9fc;
   --sidebar-foreground: #15233b;
-  --sidebar-primary: #1e63c8;
+  --sidebar-primary: #a8550f;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #eaf1fb;
-  --sidebar-accent-foreground: #1e63c8;
+  --sidebar-accent: #fbf1e4;
+  --sidebar-accent-foreground: #a8550f;
   --sidebar-border: #e4eaf2;
-  --sidebar-ring: #1e63c8;
+  --sidebar-ring: #a8550f;
 
   /* Glass (DS §2.4 · modo claro) */
   --glass-fill: rgba(15, 35, 70, 0.04);
@@ -181,16 +181,16 @@
   /* Aliases legados (telas antigas) → valores DS */
   --gradient-primary: var(--grad-brand);
   --gradient-motion: var(--grad-brand);
-  --gradient-motion-h: linear-gradient(90deg, #154494 0%, #1e63c8 100%);
+  --gradient-motion-h: linear-gradient(90deg, #154494 0%, #a8550f 100%);
 
   /* ─── Camada 1 · Primitivas (DS §2.1 · nunca no componente) ─── */
-  --blue-50: #eaf1fb;
+  --blue-50: #fbf1e4;
   --blue-100: #d3e2f7;
   --blue-200: #a9c6ef;
   --blue-300: #7ba6e6;
-  --blue-400: #5a97ee; /* Brilho */
+  --blue-400: #f0a33c; /* Brilho */
   --blue-500: #2e78e6;
-  --blue-600: #1e63c8; /* Safira (marca) */
+  --blue-600: #a8550f; /* Safira (marca) */
   --blue-700: #154494; /* brand-hover */
   --blue-800: #0e3360;
   --blue-900: #061b36;
@@ -222,7 +222,7 @@
   --text-subtle: #65758c; /* §2.2 · legendas/captions (AA ≥4.5:1) */
   --brand-hover: #154494; /* §2.2 · hover da marca */
   --border-strong: #c9d3e0; /* §2.2 · divisor forte / platina */
-  --info: #1e63c8;
+  --info: #a8550f;
   --info-foreground: #ffffff;
 
   /* Movimento (§4) */
@@ -233,12 +233,12 @@
   /* Largura máx. de conteúdo (§4) */
   --maxw: 1180px;
 
-  --grad-brand: linear-gradient(135deg, #154494 0%, #1e63c8 100%);
+  --grad-brand: linear-gradient(135deg, #154494 0%, #a8550f 100%);
   --grad-deep: radial-gradient(130% 130% at 85% -10%, #1b2e50 0%, #0d1524 52%, #090d18 100%);
-  --grad-platina: linear-gradient(120deg, #1e63c8 0%, #c9d3e0 120%);
+  --grad-platina: linear-gradient(120deg, #a8550f 0%, #c9d3e0 120%);
   --grad-sky: linear-gradient(
     155deg,
-    #eaf1fb 0%,
+    #fbf1e4 0%,
     #cbddf7 50%,
     #a9c6ef 100%
   ); /* DS §2.4 v3.2 · campo tonal claro de azul */
@@ -263,25 +263,25 @@
   --background: #0a0f1a;
   --surface: #111826;
   --surface-2: #18202f; /* DS §2.3 · inset / elevado */
-  --foreground: #eaf1fb;
+  --foreground: #fbf1e4;
 
   --card: #111826;
-  --card-foreground: #eaf1fb;
+  --card-foreground: #fbf1e4;
   --popover: #18202f;
-  --popover-foreground: #eaf1fb;
+  --popover-foreground: #fbf1e4;
 
-  --primary: #1e63c8;
+  --primary: #a8550f;
   --primary-foreground: #ffffff;
 
   --secondary: #18202f;
-  --secondary-foreground: #eaf1fb;
+  --secondary-foreground: #fbf1e4;
 
   --muted: #18202f;
   --muted-foreground: #98aac4;
 
-  --accent: rgba(90, 151, 238, 0.12);
-  --accent-foreground: #5a97ee;
-  --brand-soft: rgba(90, 151, 238, 0.12);
+  --accent: rgba(240, 163, 60, 0.12);
+  --accent-foreground: #f0a33c;
+  --brand-soft: rgba(240, 163, 60, 0.12);
 
   --success: #34d399;
   --success-foreground: #05152b;
@@ -293,35 +293,35 @@
   --border: rgba(255, 255, 255, 0.07);
   --border-strong: rgba(255, 255, 255, 0.14);
   --input: rgba(255, 255, 255, 0.14);
-  --ring: #5a97ee;
+  --ring: #f0a33c;
 
   --text-subtle: #67788f; /* §2.3 */
   --brand-hover: #2e78e6; /* §2.3 */
-  --info: #5a97ee;
+  --info: #f0a33c;
   --info-foreground: #05152b;
 
-  --chart-1: #5a97ee;
+  --chart-1: #f0a33c;
   --chart-2: #c9d3e0;
   --chart-3: #34d399;
   --chart-4: #f5b544;
   --chart-5: #f47272;
 
   --sidebar: #0a0f1a;
-  --sidebar-foreground: #eaf1fb;
-  --sidebar-primary: #1e63c8;
+  --sidebar-foreground: #fbf1e4;
+  --sidebar-primary: #a8550f;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: rgba(90, 151, 238, 0.1);
-  --sidebar-accent-foreground: #5a97ee;
+  --sidebar-accent: rgba(240, 163, 60, 0.1);
+  --sidebar-accent-foreground: #f0a33c;
   --sidebar-border: rgba(255, 255, 255, 0.07);
-  --sidebar-ring: #5a97ee;
+  --sidebar-ring: #f0a33c;
 
   --glass-fill: rgba(255, 255, 255, 0.03);
   --glass-border: rgba(255, 255, 255, 0.08);
   --glass-hi: rgba(255, 255, 255, 0.1);
 
   /* No dark, gradiente de texto usa Brilho → platina (legível no quase-preto) */
-  --gradient-motion: linear-gradient(135deg, #5a97ee 0%, #c9d3e0 100%);
-  --gradient-motion-h: linear-gradient(90deg, #5a97ee 0%, #c9d3e0 100%);
+  --gradient-motion: linear-gradient(135deg, #f0a33c 0%, #c9d3e0 100%);
+  --gradient-motion-h: linear-gradient(90deg, #f0a33c 0%, #c9d3e0 100%);
 }
 
 @layer base {
@@ -454,7 +454,7 @@
   --popover: #0d0d0d;
   --popover-foreground: #ffffff;
 
-  --primary: #3d98ff;
+  --primary: #f5a623;
   --primary-foreground: #000000;
 
   --secondary: #1a1a1a;
@@ -463,8 +463,8 @@
   --muted: #1a1a1a;
   --muted-foreground: #b3b3b3;
 
-  --accent: rgba(61, 152, 255, 0.12);
-  --accent-foreground: #3d98ff;
+  --accent: rgba(245, 166, 35, 0.12);
+  --accent-foreground: #f5a623;
 
   --success: #34d399;
   --success-foreground: #05152b;
@@ -478,14 +478,14 @@
   --border: rgba(255, 255, 255, 0.12);
   --border-strong: rgba(255, 255, 255, 0.22);
   --input: rgba(255, 255, 255, 0.16);
-  --ring: #3d98ff;
+  --ring: #f5a623;
 
   --text-subtle: #8493a6;
   --brand-hover: #5aa8ff;
-  --info: #3d98ff;
+  --info: #f5a623;
   --info-foreground: #000000;
 
-  --chart-1: #3d98ff;
+  --chart-1: #f5a623;
   --chart-2: #00e0ff;
   --chart-3: #00cc88;
   --chart-4: #7ba6e6;
@@ -493,31 +493,31 @@
 
   --sidebar: rgba(0, 0, 0, 0.92);
   --sidebar-foreground: #ffffff;
-  --sidebar-primary: #3d98ff;
+  --sidebar-primary: #f5a623;
   --sidebar-primary-foreground: #000000;
-  --sidebar-accent: rgba(61, 152, 255, 0.1);
-  --sidebar-accent-foreground: #3d98ff;
-  --sidebar-border: rgba(61, 152, 255, 0.12);
-  --sidebar-ring: #3d98ff;
+  --sidebar-accent: rgba(245, 166, 35, 0.1);
+  --sidebar-accent-foreground: #f5a623;
+  --sidebar-border: rgba(245, 166, 35, 0.12);
+  --sidebar-ring: #f5a623;
 
   /* Glass neon */
   --glass-fill: rgba(20, 20, 20, 0.88);
-  --glass-border: rgba(61, 152, 255, 0.22);
-  --glass-hi: rgba(61, 152, 255, 0.14);
+  --glass-border: rgba(245, 166, 35, 0.22);
+  --glass-hi: rgba(245, 166, 35, 0.14);
 
   /* Sombras com glow azul (assinatura do Power) */
-  --shadow-sm: 0 0 0 1px rgba(61, 152, 255, 0.06), 0 4px 16px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 0 15px rgba(61, 152, 255, 0.07), 0 4px 20px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 0 40px rgba(61, 152, 255, 0.4);
+  --shadow-sm: 0 0 0 1px rgba(245, 166, 35, 0.06), 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 0 15px rgba(245, 166, 35, 0.07), 0 4px 20px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 0 40px rgba(245, 166, 35, 0.4);
   --shadow-soft: var(--shadow-sm);
   --shadow-glass: var(--shadow-md);
   --shadow-elevated: var(--shadow-lg);
-  --shadow-glow: 0 0 15px rgba(61, 152, 255, 0.6), 0 0 45px rgba(61, 152, 255, 0.2);
-  --shadow-glow-strong: 0 0 40px rgba(61, 152, 255, 0.4);
+  --shadow-glow: 0 0 15px rgba(245, 166, 35, 0.6), 0 0 45px rgba(245, 166, 35, 0.2);
+  --shadow-glow-strong: 0 0 40px rgba(245, 166, 35, 0.4);
 
-  --grad-brand: linear-gradient(135deg, #3d98ff 0%, #0a4fa8 100%);
-  --gradient-motion: linear-gradient(135deg, #3d98ff 0%, #cfe3ff 100%);
-  --gradient-motion-h: linear-gradient(90deg, #3d98ff 0%, #cfe3ff 100%);
+  --grad-brand: linear-gradient(135deg, #f5a623 0%, #0a4fa8 100%);
+  --gradient-motion: linear-gradient(135deg, #f5a623 0%, #cfe3ff 100%);
+  --gradient-motion-h: linear-gradient(90deg, #f5a623 0%, #cfe3ff 100%);
 }
 
 /* Glow neon nos CTAs primários (botões/links de ação), sem afetar avatares.
@@ -543,27 +543,27 @@
   --background: #05070d;
   --surface: rgba(20, 40, 72, 0.55);
   --surface-2: rgba(27, 46, 80, 0.68);
-  --foreground: #eaf1fb;
+  --foreground: #fbf1e4;
 
   --card: rgba(20, 40, 72, 0.5);
-  --card-foreground: #eaf1fb;
+  --card-foreground: #fbf1e4;
   --popover: #10203a;
-  --popover-foreground: #eaf1fb;
+  --popover-foreground: #fbf1e4;
 
   /* Safira mantém o par validado com branco (5,6:1); o Brilho fica nos
    * acentos e no anel de foco, como no dark do produto (DS §2.5). */
-  --primary: #1e63c8;
+  --primary: #a8550f;
   --primary-foreground: #ffffff;
 
   --secondary: rgba(27, 46, 80, 0.6);
-  --secondary-foreground: #eaf1fb;
+  --secondary-foreground: #fbf1e4;
 
   --muted: rgba(27, 46, 80, 0.45);
   --muted-foreground: #98aac4;
 
-  --accent: rgba(90, 151, 238, 0.12);
-  --accent-foreground: #5a97ee;
-  --brand-soft: rgba(90, 151, 238, 0.12);
+  --accent: rgba(240, 163, 60, 0.12);
+  --accent-foreground: #f0a33c;
+  --brand-soft: rgba(240, 163, 60, 0.12);
 
   --success: #34d399;
   --success-foreground: #05152b;
@@ -587,34 +587,34 @@
   --border: rgba(169, 198, 239, 0.5);
   --border-strong: rgba(169, 198, 239, 0.65);
   --input: rgba(201, 211, 224, 0.2);
-  --ring: #5a97ee;
+  --ring: #f0a33c;
 
   --text-subtle: #8497b0;
   --brand-hover: #2e78e6;
-  --info: #5a97ee;
+  --info: #f0a33c;
   --info-foreground: #05152b;
 
-  --chart-1: #5a97ee;
+  --chart-1: #f0a33c;
   --chart-2: #c9d3e0;
   --chart-3: #34d399;
   --chart-4: #f5b544;
   --chart-5: #f47272;
 
   --sidebar: rgba(6, 27, 54, 0.5);
-  --sidebar-foreground: #eaf1fb;
-  --sidebar-primary: #1e63c8;
+  --sidebar-foreground: #fbf1e4;
+  --sidebar-primary: #a8550f;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: rgba(90, 151, 238, 0.1);
-  --sidebar-accent-foreground: #5a97ee;
+  --sidebar-accent: rgba(240, 163, 60, 0.1);
+  --sidebar-accent-foreground: #f0a33c;
   --sidebar-border: rgba(201, 211, 224, 0.12);
-  --sidebar-ring: #5a97ee;
+  --sidebar-ring: #f0a33c;
 
   --glass-fill: rgba(234, 241, 251, 0.04);
   --glass-border: rgba(201, 211, 224, 0.14);
   --glass-hi: rgba(255, 255, 255, 0.06);
 
-  --gradient-motion: linear-gradient(135deg, #5a97ee 0%, #c9d3e0 100%);
-  --gradient-motion-h: linear-gradient(90deg, #5a97ee 0%, #c9d3e0 100%);
+  --gradient-motion: linear-gradient(135deg, #f0a33c 0%, #c9d3e0 100%);
+  --gradient-motion-h: linear-gradient(90deg, #f0a33c 0%, #c9d3e0 100%);
 }
 
 /* O que dá o nome ao skin: o campo radial do DS por trás de toda a página.

@@ -92,7 +92,7 @@ function TechnicalInfoSection({ agentId }: { agentId: string }) {
         )}
         <p className="pt-2 text-caption text-muted-foreground">
           O provedor de agentes é a fonte de verdade desta integração: valores podem mudar
-          diretamente no painel deles a qualquer momento, sem passar pelo CRM IA.
+          diretamente no painel deles a qualquer momento, sem passar pelo Stefanello.
         </p>
       </CardContent>
     </Card>

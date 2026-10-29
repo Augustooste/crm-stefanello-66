@@ -250,7 +250,7 @@ describe("useTenantTitle", () => {
     document.title = "Agenda";
 
     render(<TitleProbe />, { wrapper: createQueryWrapper() });
-    expect(document.title).toBe("Agenda — CRM IA");
+    expect(document.title).toBe("Agenda — Stefanello");
   });
 
   it("com erro na consulta do workspace, acrescenta a marca padrão do produto", async () => {
@@ -262,7 +262,7 @@ describe("useTenantTitle", () => {
     document.title = "Agenda";
 
     render(<TitleProbe />, { wrapper: createQueryWrapper() });
-    await waitFor(() => expect(document.title).toBe("Agenda — CRM IA"));
+    await waitFor(() => expect(document.title).toBe("Agenda — Stefanello"));
   });
 
   it("com o nome já em cache, acrescenta o nome já no primeiro render", () => {
@@ -314,7 +314,7 @@ describe("useTenantTitle", () => {
   it("não repete a marca padrão quando o título herdado já a traz (root/404)", () => {
     mockProfile("t1");
     mockPathname("/rota-inexistente");
-    document.title = "Página não encontrada — CRM IA";
+    document.title = "Página não encontrada — Stefanello";
 
     render(<TitleProbe />, { wrapper: cachedTenantWrapper("Empresa X") });
     expect(document.title).toBe("Página não encontrada — Empresa X");

@@ -95,7 +95,7 @@ describe("head de /auth", () => {
     const head = Route.options.head?.({} as never);
 
     expect(head).toEqual({
-      meta: [{ title: "Entrar — CRM IA" }, { name: "robots", content: "noindex" }],
+      meta: [{ title: "Entrar — Stefanello" }, { name: "robots", content: "noindex" }],
     });
   });
 });
