@@ -183,7 +183,7 @@ export function AppTopbar() {
   const tenantName =
     activeWorkspace?.tenant_name ??
     tenantQ.data?.name ??
-    (isTenantLoading ? "Carregando…" : "CRM IA");
+    (isTenantLoading ? "Carregando…" : "Stefanello");
 
   async function handleSignOut() {
     if (isSigningOut) return;

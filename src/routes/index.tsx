@@ -8,13 +8,13 @@ import { Button } from "@/components/ui/button";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "CRM IA — Receita em movimento" },
+      { title: "Stefanello — Laticínios e embutidos" },
       {
         name: "description",
         content:
           "Funil, conversas e inteligência artificial para equipes que querem transformar conversas em receita previsível.",
       },
-      { property: "og:title", content: "CRM IA — Receita em movimento" },
+      { property: "og:title", content: "Stefanello — Laticínios e embutidos" },
       {
         property: "og:description",
         content:
@@ -30,19 +30,19 @@ export const Route = createFileRoute("/")({
 const capabilities = [
   {
     icon: Layers3,
-    title: "Funil que mostra o próximo passo",
-    description: "Visualize onde a receita está travada e mova o negócio certo no momento certo.",
+    title: "Funil do lead ao cliente recorrente",
+    description: "Acompanhe cada comércio do primeiro contato do tele vendas até o pedido semanal.",
   },
   {
     icon: MessageCircleMore,
-    title: "Conversas com contexto comercial",
+    title: "Pedidos pelo WhatsApp com contexto",
     description:
-      "Transforme cada atendimento em histórico útil, prioridade clara e ação registrada.",
+      "Vendedores, representantes e tele vendas veem o histórico de cada cliente.",
   },
   {
     icon: Bot,
-    title: "IA que ajuda a operar",
-    description: "Sugestões e automações orientadas ao fluxo da equipe, não uma IA solta na tela.",
+    title: "IA que responde todo lead digital",
+    description: "Atendimento imediato, qualificação e lembrete de recompra semanal.",
   },
 ];
 
@@ -51,11 +51,11 @@ function LandingPage() {
     <main className="min-h-screen overflow-hidden bg-[var(--neutral-950)] text-slate-100">
       <div
         aria-hidden
-        className="pointer-events-none fixed inset-0 bg-[radial-gradient(ellipse_at_top,rgba(30,99,200,0.18),transparent_42%)]"
+        className="pointer-events-none fixed inset-0 bg-[radial-gradient(ellipse_at_top,rgba(240,163,60,0.16),transparent_42%)]"
       />
       <div className="relative mx-auto max-w-[1280px] px-4 pb-12 pt-4 sm:px-6 lg:px-8">
         <header className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.035] px-4 py-3 backdrop-blur-sm sm:px-5">
-          <span className="sm:hidden" aria-label="CRM IA">
+          <span className="sm:hidden" aria-label="Stefanello">
             <BrandMark compact />
           </span>
           <span className="hidden sm:block">
@@ -91,14 +91,14 @@ function LandingPage() {
         <section className="grid items-center gap-12 pb-20 pt-16 lg:grid-cols-[1.05fr_0.95fr] lg:pb-28 lg:pt-24">
           <div className="max-w-3xl">
             <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 text-caption font-semibold uppercase tracking-[0.12em] text-primary">
-              <Sparkles className="h-3.5 w-3.5" /> CRM com IA para equipes em movimento
+              <Sparkles className="h-3.5 w-3.5" /> Laticínio Stefanello · gestão comercial
             </p>
             <h1 className="max-w-3xl [font-family:Lexend,sans-serif] text-h2 font-semibold leading-[1.06] tracking-[-0.055em] text-white sm:text-h1 lg:text-display">
-              O painel comercial para transformar conversas em receita previsível.
+              Do lead digital ao pedido da semana, sem perder nenhum cliente.
             </h1>
             <p className="mt-6 max-w-2xl text-lead leading-8 text-slate-300">
-              Capte sinais, organize o funil e dê ao time a próxima melhor ação — sem alternar entre
-              planilhas, chats e achismos.
+              Queijos, requeijões e embutidos com venda recorrente: o tele vendas atende todo lead
+              do digital e os 40 vendedores e representantes acompanham cada pedido.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button asChild size="lg" className="h-12 px-6 text-base">
@@ -116,7 +116,7 @@ function LandingPage() {
               </Button>
             </div>
             <ul className="mt-9 grid gap-3 text-sm text-slate-300 sm:grid-cols-3">
-              {["Funil visível", "Conversas unificadas", "IA em contexto"].map((item) => (
+              {["Pedido mínimo R$ 300", "WhatsApp unificado", "Recompra semanal"].map((item) => (
                 <li key={item} className="flex items-center gap-2">
                   <span className="grid h-5 w-5 place-items-center rounded-full bg-primary/15 text-primary">
                     <Check className="h-3.5 w-3.5" />
@@ -138,7 +138,7 @@ function LandingPage() {
               Operação, não complicação
             </p>
             <h2 className="mt-3 [font-family:Lexend,sans-serif] text-h3 font-semibold tracking-[-0.045em] text-white sm:text-h2">
-              Uma fonte de verdade para vender melhor todos os dias.
+              Toda a carteira de clientes em um só lugar.
             </h2>
           </div>
           <div className="mt-10 grid gap-px overflow-hidden rounded-2xl border border-white/10 bg-white/10 md:grid-cols-3">
@@ -172,18 +172,18 @@ function LandingPage() {
             {[
               [
                 "01",
-                "Centralize o que acontece",
-                "Leads, conversas e oportunidades chegam ao mesmo fluxo.",
+                "Lead digital chega",
+                "Site, Instagram e anúncios caem direto no tele vendas.",
               ],
               [
                 "02",
-                "Encontre o que importa",
-                "A visão geral destaca onde o time precisa agir primeiro.",
+                "Tele vendas qualifica",
+                "Tipo de comércio, região e volume semanal registrados.",
               ],
               [
                 "03",
-                "Execute com contexto",
-                "Funil, Conversas e automações mantêm o próximo passo visível.",
+                "Pedido e recompra",
+                "Primeiro pedido fechado e lembrete do pedido da semana.",
               ],
             ].map(([number, title, description]) => (
               <li
@@ -205,7 +205,7 @@ function LandingPage() {
         <section className="rounded-2xl border border-primary/25 bg-primary/10 px-6 py-10 text-center sm:px-12 sm:py-14">
           <Target className="mx-auto h-6 w-6 text-primary" />
           <h2 className="mx-auto mt-4 max-w-2xl [font-family:Lexend,sans-serif] text-h3 font-semibold tracking-[-0.045em] text-white">
-            Sua operação comercial merece uma visão clara do que move a receita.
+            Mais pedidos toda semana, com cada cliente acompanhado.
           </h2>
           <Button asChild size="lg" className="mt-7 h-12 px-6 text-base">
             <Link to="/auth" search={{ mode: "signup" } as never}>

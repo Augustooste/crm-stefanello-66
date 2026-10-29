@@ -20,10 +20,10 @@ export function BrandMark({ compact = false, className }: BrandMarkProps) {
       {!compact && (
         <span className="leading-tight">
           <span className="block text-base font-semibold tracking-[-0.03em] text-foreground">
-            CRM IA
+            Stefanello
           </span>
           <span className="block text-[11px] font-medium uppercase tracking-[0.14em] text-muted-foreground">
-            Receita em movimento
+            Laticínios e embutidos
           </span>
         </span>
       )}

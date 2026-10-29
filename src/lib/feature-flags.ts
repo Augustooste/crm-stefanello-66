@@ -13,7 +13,7 @@
  * O que está no repo é um painel de controle REMOTO de um provedor externo: cada
  * ação da tela vira chamada à API dele, com o token do tenant. Isso não some por
  * estar ligado — quem conectar a integração passa a mandar credencial e dados
- * para fora, e o motor próprio do CRM IA (`ai-respond` + RAG em
+ * para fora, e o motor próprio do Stefanello (`ai-respond` + RAG em
  * `kb_documents`) continua sendo o caminho do MVP. As duas coisas convivem: esta
  * área é opcional e só age se o tenant conectar.
  *

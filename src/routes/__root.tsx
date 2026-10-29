@@ -1,3 +1,4 @@
+import type { ErrorComponentProps } from "@tanstack/react-router";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
@@ -23,7 +24,7 @@ function NotFoundComponent() {
   // do root. Client-only: não cobre o <title> do HTML servido por SSR nem
   // og:title de preview de link — só a aba do navegador depois de montar.
   useEffect(() => {
-    document.title = "Página não encontrada — CRM IA";
+    document.title = "Página não encontrada — Stefanello";
   }, []);
 
   return (
@@ -47,7 +48,7 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
@@ -98,15 +99,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "CRM IA — Receita em movimento" },
+      { title: "Stefanello — Laticínios e embutidos" },
       {
         name: "description",
         content:
           "CRM com assistente de IA para pequenas e médias empresas: pipeline kanban, inbox unificado de WhatsApp e e-mail, e qualificação automática de leads.",
       },
-      { name: "author", content: "CRM IA" },
-      { property: "og:site_name", content: "CRM IA" },
-      { property: "og:title", content: "CRM IA — Receita em movimento" },
+      { name: "author", content: "Stefanello" },
+      { property: "og:site_name", content: "Stefanello" },
+      { property: "og:title", content: "Stefanello — Laticínios e embutidos" },
       {
         property: "og:description",
         content:

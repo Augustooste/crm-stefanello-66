@@ -16,20 +16,20 @@ export const Route = createFileRoute("/_app/ajuda")({
       {
         name: "description",
         content:
-          "Guia rápido de uso do CRM IA: funil, conversas, contatos, atividades, agenda e configurações.",
+          "Guia rápido de uso do Stefanello: funil, conversas, contatos, atividades, agenda e configurações.",
       },
       { property: "og:title", content: "Ajuda" },
       {
         property: "og:description",
         content:
-          "Guia rápido de uso do CRM IA: funil, conversas, contatos, atividades, agenda e configurações.",
+          "Guia rápido de uso do Stefanello: funil, conversas, contatos, atividades, agenda e configurações.",
       },
       { property: "og:url", content: "https://aceleraflow.lovable.app/ajuda" },
       { name: "twitter:title", content: "Ajuda" },
       {
         name: "twitter:description",
         content:
-          "Guia rápido de uso do CRM IA: funil, conversas, contatos, atividades, agenda e configurações.",
+          "Guia rápido de uso do Stefanello: funil, conversas, contatos, atividades, agenda e configurações.",
       },
     ],
     links: [{ rel: "canonical", href: "https://aceleraflow.lovable.app/ajuda" }],
@@ -103,7 +103,7 @@ const helpSections: HelpSection[] = [
 function AjudaPage() {
   return (
     <div className="col-span-12 flex flex-col gap-4">
-      <PageHeader title="Ajuda" description="Guia rápido de uso do CRM IA" />
+      <PageHeader title="Ajuda" description="Guia rápido de uso do Stefanello" />
       <Card>
         <CardContent className="p-4">
           <Accordion type="single" collapsible className="w-full">

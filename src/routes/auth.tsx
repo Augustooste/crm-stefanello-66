@@ -25,7 +25,7 @@ export const Route = createFileRoute("/auth")({
   },
   component: AuthPage,
   head: () => ({
-    meta: [{ title: "Entrar — CRM IA" }, { name: "robots", content: "noindex" }],
+    meta: [{ title: "Entrar — Stefanello" }, { name: "robots", content: "noindex" }],
   }),
 });
 
@@ -290,7 +290,7 @@ function AuthPage() {
         <Card className="w-full max-w-md border-white/10 bg-[var(--neutral-950)]/90 shadow-2xl shadow-black/30 backdrop-blur-xl">
           <CardHeader className="space-y-3 pb-5">
             <span className="inline-flex w-fit items-center gap-2 text-caption font-semibold uppercase tracking-[0.14em] text-primary lg:hidden">
-              <KeyRound className="h-3.5 w-3.5" /> CRM IA
+              <KeyRound className="h-3.5 w-3.5" /> Stefanello
             </span>
             <CardTitle className="[font-family:Lexend,sans-serif] text-h3 font-semibold leading-tight tracking-[-0.045em] text-white">
               {mode === "signin" && "Entre no seu cockpit"}

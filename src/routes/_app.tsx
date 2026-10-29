@@ -1,3 +1,4 @@
+import type { ErrorComponentProps } from "@tanstack/react-router";
 import {
   Outlet,
   createFileRoute,
@@ -29,7 +30,7 @@ import { MaintenanceBanner } from "@/components/common/MaintenanceBanner";
 import { DevDebugButton } from "@/components/common/DevDebugButton";
 import { cn } from "@/lib/utils";
 
-function AppErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function AppErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
   const queryClient = useQueryClient();

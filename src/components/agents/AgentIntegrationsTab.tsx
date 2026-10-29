@@ -8,7 +8,7 @@
 //    isso esta seção NUNCA inventa endpoint, nunca faz scraping do painel,
 //    nunca mostra "conectado" e nunca tem formulário de credencial: só o
 //    aviso de indisponibilidade, deixando claro que a limitação é da API
-//    pública, não do produto provedor de agentes nem do CRM IA.
+//    pública, não do produto provedor de agentes nem do Stefanello.
 //
 // 2) MCPs conectados por API (mcp.add / mcp.connect / mcp.tools.* /
 //    mcp.delete — esses SIM existem no contrato). O contrato não tem

@@ -56,7 +56,7 @@ export function InstallBanner() {
     >
       <div className="flex items-center gap-2">
         <Download className="h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
-        <p className="text-sm font-medium">Instale o CRM IA para acesso rápido</p>
+        <p className="text-sm font-medium">Instale o Stefanello para acesso rápido</p>
       </div>
       <div className="flex items-center gap-2 self-end sm:self-auto">
         <button

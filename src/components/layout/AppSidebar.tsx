@@ -124,7 +124,7 @@ export function AppSidebar() {
   }));
   const items = [...baseItems.filter((i) => !i.admin || isAdmin), ...engineItems];
   // Marca padrão só quando não há workspace; enquanto o nome carrega, placeholder neutro.
-  const brandName = brand.name ?? (brand.isLoading ? null : "CRM IA");
+  const brandName = brand.name ?? (brand.isLoading ? null : "Stefanello");
 
   return (
     <Sidebar collapsible="icon">

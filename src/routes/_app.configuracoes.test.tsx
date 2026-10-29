@@ -97,7 +97,7 @@ describe("head() da rota de configurações", () => {
     expect(titleMeta).toMatchObject({ title: "Configurações" });
     const descriptionMeta = head?.meta?.find((m) => m && "name" in m && m.name === "description");
     expect(descriptionMeta).toMatchObject({
-      content: "Preferências da conta, da empresa e do time no CRM IA.",
+      content: "Preferências da conta, da empresa e do time no Stefanello.",
     });
     expect(head?.links?.some((l) => l && "rel" in l && l.rel === "canonical")).toBe(true);
   });

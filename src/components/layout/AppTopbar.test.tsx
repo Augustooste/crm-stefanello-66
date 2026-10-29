@@ -120,7 +120,7 @@ describe("AppTopbar", () => {
 
     renderTopbar();
 
-    expect(screen.queryAllByText("CRM IA")).toHaveLength(0);
+    expect(screen.queryAllByText("Stefanello")).toHaveLength(0);
     expect(screen.getAllByText("Carregando…").length).toBeGreaterThan(0);
   });
 
@@ -162,7 +162,7 @@ describe("AppTopbar", () => {
     renderTopbar();
 
     expect((await screen.findAllByText("Empresa X")).length).toBeGreaterThan(0);
-    expect(screen.queryAllByText("CRM IA")).toHaveLength(0);
+    expect(screen.queryAllByText("Stefanello")).toHaveLength(0);
   });
 
   it("renderiza o nome do tenant retornado pela query quando o perfil tem tenant_id", async () => {
@@ -352,7 +352,7 @@ describe("AppTopbar", () => {
 
     renderTopbar();
 
-    expect((await screen.findAllByText("CRM IA")).length).toBeGreaterThan(0);
+    expect((await screen.findAllByText("Stefanello")).length).toBeGreaterThan(0);
   });
 
   it("mantém logoUrl nulo quando createSignedUrl não retorna signedUrl", async () => {

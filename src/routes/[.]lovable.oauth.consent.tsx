@@ -102,12 +102,12 @@ function ConsentPage() {
       <Card className="w-full border-white/10 bg-[var(--neutral-950)]/90 text-slate-100 shadow-2xl">
         <CardHeader>
           <CardTitle className="[font-family:Lexend,sans-serif] text-h4">
-            Conectar {clientName} ao CRM IA
+            Conectar {clientName} ao Stefanello
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <p className="text-sm text-slate-300">
-            Isso permitirá que <strong>{clientName}</strong> use o CRM IA como você, respeitando as
+            Isso permitirá que <strong>{clientName}</strong> use o Stefanello como você, respeitando as
             permissões do seu papel e o isolamento do seu tenant.
           </p>
           {scope && (

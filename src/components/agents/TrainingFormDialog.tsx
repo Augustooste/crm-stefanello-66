@@ -326,7 +326,7 @@ export function TrainingFormDialog({
 
           {mode === "create" && (
             <p className="text-caption text-muted-foreground">
-              O acompanhamento do processamento é automático: o CRM IA recebe a notificação do
+              O acompanhamento do processamento é automático: o Stefanello recebe a notificação do
               provedor de agentes quando o treinamento termina, sem nada para configurar aqui.
             </p>
           )}

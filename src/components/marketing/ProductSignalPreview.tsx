@@ -9,7 +9,7 @@ type ProductSignalPreviewProps = {
 export function ProductSignalPreview({ className, compact = false }: ProductSignalPreviewProps) {
   return (
     <section
-      aria-label="Prévia do painel CRM IA"
+      aria-label="Prévia do painel Stefanello"
       className={`overflow-hidden rounded-2xl border border-white/10 bg-[var(--neutral-950)] shadow-2xl shadow-black/25 ${className ?? ""}`}
     >
       <div className="flex items-center justify-between border-b border-white/8 px-4 py-3 sm:px-5">

@@ -30,7 +30,7 @@ export const Route = createFileRoute("/f/$formId")({
   component: PublicLeadFormPage,
   head: () => ({
     meta: [
-      { title: "Formulário de contato — CRM IA" },
+      { title: "Formulário de contato — Stefanello" },
       { name: "description", content: "Preencha o formulário para entrar em contato." },
     ],
   }),
