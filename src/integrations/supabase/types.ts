@@ -69,6 +69,13 @@ export type Database = {
             foreignKeyName: "activities_deal_id_fkey"
             columns: ["deal_id"]
             isOneToOne: false
+            referencedRelation: "deal_sla_status"
+            referencedColumns: ["deal_id"]
+          },
+          {
+            foreignKeyName: "activities_deal_id_fkey"
+            columns: ["deal_id"]
+            isOneToOne: false
             referencedRelation: "deals"
             referencedColumns: ["id"]
           },
@@ -345,6 +352,13 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "conversations"
             referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "ai_conversation_summaries_deal_id_fkey"
+            columns: ["deal_id"]
+            isOneToOne: false
+            referencedRelation: "deal_sla_status"
+            referencedColumns: ["deal_id"]
           },
           {
             foreignKeyName: "ai_conversation_summaries_deal_id_fkey"
@@ -634,6 +648,27 @@ export type Database = {
             referencedColumns: ["id"]
           },
           {
+            foreignKeyName: "ai_pending_stage_advances_current_stage_id_fkey"
+            columns: ["current_stage_id"]
+            isOneToOne: false
+            referencedRelation: "v_stef_stage_avg_time"
+            referencedColumns: ["stage_id"]
+          },
+          {
+            foreignKeyName: "ai_pending_stage_advances_current_stage_id_fkey"
+            columns: ["current_stage_id"]
+            isOneToOne: false
+            referencedRelation: "v_stef_stage_conversion"
+            referencedColumns: ["stage_id"]
+          },
+          {
+            foreignKeyName: "ai_pending_stage_advances_deal_id_fkey"
+            columns: ["deal_id"]
+            isOneToOne: false
+            referencedRelation: "deal_sla_status"
+            referencedColumns: ["deal_id"]
+          },
+          {
             foreignKeyName: "ai_pending_stage_advances_deal_id_fkey"
             columns: ["deal_id"]
             isOneToOne: false
@@ -653,6 +688,20 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "board_stages"
             referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "ai_pending_stage_advances_suggested_stage_id_fkey"
+            columns: ["suggested_stage_id"]
+            isOneToOne: false
+            referencedRelation: "v_stef_stage_avg_time"
+            referencedColumns: ["stage_id"]
+          },
+          {
+            foreignKeyName: "ai_pending_stage_advances_suggested_stage_id_fkey"
+            columns: ["suggested_stage_id"]
+            isOneToOne: false
+            referencedRelation: "v_stef_stage_conversion"
+            referencedColumns: ["stage_id"]
           },
           {
             foreignKeyName: "ai_pending_stage_advances_tenant_id_fkey"
@@ -1048,8 +1097,12 @@ export type Database = {
           id: string
           is_lost: boolean
           is_won: boolean
+          max_attempts: number | null
           name: string
           position: number
+          sla_business_days: boolean
+          sla_days: number | null
+          stage_key: string | null
           updated_at: string
         }
         Insert: {
@@ -1058,8 +1111,12 @@ export type Database = {
           id?: string
           is_lost?: boolean
           is_won?: boolean
+          max_attempts?: number | null
           name: string
           position?: number
+          sla_business_days?: boolean
+          sla_days?: number | null
+          stage_key?: string | null
           updated_at?: string
         }
         Update: {
@@ -1068,8 +1125,12 @@ export type Database = {
           id?: string
           is_lost?: boolean
           is_won?: boolean
+          max_attempts?: number | null
           name?: string
           position?: number
+          sla_business_days?: boolean
+          sla_days?: number | null
+          stage_key?: string | null
           updated_at?: string
         }
         Relationships: [
@@ -1087,6 +1148,7 @@ export type Database = {
           automation_max_daily_transitions: number
           automation_mode: string
           automation_reversal_threshold: number
+          board_key: string | null
           created_at: string
           goal_period: string | null
           goal_target: number | null
@@ -1101,6 +1163,7 @@ export type Database = {
           automation_max_daily_transitions?: number
           automation_mode?: string
           automation_reversal_threshold?: number
+          board_key?: string | null
           created_at?: string
           goal_period?: string | null
           goal_target?: number | null
@@ -1115,6 +1178,7 @@ export type Database = {
           automation_max_daily_transitions?: number
           automation_mode?: string
           automation_reversal_threshold?: number
+          board_key?: string | null
           created_at?: string
           goal_period?: string | null
           goal_target?: number | null
@@ -1899,22 +1963,38 @@ export type Database = {
           ai_paused: boolean
           avatar_url: string | null
           birthday: string | null
+          client_origin:
+            | Database["public"]["Enums"]["client_origin_type"]
+            | null
           company_id: string | null
           created_at: string
+          current_supplier: string | null
           custom_fields: Json
           deleted_at: string | null
           department: string | null
           description: string | null
           email: string | null
+          follow_up_owner_id: string | null
           id: string
           instagram: string | null
           job_title: string | null
+          lead_origin: Database["public"]["Enums"]["lead_origin_type"] | null
           linkedin: string | null
           merged_into_id: string | null
+          monthly_volume_kg: number | null
           name: string
           notes: string | null
+          opened_by: string | null
+          out_of_area: boolean
+          out_of_area_at: string | null
+          out_of_area_note: string | null
           owner_id: string | null
           phone: string | null
+          portfolio_owner_id: string | null
+          portfolio_transferred_at: string | null
+          products_interest: string[]
+          region_id: string | null
+          segment: Database["public"]["Enums"]["customer_segment_type"] | null
           source: string | null
           status: string
           tags: string[]
@@ -1932,22 +2012,38 @@ export type Database = {
           ai_paused?: boolean
           avatar_url?: string | null
           birthday?: string | null
+          client_origin?:
+            | Database["public"]["Enums"]["client_origin_type"]
+            | null
           company_id?: string | null
           created_at?: string
+          current_supplier?: string | null
           custom_fields?: Json
           deleted_at?: string | null
           department?: string | null
           description?: string | null
           email?: string | null
+          follow_up_owner_id?: string | null
           id?: string
           instagram?: string | null
           job_title?: string | null
+          lead_origin?: Database["public"]["Enums"]["lead_origin_type"] | null
           linkedin?: string | null
           merged_into_id?: string | null
+          monthly_volume_kg?: number | null
           name: string
           notes?: string | null
+          opened_by?: string | null
+          out_of_area?: boolean
+          out_of_area_at?: string | null
+          out_of_area_note?: string | null
           owner_id?: string | null
           phone?: string | null
+          portfolio_owner_id?: string | null
+          portfolio_transferred_at?: string | null
+          products_interest?: string[]
+          region_id?: string | null
+          segment?: Database["public"]["Enums"]["customer_segment_type"] | null
           source?: string | null
           status?: string
           tags?: string[]
@@ -1965,22 +2061,38 @@ export type Database = {
           ai_paused?: boolean
           avatar_url?: string | null
           birthday?: string | null
+          client_origin?:
+            | Database["public"]["Enums"]["client_origin_type"]
+            | null
           company_id?: string | null
           created_at?: string
+          current_supplier?: string | null
           custom_fields?: Json
           deleted_at?: string | null
           department?: string | null
           description?: string | null
           email?: string | null
+          follow_up_owner_id?: string | null
           id?: string
           instagram?: string | null
           job_title?: string | null
+          lead_origin?: Database["public"]["Enums"]["lead_origin_type"] | null
           linkedin?: string | null
           merged_into_id?: string | null
+          monthly_volume_kg?: number | null
           name?: string
           notes?: string | null
+          opened_by?: string | null
+          out_of_area?: boolean
+          out_of_area_at?: string | null
+          out_of_area_note?: string | null
           owner_id?: string | null
           phone?: string | null
+          portfolio_owner_id?: string | null
+          portfolio_transferred_at?: string | null
+          products_interest?: string[]
+          region_id?: string | null
+          segment?: Database["public"]["Enums"]["customer_segment_type"] | null
           source?: string | null
           status?: string
           tags?: string[]
@@ -1997,6 +2109,13 @@ export type Database = {
             referencedColumns: ["tenant_id", "id"]
           },
           {
+            foreignKeyName: "contacts_follow_up_owner_id_fkey"
+            columns: ["follow_up_owner_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
             foreignKeyName: "contacts_merged_into_id_fkey"
             columns: ["merged_into_id"]
             isOneToOne: false
@@ -2004,10 +2123,31 @@ export type Database = {
             referencedColumns: ["id"]
           },
           {
+            foreignKeyName: "contacts_opened_by_fkey"
+            columns: ["opened_by"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
             foreignKeyName: "contacts_owner_id_fkey"
             columns: ["owner_id"]
             isOneToOne: false
             referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "contacts_portfolio_owner_id_fkey"
+            columns: ["portfolio_owner_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "contacts_region_id_fkey"
+            columns: ["region_id"]
+            isOneToOne: false
+            referencedRelation: "service_regions"
             referencedColumns: ["id"]
           },
           {
@@ -2344,6 +2484,13 @@ export type Database = {
             foreignKeyName: "deal_followups_deal_id_fkey"
             columns: ["deal_id"]
             isOneToOne: false
+            referencedRelation: "deal_sla_status"
+            referencedColumns: ["deal_id"]
+          },
+          {
+            foreignKeyName: "deal_followups_deal_id_fkey"
+            columns: ["deal_id"]
+            isOneToOne: false
             referencedRelation: "deals"
             referencedColumns: ["id"]
           },
@@ -2397,6 +2544,13 @@ export type Database = {
           tenant_id?: string
         }
         Relationships: [
+          {
+            foreignKeyName: "deal_qualification_snapshots_deal_id_fkey"
+            columns: ["deal_id"]
+            isOneToOne: false
+            referencedRelation: "deal_sla_status"
+            referencedColumns: ["deal_id"]
+          },
           {
             foreignKeyName: "deal_qualification_snapshots_deal_id_fkey"
             columns: ["deal_id"]
@@ -2473,6 +2627,13 @@ export type Database = {
             foreignKeyName: "deal_stage_evaluations_deal_id_fkey"
             columns: ["deal_id"]
             isOneToOne: false
+            referencedRelation: "deal_sla_status"
+            referencedColumns: ["deal_id"]
+          },
+          {
+            foreignKeyName: "deal_stage_evaluations_deal_id_fkey"
+            columns: ["deal_id"]
+            isOneToOne: false
             referencedRelation: "deals"
             referencedColumns: ["id"]
           },
@@ -2482,6 +2643,20 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "board_stages"
             referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "deal_stage_evaluations_stage_id_fkey"
+            columns: ["stage_id"]
+            isOneToOne: false
+            referencedRelation: "v_stef_stage_avg_time"
+            referencedColumns: ["stage_id"]
+          },
+          {
+            foreignKeyName: "deal_stage_evaluations_stage_id_fkey"
+            columns: ["stage_id"]
+            isOneToOne: false
+            referencedRelation: "v_stef_stage_conversion"
+            referencedColumns: ["stage_id"]
           },
           {
             foreignKeyName: "deal_stage_evaluations_tenant_id_fkey"
@@ -2572,6 +2747,13 @@ export type Database = {
           trigger_event?: string | null
         }
         Relationships: [
+          {
+            foreignKeyName: "deal_stage_history_deal_id_fkey"
+            columns: ["deal_id"]
+            isOneToOne: false
+            referencedRelation: "deal_sla_status"
+            referencedColumns: ["deal_id"]
+          },
           {
             foreignKeyName: "deal_stage_history_deal_id_fkey"
             columns: ["deal_id"]
@@ -2692,6 +2874,13 @@ export type Database = {
             foreignKeyName: "deal_stage_transition_commands_deal_id_fkey"
             columns: ["deal_id"]
             isOneToOne: false
+            referencedRelation: "deal_sla_status"
+            referencedColumns: ["deal_id"]
+          },
+          {
+            foreignKeyName: "deal_stage_transition_commands_deal_id_fkey"
+            columns: ["deal_id"]
+            isOneToOne: false
             referencedRelation: "deals"
             referencedColumns: ["id"]
           },
@@ -2721,13 +2910,30 @@ export type Database = {
           automation_paused_until: string | null
           board_id: string
           closed_at: string | null
+          contact_attempts: number
           contact_id: string | null
           created_at: string
           custom_fields: Json
+          first_delivery_at: string | null
+          first_order_at: string | null
+          first_order_mix: string[]
+          first_order_value: number | null
           id: string
           last_ai_transition_at: string | null
           lost_reason: string | null
+          lost_reason_code:
+            | Database["public"]["Enums"]["lost_reason_code_type"]
+            | null
+          nurture_return_at: string | null
           owner_id: string | null
+          sample_delivered_at: string | null
+          sample_requested: boolean
+          sample_status:
+            | Database["public"]["Enums"]["sample_status_type"]
+            | null
+          second_order_at: string | null
+          source_deal_id: string | null
+          stage_due_at: string | null
           stage_entered_at: string
           stage_id: string
           status: string
@@ -2745,13 +2951,30 @@ export type Database = {
           automation_paused_until?: string | null
           board_id: string
           closed_at?: string | null
+          contact_attempts?: number
           contact_id?: string | null
           created_at?: string
           custom_fields?: Json
+          first_delivery_at?: string | null
+          first_order_at?: string | null
+          first_order_mix?: string[]
+          first_order_value?: number | null
           id?: string
           last_ai_transition_at?: string | null
           lost_reason?: string | null
+          lost_reason_code?:
+            | Database["public"]["Enums"]["lost_reason_code_type"]
+            | null
+          nurture_return_at?: string | null
           owner_id?: string | null
+          sample_delivered_at?: string | null
+          sample_requested?: boolean
+          sample_status?:
+            | Database["public"]["Enums"]["sample_status_type"]
+            | null
+          second_order_at?: string | null
+          source_deal_id?: string | null
+          stage_due_at?: string | null
           stage_entered_at?: string
           stage_id: string
           status?: string
@@ -2769,13 +2992,30 @@ export type Database = {
           automation_paused_until?: string | null
           board_id?: string
           closed_at?: string | null
+          contact_attempts?: number
           contact_id?: string | null
           created_at?: string
           custom_fields?: Json
+          first_delivery_at?: string | null
+          first_order_at?: string | null
+          first_order_mix?: string[]
+          first_order_value?: number | null
           id?: string
           last_ai_transition_at?: string | null
           lost_reason?: string | null
+          lost_reason_code?:
+            | Database["public"]["Enums"]["lost_reason_code_type"]
+            | null
+          nurture_return_at?: string | null
           owner_id?: string | null
+          sample_delivered_at?: string | null
+          sample_requested?: boolean
+          sample_status?:
+            | Database["public"]["Enums"]["sample_status_type"]
+            | null
+          second_order_at?: string | null
+          source_deal_id?: string | null
+          stage_due_at?: string | null
           stage_entered_at?: string
           stage_id?: string
           status?: string
@@ -2807,11 +3047,39 @@ export type Database = {
             referencedColumns: ["id"]
           },
           {
+            foreignKeyName: "deals_source_deal_id_fkey"
+            columns: ["source_deal_id"]
+            isOneToOne: false
+            referencedRelation: "deal_sla_status"
+            referencedColumns: ["deal_id"]
+          },
+          {
+            foreignKeyName: "deals_source_deal_id_fkey"
+            columns: ["source_deal_id"]
+            isOneToOne: false
+            referencedRelation: "deals"
+            referencedColumns: ["id"]
+          },
+          {
             foreignKeyName: "deals_stage_id_fkey"
             columns: ["stage_id"]
             isOneToOne: false
             referencedRelation: "board_stages"
             referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "deals_stage_id_fkey"
+            columns: ["stage_id"]
+            isOneToOne: false
+            referencedRelation: "v_stef_stage_avg_time"
+            referencedColumns: ["stage_id"]
+          },
+          {
+            foreignKeyName: "deals_stage_id_fkey"
+            columns: ["stage_id"]
+            isOneToOne: false
+            referencedRelation: "v_stef_stage_conversion"
+            referencedColumns: ["stage_id"]
           },
           {
             foreignKeyName: "deals_tenant_id_fkey"
@@ -3261,6 +3529,13 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "contacts"
             referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "hitl_decisions_deal_id_fkey"
+            columns: ["deal_id"]
+            isOneToOne: false
+            referencedRelation: "deal_sla_status"
+            referencedColumns: ["deal_id"]
           },
           {
             foreignKeyName: "hitl_decisions_deal_id_fkey"
@@ -3929,6 +4204,44 @@ export type Database = {
           },
         ]
       }
+      marketing_spend: {
+        Row: {
+          amount: number
+          channel: string
+          created_at: string
+          id: string
+          month: string
+          tenant_id: string
+          updated_at: string
+        }
+        Insert: {
+          amount?: number
+          channel?: string
+          created_at?: string
+          id?: string
+          month: string
+          tenant_id: string
+          updated_at?: string
+        }
+        Update: {
+          amount?: number
+          channel?: string
+          created_at?: string
+          id?: string
+          month?: string
+          tenant_id?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "marketing_spend_tenant_id_fkey"
+            columns: ["tenant_id"]
+            isOneToOne: false
+            referencedRelation: "tenants"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       marketplace_engine_capabilities: {
         Row: {
           capability_key: string
@@ -4508,6 +4821,13 @@ export type Database = {
             foreignKeyName: "nurture_enrollments_deal_id_fkey"
             columns: ["deal_id"]
             isOneToOne: false
+            referencedRelation: "deal_sla_status"
+            referencedColumns: ["deal_id"]
+          },
+          {
+            foreignKeyName: "nurture_enrollments_deal_id_fkey"
+            columns: ["deal_id"]
+            isOneToOne: false
             referencedRelation: "deals"
             referencedColumns: ["id"]
           },
@@ -4639,6 +4959,20 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "board_stages"
             referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "nurture_sequences_trigger_stage_id_fkey"
+            columns: ["trigger_stage_id"]
+            isOneToOne: false
+            referencedRelation: "v_stef_stage_avg_time"
+            referencedColumns: ["stage_id"]
+          },
+          {
+            foreignKeyName: "nurture_sequences_trigger_stage_id_fkey"
+            columns: ["trigger_stage_id"]
+            isOneToOne: false
+            referencedRelation: "v_stef_stage_conversion"
+            referencedColumns: ["stage_id"]
           },
         ]
       }
@@ -4927,6 +5261,102 @@ export type Database = {
           },
         ]
       }
+      service_regions: {
+        Row: {
+          created_at: string
+          external_seller_id: string | null
+          id: string
+          name: string
+          tenant_id: string
+          uf: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          external_seller_id?: string | null
+          id?: string
+          name: string
+          tenant_id: string
+          uf: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          external_seller_id?: string | null
+          id?: string
+          name?: string
+          tenant_id?: string
+          uf?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "service_regions_external_seller_id_fkey"
+            columns: ["external_seller_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "service_regions_tenant_id_fkey"
+            columns: ["tenant_id"]
+            isOneToOne: false
+            referencedRelation: "tenants"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      service_route_cities: {
+        Row: {
+          active: boolean
+          city: string
+          city_norm: string | null
+          created_at: string
+          id: string
+          region_id: string | null
+          tenant_id: string
+          uf: string
+          updated_at: string
+        }
+        Insert: {
+          active?: boolean
+          city: string
+          city_norm?: string | null
+          created_at?: string
+          id?: string
+          region_id?: string | null
+          tenant_id: string
+          uf: string
+          updated_at?: string
+        }
+        Update: {
+          active?: boolean
+          city?: string
+          city_norm?: string | null
+          created_at?: string
+          id?: string
+          region_id?: string | null
+          tenant_id?: string
+          uf?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "service_route_cities_region_id_fkey"
+            columns: ["region_id"]
+            isOneToOne: false
+            referencedRelation: "service_regions"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "service_route_cities_tenant_id_fkey"
+            columns: ["tenant_id"]
+            isOneToOne: false
+            referencedRelation: "tenants"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       stage_ai_config: {
         Row: {
           advancement_criteria: Json
@@ -4974,6 +5404,20 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "board_stages"
             referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "stage_ai_config_stage_id_fkey"
+            columns: ["stage_id"]
+            isOneToOne: false
+            referencedRelation: "v_stef_stage_avg_time"
+            referencedColumns: ["stage_id"]
+          },
+          {
+            foreignKeyName: "stage_ai_config_stage_id_fkey"
+            columns: ["stage_id"]
+            isOneToOne: false
+            referencedRelation: "v_stef_stage_conversion"
+            referencedColumns: ["stage_id"]
           },
           {
             foreignKeyName: "stage_ai_config_tenant_id_fkey"
@@ -5049,6 +5493,20 @@ export type Database = {
             referencedColumns: ["id"]
           },
           {
+            foreignKeyName: "stage_transitions_from_stage_id_fkey"
+            columns: ["from_stage_id"]
+            isOneToOne: false
+            referencedRelation: "v_stef_stage_avg_time"
+            referencedColumns: ["stage_id"]
+          },
+          {
+            foreignKeyName: "stage_transitions_from_stage_id_fkey"
+            columns: ["from_stage_id"]
+            isOneToOne: false
+            referencedRelation: "v_stef_stage_conversion"
+            referencedColumns: ["stage_id"]
+          },
+          {
             foreignKeyName: "stage_transitions_tenant_id_fkey"
             columns: ["tenant_id"]
             isOneToOne: false
@@ -5061,6 +5519,20 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "board_stages"
             referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "stage_transitions_to_stage_id_fkey"
+            columns: ["to_stage_id"]
+            isOneToOne: false
+            referencedRelation: "v_stef_stage_avg_time"
+            referencedColumns: ["stage_id"]
+          },
+          {
+            foreignKeyName: "stage_transitions_to_stage_id_fkey"
+            columns: ["to_stage_id"]
+            isOneToOne: false
+            referencedRelation: "v_stef_stage_conversion"
+            referencedColumns: ["stage_id"]
           },
         ]
       }
@@ -5497,6 +5969,72 @@ export type Database = {
           },
         ]
       }
+      tenant_commercial_settings: {
+        Row: {
+          created_at: string
+          external_seller_rs_profile_id: string | null
+          finance_profile_id: string | null
+          sales_manager_profile_id: string | null
+          televendas_rs_profile_id: string | null
+          tenant_id: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          external_seller_rs_profile_id?: string | null
+          finance_profile_id?: string | null
+          sales_manager_profile_id?: string | null
+          televendas_rs_profile_id?: string | null
+          tenant_id: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          external_seller_rs_profile_id?: string | null
+          finance_profile_id?: string | null
+          sales_manager_profile_id?: string | null
+          televendas_rs_profile_id?: string | null
+          tenant_id?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "tenant_commercial_settings_external_seller_rs_profile_id_fkey"
+            columns: ["external_seller_rs_profile_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "tenant_commercial_settings_finance_profile_id_fkey"
+            columns: ["finance_profile_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "tenant_commercial_settings_sales_manager_profile_id_fkey"
+            columns: ["sales_manager_profile_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "tenant_commercial_settings_televendas_rs_profile_id_fkey"
+            columns: ["televendas_rs_profile_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "tenant_commercial_settings_tenant_id_fkey"
+            columns: ["tenant_id"]
+            isOneToOne: true
+            referencedRelation: "tenants"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       tenant_entitlements: {
         Row: {
           capability_key: string
@@ -5860,6 +6398,48 @@ export type Database = {
         }
         Relationships: []
       }
+      uf_routing_rules: {
+        Row: {
+          created_at: string
+          id: string
+          owner_id: string
+          tenant_id: string
+          uf: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          owner_id: string
+          tenant_id: string
+          uf: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          owner_id?: string
+          tenant_id?: string
+          uf?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "uf_routing_rules_owner_id_fkey"
+            columns: ["owner_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "uf_routing_rules_tenant_id_fkey"
+            columns: ["tenant_id"]
+            isOneToOne: false
+            referencedRelation: "tenants"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       usage_aggregates: {
         Row: {
           capability_key: string
@@ -6123,6 +6703,13 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "contacts"
             referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "voice_calls_deal_id_fkey"
+            columns: ["deal_id"]
+            isOneToOne: false
+            referencedRelation: "deal_sla_status"
+            referencedColumns: ["deal_id"]
           },
           {
             foreignKeyName: "voice_calls_deal_id_fkey"
@@ -6445,6 +7032,37 @@ export type Database = {
           },
         ]
       }
+      deal_sla_status: {
+        Row: {
+          board_key: string | null
+          contact_attempts: number | null
+          deal_id: string | null
+          is_overdue: boolean | null
+          max_attempts: number | null
+          owner_id: string | null
+          stage_due_at: string | null
+          stage_entered_at: string | null
+          stage_key: string | null
+          stage_name: string | null
+          tenant_id: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "deals_owner_id_fkey"
+            columns: ["owner_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "deals_tenant_id_fkey"
+            columns: ["tenant_id"]
+            isOneToOne: false
+            referencedRelation: "tenants"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       domain_event_delivery_health: {
         Row: {
           delivery_count: number | null
@@ -6460,6 +7078,231 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "domain_event_subscriptions"
             referencedColumns: ["subscriber_id"]
+          },
+        ]
+      }
+      v_stef_activation_rate: {
+        Row: {
+          activated: number | null
+          activation_pct: number | null
+          eligible: number | null
+          first_orders: number | null
+          tenant_id: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "deals_tenant_id_fkey"
+            columns: ["tenant_id"]
+            isOneToOne: false
+            referencedRelation: "tenants"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      v_stef_clients_by_origin: {
+        Row: {
+          client_origin:
+            | Database["public"]["Enums"]["client_origin_type"]
+            | null
+          clients: number | null
+          tenant_id: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "deals_tenant_id_fkey"
+            columns: ["tenant_id"]
+            isOneToOne: false
+            referencedRelation: "tenants"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      v_stef_cost_per_client: {
+        Row: {
+          clients: number | null
+          cost_per_client: number | null
+          month: string | null
+          spend: number | null
+          tenant_id: string | null
+        }
+        Relationships: []
+      }
+      v_stef_first_order: {
+        Row: {
+          avg_ticket: number | null
+          month: string | null
+          orders: number | null
+          tenant_id: string | null
+          total: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "deals_tenant_id_fkey"
+            columns: ["tenant_id"]
+            isOneToOne: false
+            referencedRelation: "tenants"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      v_stef_first_order_mix: {
+        Row: {
+          orders: number | null
+          product: string | null
+          tenant_id: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "deals_tenant_id_fkey"
+            columns: ["tenant_id"]
+            isOneToOne: false
+            referencedRelation: "tenants"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      v_stef_lead_to_client: {
+        Row: {
+          clients: number | null
+          conversion_pct: number | null
+          leads: number | null
+          tenant_id: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "deals_tenant_id_fkey"
+            columns: ["tenant_id"]
+            isOneToOne: false
+            referencedRelation: "tenants"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      v_stef_leads_by_origin: {
+        Row: {
+          lead_origin: Database["public"]["Enums"]["lead_origin_type"] | null
+          leads: number | null
+          tenant_id: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "contacts_tenant_id_fkey"
+            columns: ["tenant_id"]
+            isOneToOne: false
+            referencedRelation: "tenants"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      v_stef_leads_by_owner: {
+        Row: {
+          leads: number | null
+          owner_id: string | null
+          owner_name: string | null
+          tenant_id: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "contacts_owner_id_fkey"
+            columns: ["owner_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "contacts_tenant_id_fkey"
+            columns: ["tenant_id"]
+            isOneToOne: false
+            referencedRelation: "tenants"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      v_stef_out_of_area_demand: {
+        Row: {
+          city: string | null
+          group_level: string | null
+          kg_month: number | null
+          leads: number | null
+          region_name: string | null
+          tenant_id: string | null
+          uf: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "contacts_tenant_id_fkey"
+            columns: ["tenant_id"]
+            isOneToOne: false
+            referencedRelation: "tenants"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      v_stef_overdue_summary: {
+        Row: {
+          board_key: string | null
+          overdue: number | null
+          owner_id: string | null
+          stage_key: string | null
+          stage_name: string | null
+          tenant_id: string | null
+          total: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "deals_owner_id_fkey"
+            columns: ["owner_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "deals_tenant_id_fkey"
+            columns: ["tenant_id"]
+            isOneToOne: false
+            referencedRelation: "tenants"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      v_stef_stage_avg_time: {
+        Row: {
+          avg_hours: number | null
+          board_id: string | null
+          name: string | null
+          passages: number | null
+          stage_id: string | null
+          stage_key: string | null
+          tenant_id: string | null
+        }
+        Relationships: []
+      }
+      v_stef_stage_conversion: {
+        Row: {
+          board_id: string | null
+          conversion_pct: number | null
+          deals_next: number | null
+          deals_reached: number | null
+          name: string | null
+          position: number | null
+          stage_id: string | null
+          stage_key: string | null
+          tenant_id: string | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "board_stages_board_id_fkey"
+            columns: ["board_id"]
+            isOneToOne: false
+            referencedRelation: "boards"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "boards_tenant_id_fkey"
+            columns: ["tenant_id"]
+            isOneToOne: false
+            referencedRelation: "tenants"
+            referencedColumns: ["id"]
           },
         ]
       }
@@ -7029,6 +7872,10 @@ export type Database = {
           isSetofReturn: false
         }
       }
+      mark_out_of_area: {
+        Args: { p_deal_id: string; p_note?: string }
+        Returns: undefined
+      }
       merge_contacts: {
         Args: { p_source_id: string; p_target_id: string }
         Returns: Json
@@ -7042,6 +7889,7 @@ export type Database = {
         Args: { p_payload: Json; p_rule_id: string }
         Returns: Json
       }
+      process_nurture_returns: { Args: never; Returns: number }
       prune_domain_events: {
         Args: { p_before: string; p_limit?: number }
         Returns: number
@@ -7083,6 +7931,10 @@ export type Database = {
           isOneToOne: true
           isSetofReturn: false
         }
+      }
+      reactivate_region: {
+        Args: { p_cities: string[]; p_new_owner: string; p_region_id: string }
+        Returns: number
       }
       reconcile_subscription_runtime: {
         Args: { p_subscription_id: string }
@@ -7286,7 +8138,30 @@ export type Database = {
       webhook_allowed_event_types: { Args: never; Returns: string[] }
     }
     Enums: {
-      [_ in never]: never
+      client_origin_type: "lead_empresa" | "prospeccao_propria"
+      customer_segment_type:
+        | "pizzaria"
+        | "restaurante"
+        | "hamburgueria"
+        | "mercado"
+        | "padaria"
+        | "distribuidor"
+        | "outro"
+      lead_origin_type:
+        | "trafego_pago_site"
+        | "whatsapp_instagram"
+        | "indicacao_prospeccao"
+        | "eventos_chefs"
+      lost_reason_code_type:
+        | "sem_contato"
+        | "preco"
+        | "ja_tem_fornecedor"
+        | "pedido_minimo"
+        | "amostra_nao_aprovada"
+        | "credito_reprovado"
+        | "sem_perfil"
+        | "duplicado_invalido"
+      sample_status_type: "pendente" | "aprovada" | "reprovada"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -7413,6 +8288,34 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      client_origin_type: ["lead_empresa", "prospeccao_propria"],
+      customer_segment_type: [
+        "pizzaria",
+        "restaurante",
+        "hamburgueria",
+        "mercado",
+        "padaria",
+        "distribuidor",
+        "outro",
+      ],
+      lead_origin_type: [
+        "trafego_pago_site",
+        "whatsapp_instagram",
+        "indicacao_prospeccao",
+        "eventos_chefs",
+      ],
+      lost_reason_code_type: [
+        "sem_contato",
+        "preco",
+        "ja_tem_fornecedor",
+        "pedido_minimo",
+        "amostra_nao_aprovada",
+        "credito_reprovado",
+        "sem_perfil",
+        "duplicado_invalido",
+      ],
+      sample_status_type: ["pendente", "aprovada", "reprovada"],
+    },
   },
 } as const
