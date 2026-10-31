@@ -8,6 +8,13 @@
       "when": 1793283834397,
       "tag": "0000_niche_laticinios_stefanello",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1793414874358,
+      "tag": "0001_stefanello_funil_comercial",
+      "breakpoints": true
     }
   ]
 }
