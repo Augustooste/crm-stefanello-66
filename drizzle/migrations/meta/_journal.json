@@ -22,6 +22,13 @@
       "when": 1795713980822,
       "tag": "0002_fix_profile_on_signup",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1795714400275,
+      "tag": "0003_scope_catalog_reads_to_workspace_members",
+      "breakpoints": true
     }
   ]
 }
