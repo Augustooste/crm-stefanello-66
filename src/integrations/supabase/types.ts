@@ -1414,6 +1414,171 @@ export type Database = {
           },
         ]
       }
+      commercial_credit_allowances: {
+        Row: {
+          active: boolean
+          budget_total: number
+          created_at: string
+          id: string
+          max_clients: number | null
+          max_per_client: number
+          profile_id: string
+          release_after_days: number
+          release_requires_second_order: boolean
+          tenant_id: string
+          updated_at: string
+        }
+        Insert: {
+          active?: boolean
+          budget_total: number
+          created_at?: string
+          id?: string
+          max_clients?: number | null
+          max_per_client: number
+          profile_id: string
+          release_after_days?: number
+          release_requires_second_order?: boolean
+          tenant_id: string
+          updated_at?: string
+        }
+        Update: {
+          active?: boolean
+          budget_total?: number
+          created_at?: string
+          id?: string
+          max_clients?: number | null
+          max_per_client?: number
+          profile_id?: string
+          release_after_days?: number
+          release_requires_second_order?: boolean
+          tenant_id?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "commercial_credit_allowances_profile_id_fkey"
+            columns: ["profile_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "commercial_credit_allowances_tenant_id_fkey"
+            columns: ["tenant_id"]
+            isOneToOne: false
+            referencedRelation: "tenants"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      commercial_credit_grants: {
+        Row: {
+          allowance_id: string
+          amount: number
+          contact_id: string | null
+          deal_id: string
+          granted_at: string
+          granted_by: string
+          id: string
+          notes: string | null
+          payment_terms_days: number[]
+          release_reason: string | null
+          released_at: string | null
+          released_by: string | null
+          status: string
+          tenant_id: string
+        }
+        Insert: {
+          allowance_id: string
+          amount: number
+          contact_id?: string | null
+          deal_id: string
+          granted_at?: string
+          granted_by: string
+          id?: string
+          notes?: string | null
+          payment_terms_days?: number[]
+          release_reason?: string | null
+          released_at?: string | null
+          released_by?: string | null
+          status?: string
+          tenant_id: string
+        }
+        Update: {
+          allowance_id?: string
+          amount?: number
+          contact_id?: string | null
+          deal_id?: string
+          granted_at?: string
+          granted_by?: string
+          id?: string
+          notes?: string | null
+          payment_terms_days?: number[]
+          release_reason?: string | null
+          released_at?: string | null
+          released_by?: string | null
+          status?: string
+          tenant_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "commercial_credit_grants_allowance_id_fkey"
+            columns: ["allowance_id"]
+            isOneToOne: false
+            referencedRelation: "commercial_credit_allowances"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "commercial_credit_grants_allowance_id_fkey"
+            columns: ["allowance_id"]
+            isOneToOne: false
+            referencedRelation: "v_stef_credit_allowance_usage"
+            referencedColumns: ["allowance_id"]
+          },
+          {
+            foreignKeyName: "commercial_credit_grants_contact_id_fkey"
+            columns: ["contact_id"]
+            isOneToOne: false
+            referencedRelation: "contacts"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "commercial_credit_grants_deal_id_fkey"
+            columns: ["deal_id"]
+            isOneToOne: false
+            referencedRelation: "deal_sla_status"
+            referencedColumns: ["deal_id"]
+          },
+          {
+            foreignKeyName: "commercial_credit_grants_deal_id_fkey"
+            columns: ["deal_id"]
+            isOneToOne: false
+            referencedRelation: "deals"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "commercial_credit_grants_granted_by_fkey"
+            columns: ["granted_by"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "commercial_credit_grants_released_by_fkey"
+            columns: ["released_by"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "commercial_credit_grants_tenant_id_fkey"
+            columns: ["tenant_id"]
+            isOneToOne: false
+            referencedRelation: "tenants"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       communication_usage_events: {
         Row: {
           actual_cost_micros: number | null
@@ -7197,6 +7362,38 @@ export type Database = {
         }
         Relationships: []
       }
+      v_stef_credit_allowance_usage: {
+        Row: {
+          active: boolean | null
+          active_clients: number | null
+          allowance_id: string | null
+          available_amount: number | null
+          budget_total: number | null
+          max_clients: number | null
+          max_per_client: number | null
+          profile_id: string | null
+          profile_name: string | null
+          release_after_days: number | null
+          tenant_id: string | null
+          used_amount: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "commercial_credit_allowances_profile_id_fkey"
+            columns: ["profile_id"]
+            isOneToOne: false
+            referencedRelation: "profiles"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "commercial_credit_allowances_tenant_id_fkey"
+            columns: ["tenant_id"]
+            isOneToOne: false
+            referencedRelation: "tenants"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       v_stef_first_order: {
         Row: {
           avg_ticket: number | null
@@ -7935,6 +8132,15 @@ export type Database = {
           previous: string
         }[]
       }
+      grant_commercial_credit: {
+        Args: {
+          p_amount: number
+          p_deal_id: string
+          p_notes?: string
+          p_payment_terms_days?: number[]
+        }
+        Returns: string
+      }
       has_capability: { Args: { p_capability_key: string }; Returns: boolean }
       has_unique: { Args: { "": string }; Returns: string }
       in_todo: { Args: never; Returns: boolean }
@@ -8044,6 +8250,7 @@ export type Database = {
         Args: { p_rule_id: string; p_sample: Json }
         Returns: Json
       }
+      process_commercial_credit_releases: { Args: never; Returns: number }
       process_inbound_event: {
         Args: { p_payload: Json; p_rule_id: string }
         Returns: Json
@@ -8274,6 +8481,10 @@ export type Database = {
       }
       uninstall_marketplace_engine: {
         Args: { p_engine_id: string; p_tenant_id: string }
+        Returns: undefined
+      }
+      update_commercial_credit_grant: {
+        Args: { p_grant_id: string; p_reason?: string; p_status: string }
         Returns: undefined
       }
       update_inbound_rule: {
