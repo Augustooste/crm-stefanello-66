@@ -89,6 +89,7 @@ import {
 } from "@/lib/deal-health";
 import { buildDealBriefing, type DealBriefing, type DealFollowupStatus } from "@/lib/deal-briefing";
 import { DealChatDialog } from "@/components/pipeline/deal-chat-dialog";
+import { DealCommercialCreditSection } from "@/components/pipeline/DealCommercialCreditSection";
 import { DealCreditSection, type CreditCondition } from "@/components/pipeline/DealCreditSection";
 import { MeetingPrepSheet } from "@/components/pipeline/meeting-prep-sheet";
 import { MeetingResultSheet } from "@/components/pipeline/meeting-result-sheet";
@@ -1393,6 +1394,7 @@ function DraggableCard({
               </>
             )}
             <DealCreditSection deal={deal} canEdit={canEditCredit} />
+            <DealCommercialCreditSection dealId={deal.id} creditCondition={deal.credit_condition} canManage={canEditCredit} />
           </PopoverContent>
         </Popover>
         {!readOnly && (
