@@ -15,6 +15,13 @@
       "when": 1793414874358,
       "tag": "0001_stefanello_funil_comercial",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1795713980822,
+      "tag": "0002_fix_profile_on_signup",
+      "breakpoints": true
     }
   ]
 }
