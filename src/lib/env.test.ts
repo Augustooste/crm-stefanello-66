@@ -7,9 +7,6 @@ import {
   toMissingEnvError,
 } from "./env";
 
-// Mesmos valores hardcoded em `FALLBACK_PUBLIC_SUPABASE_ENV` (src/lib/env.ts).
-const FALLBACK_URL = "https://dpdtgddkvdgswndzuofv.supabase.co";
-const FALLBACK_KEY = "sb_publishable_nbHDSIpyRbePTlV-XRepHw_-U4ps2-2";
 
 /** Sempre stuba todas as vars (mesmo padrão de integrations/supabase/client.test.ts) — evita vazar `.env.local` real da máquina pro teste. */
 function stubAllEnv(vars: {
@@ -123,21 +120,12 @@ describe("checkPublicSupabaseEnv", () => {
     });
   });
 
-  it("cai para o fallback hardcoded quando nenhuma env var está definida", () => {
+  it("sem nenhuma env var, acusa variáveis ausentes (nunca usa outro backend)", () => {
     stubAllEnv({});
 
     expect(checkPublicSupabaseEnv()).toEqual({
-      ok: true,
-      env: { url: FALLBACK_URL, publishableKey: FALLBACK_KEY },
-    });
-  });
-
-  it("mantém o fallback quando o ambiente identifica ESTE projeto", () => {
-    stubAllEnv({ projectId: "dpdtgddkvdgswndzuofv" });
-
-    expect(checkPublicSupabaseEnv()).toEqual({
-      ok: true,
-      env: { url: FALLBACK_URL, publishableKey: FALLBACK_KEY },
+      ok: false,
+      missing: ["SUPABASE_URL", "SUPABASE_PUBLISHABLE_KEY"],
     });
   });
 

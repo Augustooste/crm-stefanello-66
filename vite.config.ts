@@ -10,20 +10,11 @@ import { loadEnv, type ConfigEnv } from "vite";
 export default function config(configEnv: ConfigEnv) {
   const { mode } = configEnv;
   const env = loadEnv(mode, process.cwd(), "");
-  // Fallback load-bearing no rebuild via GitHub (o .env pode não chegar), mas
-  // ele vale SÓ para este projeto. Num remix o backend é outro: usar o fallback
-  // ali faria o app clonado apontar para o backend errado e falhar em toda tela.
-  const FALLBACK_PROJECT_ID = "dpdtgddkvdgswndzuofv";
-  const fallbackSupabaseUrl = `https://${FALLBACK_PROJECT_ID}.supabase.co`;
-  const fallbackSupabasePublishableKey = "sb_publishable_nbHDSIpyRbePTlV-XRepHw_-U4ps2-2";
-  const envProjectId = env.VITE_SUPABASE_PROJECT_ID || env.SUPABASE_PROJECT_ID || "";
-  const fallbackAllowed = envProjectId === "" || envProjectId === FALLBACK_PROJECT_ID;
-  const supabaseUrl =
-    env.VITE_SUPABASE_URL || env.SUPABASE_URL || (fallbackAllowed ? fallbackSupabaseUrl : "");
+  // Sem fallback: o backend vem só das variáveis do Lovable Cloud. Se faltarem,
+  // o app mostra o erro de "variáveis ausentes" em vez de usar outro backend.
+  const supabaseUrl = env.VITE_SUPABASE_URL || env.SUPABASE_URL || "";
   const supabasePublishableKey =
-    env.VITE_SUPABASE_PUBLISHABLE_KEY ||
-    env.SUPABASE_PUBLISHABLE_KEY ||
-    (fallbackAllowed ? fallbackSupabasePublishableKey : "");
+    env.VITE_SUPABASE_PUBLISHABLE_KEY || env.SUPABASE_PUBLISHABLE_KEY || "";
 
   return defineConfig({
     tanstackStart: {
