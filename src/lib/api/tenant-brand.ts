@@ -4,9 +4,10 @@ import { useRouterState } from "@tanstack/react-router";
 import { supabase } from "@/integrations/supabase/client";
 import { useCurrentProfile } from "@/lib/api/session";
 import { applyBrandTheme, parseBrandColors } from "@/lib/brand-theme";
+import { displayBrandName } from "@/lib/brand-name";
 
 /** Marca padrão do produto: só aparece quando o usuário não tem workspace. */
-const PRODUCT_BRAND = "Stefanello";
+const PRODUCT_BRAND = "Laticínio Stefanello";
 
 export interface TenantBrand {
   /** Nome do workspace (tenant); `null` sem tenant, com erro ou ainda carregando. */
@@ -118,13 +119,13 @@ export function useTenantTitle() {
 
     // Normalizar a base: remover a marca padrão se estiver presente
     // (para rotas fora de _app que ainda trazem " - Stefanello" ou " — Stefanello")
-    const normalized = base.replace(/\s*[—-]\s*Stefanello\s*$/, "").trim();
+    const normalized = base.replace(/\s*[—-]\s*(?:Laticínios?\s+)?Stefanello\s*$/, "").trim();
 
     const brand = brandRef.current;
     let next = normalized;
     if (!brand.isLoading) {
       // Carregamento terminou: acrescentar a marca
-      const suffix = brand.name ?? PRODUCT_BRAND;
+      const suffix = brand.name ? displayBrandName(brand.name) : PRODUCT_BRAND;
       next = `${normalized} — ${suffix}`;
     }
 

@@ -73,7 +73,7 @@ describe("head() da rota de formulários", () => {
   it("define título e descrição de SEO", async () => {
     const head = await Route.options.head?.({} as never);
     const titleMeta = head?.meta?.find((m) => m && "title" in m);
-    expect(titleMeta).toMatchObject({ title: "Formulários de captura" });
+    expect(titleMeta).toMatchObject({ title: "Formulários de captura — Laticínio Stefanello" });
     expect(head?.links?.some((l) => l && "rel" in l && l.rel === "canonical")).toBe(true);
   });
 });

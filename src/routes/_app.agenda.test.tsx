@@ -93,11 +93,15 @@ describe("configuração da rota /_app/agenda", () => {
 
     expect(head).toEqual({
       meta: [
-        { title: "Agenda" },
+        { title: "Agenda — Laticínio Stefanello" },
         {
           name: "description",
           content: "Agenda semanal de compromissos do seu negócio.",
         },
+        { property: "og:title", content: "Agenda — Laticínio Stefanello" },
+        { property: "og:description", content: "Agenda semanal de compromissos do seu negócio." },
+        { property: "og:type", content: "website" },
+        { name: "twitter:card", content: "summary_large_image" },
       ],
     });
   });

@@ -33,6 +33,8 @@ import {
 import { useCurrentProfile } from "@/lib/api/session";
 import { useHumanAttentionCount } from "@/lib/api/human-attention";
 import { useTenantBrand } from "@/lib/api/tenant-brand";
+import { BrandMark } from "@/components/marketing/BrandMark";
+import { displayBrandName } from "@/lib/brand-name";
 import { useActivePlugins } from "@/lib/api/plugins";
 import { useMyCapabilities } from "@/lib/api/entitlements";
 import { engineRegistry } from "@/engines/registry";
@@ -124,7 +126,11 @@ export function AppSidebar() {
   }));
   const items = [...baseItems.filter((i) => !i.admin || isAdmin), ...engineItems];
   // Marca padrão só quando não há workspace; enquanto o nome carrega, placeholder neutro.
-  const brandName = brand.name ?? (brand.isLoading ? null : "Stefanello");
+  const brandName = brand.name
+    ? displayBrandName(brand.name)
+    : brand.isLoading
+      ? null
+      : "Laticínio Stefanello";
 
   return (
     <Sidebar collapsible="icon">
@@ -133,23 +139,15 @@ export function AppSidebar() {
           className="flex items-center gap-2 px-2 py-1.5"
           aria-busy={brandName ? undefined : true}
         >
-          {brand.logoUrl ? (
-            <img
-              src={brand.logoUrl}
-              alt=""
-              aria-hidden
-              className="h-8 w-8 shrink-0 rounded-md object-cover"
-            />
-          ) : brandName ? (
-            <div className="glow-soft flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-primary font-mono font-medium text-primary-foreground">
-              {brandName.charAt(0).toUpperCase()}
-            </div>
-          ) : (
-            <div aria-hidden className="h-8 w-8 shrink-0 animate-pulse rounded-md bg-muted" />
-          )}
-          <span className="truncate text-body font-semibold text-sidebar-foreground group-data-[collapsible=icon]:hidden">
-            {brandName ?? "Carregando…"}
-          </span>
+          <BrandMark className="h-9 group-data-[collapsible=icon]:hidden" />
+          <img
+            src="/app-icon-192.png"
+            alt="Laticínio Stefanello"
+            width={192}
+            height={192}
+            className="hidden h-8 w-8 object-contain group-data-[collapsible=icon]:block"
+          />
+          <span className="sr-only">{brandName ?? "Carregando…"}</span>
         </div>
       </SidebarHeader>
       <SidebarContent>

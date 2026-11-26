@@ -24,7 +24,7 @@ function NotFoundComponent() {
   // do root. Client-only: não cobre o <title> do HTML servido por SSR nem
   // og:title de preview de link — só a aba do navegador depois de montar.
   useEffect(() => {
-    document.title = "Página não encontrada — Stefanello";
+    document.title = "Página não encontrada — Laticínio Stefanello";
   }, []);
 
   return (
@@ -99,15 +99,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Stefanello — Laticínios e embutidos" },
+      { title: "Laticínio Stefanello" },
       {
         name: "description",
         content:
           "CRM com assistente de IA para pequenas e médias empresas: pipeline kanban, inbox unificado de WhatsApp e e-mail, e qualificação automática de leads.",
       },
-      { name: "author", content: "Stefanello" },
-      { property: "og:site_name", content: "Stefanello" },
-      { property: "og:title", content: "Stefanello — Laticínios e embutidos" },
+      { name: "author", content: "Laticínio Stefanello" },
+      { property: "og:site_name", content: "Laticínio Stefanello" },
+      { property: "og:title", content: "Laticínio Stefanello" },
       {
         property: "og:description",
         content:
@@ -120,6 +120,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "icon", type: "image/png", href: "/favicon.png" },
+      { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
       { rel: "manifest", href: "/manifest.webmanifest" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },

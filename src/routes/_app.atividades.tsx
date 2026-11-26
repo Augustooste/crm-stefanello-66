@@ -69,24 +69,26 @@ type ActivityRow = {
 export const Route = createFileRoute("/_app/atividades")({
   head: () => ({
     meta: [
-      { title: "Atividades" },
+      { title: "Atividades — Laticínio Stefanello" },
       {
         name: "description",
         content: "Tarefas, ligações e retornos organizados por atrasadas, hoje e próximas.",
       },
-      { property: "og:title", content: "Atividades" },
+      { property: "og:title", content: "Atividades — Laticínio Stefanello" },
       {
         property: "og:description",
         content: "Tarefas, ligações e retornos organizados por atrasadas, hoje e próximas.",
       },
-      { property: "og:url", content: "https://aceleraflow.lovable.app/atividades" },
-      { name: "twitter:title", content: "Atividades" },
+      { property: "og:url", content: "https://crmstefanello.lovable.app/atividades" },
+      { name: "twitter:title", content: "Atividades — Laticínio Stefanello" },
       {
         name: "twitter:description",
         content: "Tarefas, ligações e retornos organizados por atrasadas, hoje e próximas.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://aceleraflow.lovable.app/atividades" }],
+    links: [{ rel: "canonical", href: "https://crmstefanello.lovable.app/atividades" }],
   }),
   component: ActivitiesPage,
 });

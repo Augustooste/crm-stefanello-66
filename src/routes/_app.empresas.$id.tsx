@@ -30,8 +30,12 @@ export const Route = createFileRoute("/_app/empresas/$id")({
   beforeLoad: ({ context }) => requirePluginActive(context.queryClient, "companies"),
   head: () => ({
     meta: [
-      { title: "Empresa" },
+      { title: "Empresa — Laticínio Stefanello" },
       { name: "description", content: "Contatos e negócios agrupados por empresa." },
+      { property: "og:title", content: "Empresa — Laticínio Stefanello" },
+      { property: "og:description", content: "Contatos e negócios agrupados por empresa." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: CompanyDetail,

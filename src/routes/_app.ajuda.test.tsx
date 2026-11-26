@@ -11,7 +11,7 @@ describe("head() da rota de ajuda", () => {
   it("define título e descrição de SEO", async () => {
     const head = await Route.options.head?.({} as never);
     const titleMeta = head?.meta?.find((m) => m && "title" in m);
-    expect(titleMeta).toMatchObject({ title: "Ajuda" });
+    expect(titleMeta).toMatchObject({ title: "Ajuda — Laticínio Stefanello" });
     expect(head?.links?.some((l) => l && "rel" in l && l.rel === "canonical")).toBe(true);
   });
 });
@@ -21,7 +21,7 @@ describe("página de ajuda (/_app/ajuda)", () => {
     renderWithQueryClient(<AjudaPage />);
 
     expect(screen.getByRole("heading", { name: "Ajuda" })).toBeInTheDocument();
-    expect(screen.getByText("Guia rápido de uso do Stefanello")).toBeInTheDocument();
+    expect(screen.getByText("Guia rápido de uso do Laticínio Stefanello")).toBeInTheDocument();
   });
 
   it("lista as seções principais do app", () => {

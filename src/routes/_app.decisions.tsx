@@ -52,27 +52,29 @@ import {
 export const Route = createFileRoute("/_app/decisions")({
   head: () => ({
     meta: [
-      { title: "Decisões" },
+      { title: "Decisões — Laticínio Stefanello" },
       {
         name: "description",
         content:
           "Fila única de sugestões da IA aguardando aprovação, edição, rejeição ou adiamento.",
       },
-      { property: "og:title", content: "Decisões" },
+      { property: "og:title", content: "Decisões — Laticínio Stefanello" },
       {
         property: "og:description",
         content:
           "Fila única de sugestões da IA aguardando aprovação, edição, rejeição ou adiamento.",
       },
-      { property: "og:url", content: "https://aceleraflow.lovable.app/decisions" },
-      { name: "twitter:title", content: "Decisões" },
+      { property: "og:url", content: "https://crmstefanello.lovable.app/decisions" },
+      { name: "twitter:title", content: "Decisões — Laticínio Stefanello" },
       {
         name: "twitter:description",
         content:
           "Fila única de sugestões da IA aguardando aprovação, edição, rejeição ou adiamento.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://aceleraflow.lovable.app/decisions" }],
+    links: [{ rel: "canonical", href: "https://crmstefanello.lovable.app/decisions" }],
   }),
   component: DecisionsPage,
 });

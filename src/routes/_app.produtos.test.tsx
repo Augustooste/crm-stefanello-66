@@ -316,6 +316,8 @@ describe("página de produtos (/_app/produtos)", () => {
   it("gera título e descrição no head da rota", async () => {
     const head = await Route.options.head?.({} as never);
 
-    expect(head?.meta?.some((m) => m && "title" in m && m.title === "Produtos")).toBe(true);
+    expect(
+      head?.meta?.some((m) => m && "title" in m && m.title === "Produtos — Laticínio Stefanello"),
+    ).toBe(true);
   });
 });

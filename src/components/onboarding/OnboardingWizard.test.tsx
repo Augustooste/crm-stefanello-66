@@ -1142,13 +1142,13 @@ describe("StepEmpresa", () => {
     const user = userEvent.setup();
     renderWizard();
 
-    expect(await screen.findByText("Sem logo")).toBeInTheDocument();
+    expect((await screen.findAllByAltText("Laticínio Stefanello")).length).toBeGreaterThan(0);
 
     await advanceToStep(user, 3);
     expect(await screen.findByText("Time de atendimento")).toBeInTheDocument();
   });
 
-  it("mantém o preview de logo vazio quando o signed URL retorna nulo", async () => {
+  it("mantém a logo oficial quando o signed URL retorna nulo", async () => {
     setTableResult("tenants", "select", {
       data: { id: "t1", name: "Empresa X", logo_url: "t1/logo.png", business_profile: {} },
       error: null,
@@ -1158,7 +1158,7 @@ describe("StepEmpresa", () => {
 
     await screen.findByDisplayValue("Empresa X");
     await waitFor(() => expect(createSignedUrlMock).toHaveBeenCalled());
-    expect(screen.getByText("Sem logo")).toBeInTheDocument();
+    expect(screen.getAllByAltText("Laticínio Stefanello").length).toBeGreaterThan(0);
   });
 
   it("mostra toast de erro com mensagem padrão quando o upload da logo falha sem mensagem", async () => {

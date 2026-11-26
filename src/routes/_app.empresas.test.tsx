@@ -169,6 +169,8 @@ describe("página de empresas (/_app/empresas)", () => {
   it("gera título e descrição no head da rota", async () => {
     const head = await Route.options.head?.({} as never);
 
-    expect(head?.meta?.some((m) => m && "title" in m && m.title === "Empresas")).toBe(true);
+    expect(
+      head?.meta?.some((m) => m && "title" in m && m.title === "Empresas — Laticínio Stefanello"),
+    ).toBe(true);
   });
 });

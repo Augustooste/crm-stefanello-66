@@ -146,7 +146,9 @@ describe("página de detalhe da empresa (/_app/empresas/$id)", () => {
   it("gera título e descrição no head da rota", async () => {
     const head = await Route.options.head?.({ params: { id: "company-1" } } as never);
 
-    expect(head?.meta?.some((m) => m && "title" in m && m.title === "Empresa")).toBe(true);
+    expect(
+      head?.meta?.some((m) => m && "title" in m && m.title === "Empresa — Laticínio Stefanello"),
+    ).toBe(true);
     expect(
       head?.meta?.some(
         (m) => m && "content" in m && m.content === "Contatos e negócios agrupados por empresa.",

@@ -16,12 +16,14 @@ const DESCRIPTION =
 export const Route = createFileRoute("/_app/documentacao/webhooks")({
   head: () => ({
     meta: [
-      { title: TITLE },
+      { title: `${TITLE} — Laticínio Stefanello` },
       { name: "description", content: DESCRIPTION },
-      { property: "og:title", content: TITLE },
+      { property: "og:title", content: `${TITLE} — Laticínio Stefanello` },
       { property: "og:description", content: DESCRIPTION },
-      { name: "twitter:title", content: TITLE },
+      { name: "twitter:title", content: `${TITLE} — Laticínio Stefanello` },
       { name: "twitter:description", content: DESCRIPTION },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: WebhooksDocsPage,

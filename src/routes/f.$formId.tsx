@@ -30,8 +30,12 @@ export const Route = createFileRoute("/f/$formId")({
   component: PublicLeadFormPage,
   head: () => ({
     meta: [
-      { title: "Formulário de contato — Stefanello" },
+      { title: "Formulário de contato — Laticínio Stefanello" },
       { name: "description", content: "Preencha o formulário para entrar em contato." },
+      { property: "og:title", content: "Formulário de contato — Laticínio Stefanello" },
+      { property: "og:description", content: "Preencha o formulário para entrar em contato." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
 });

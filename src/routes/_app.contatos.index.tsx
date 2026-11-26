@@ -80,24 +80,26 @@ type ContactListRow = ContactRow & {
 export const Route = createFileRoute("/_app/contatos/")({
   head: () => ({
     meta: [
-      { title: "Contatos" },
+      { title: "Contatos — Laticínio Stefanello" },
       {
         name: "description",
         content: "Base de leads e clientes com busca, filtros e histórico completo.",
       },
-      { property: "og:title", content: "Contatos" },
+      { property: "og:title", content: "Contatos — Laticínio Stefanello" },
       {
         property: "og:description",
         content: "Base de leads e clientes com busca, filtros e histórico completo.",
       },
-      { property: "og:url", content: "https://aceleraflow.lovable.app/contatos" },
-      { name: "twitter:title", content: "Contatos" },
+      { property: "og:url", content: "https://crmstefanello.lovable.app/contatos" },
+      { name: "twitter:title", content: "Contatos — Laticínio Stefanello" },
       {
         name: "twitter:description",
         content: "Base de leads e clientes com busca, filtros e histórico completo.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://aceleraflow.lovable.app/contatos" }],
+    links: [{ rel: "canonical", href: "https://crmstefanello.lovable.app/contatos" }],
   }),
   component: ContactsPage,
 });

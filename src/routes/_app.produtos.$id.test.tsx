@@ -202,7 +202,9 @@ describe("página de detalhe do produto (/_app/produtos/$id)", () => {
   it("gera título e descrição no head da rota", async () => {
     const head = await Route.options.head?.({ params: { id: "product-1" } } as never);
 
-    expect(head?.meta?.some((m) => m && "title" in m && m.title === "Produto")).toBe(true);
+    expect(
+      head?.meta?.some((m) => m && "title" in m && m.title === "Produto — Laticínio Stefanello"),
+    ).toBe(true);
     expect(
       head?.meta?.some(
         (m) => m && "content" in m && m.content === "Detalhes do produto ou serviço do catálogo.",

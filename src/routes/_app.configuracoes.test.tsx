@@ -94,10 +94,10 @@ describe("head() da rota de configurações", () => {
   it("define título e descrição de SEO", async () => {
     const head = await Route.options.head?.({} as never);
     const titleMeta = head?.meta?.find((m) => m && "title" in m);
-    expect(titleMeta).toMatchObject({ title: "Configurações" });
+    expect(titleMeta).toMatchObject({ title: "Configurações — Laticínio Stefanello" });
     const descriptionMeta = head?.meta?.find((m) => m && "name" in m && m.name === "description");
     expect(descriptionMeta).toMatchObject({
-      content: "Preferências da conta, da empresa e do time no Stefanello.",
+      content: "Preferências da conta, da empresa e do time no Laticínio Stefanello.",
     });
     expect(head?.links?.some((l) => l && "rel" in l && l.rel === "canonical")).toBe(true);
   });

@@ -10,27 +10,29 @@ export const Route = createFileRoute("/_app/templates")({
   beforeLoad: ({ context }) => requireAdmin(context.queryClient),
   head: () => ({
     meta: [
-      { title: "Campanhas" },
+      { title: "Campanhas — Laticínio Stefanello" },
       {
         name: "description",
         content:
           "Campanhas de reativação, recuperação, nutrição e recompra, e os modelos de mensagem aprovados.",
       },
-      { property: "og:title", content: "Campanhas" },
+      { property: "og:title", content: "Campanhas — Laticínio Stefanello" },
       {
         property: "og:description",
         content:
           "Campanhas de reativação, recuperação, nutrição e recompra, e os modelos de mensagem aprovados.",
       },
-      { property: "og:url", content: "https://aceleraflow.lovable.app/templates" },
-      { name: "twitter:title", content: "Campanhas" },
+      { property: "og:url", content: "https://crmstefanello.lovable.app/templates" },
+      { name: "twitter:title", content: "Campanhas — Laticínio Stefanello" },
       {
         name: "twitter:description",
         content:
           "Campanhas de reativação, recuperação, nutrição e recompra, e os modelos de mensagem aprovados.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://aceleraflow.lovable.app/templates" }],
+    links: [{ rel: "canonical", href: "https://crmstefanello.lovable.app/templates" }],
   }),
   component: CampanhasPage,
 });

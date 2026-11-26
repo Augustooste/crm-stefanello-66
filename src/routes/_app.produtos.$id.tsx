@@ -31,8 +31,12 @@ export const Route = createFileRoute("/_app/produtos/$id")({
   beforeLoad: ({ context }) => requirePluginActive(context.queryClient, "catalogo"),
   head: () => ({
     meta: [
-      { title: "Produto" },
+      { title: "Produto — Laticínio Stefanello" },
       { name: "description", content: "Detalhes do produto ou serviço do catálogo." },
+      { property: "og:title", content: "Produto — Laticínio Stefanello" },
+      { property: "og:description", content: "Detalhes do produto ou serviço do catálogo." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: ProductDetail,

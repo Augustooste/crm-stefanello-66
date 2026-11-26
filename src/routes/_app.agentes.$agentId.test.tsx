@@ -94,10 +94,12 @@ describe("head() da rota /_app/agentes/$agentId", () => {
   it("gera título, canonical e og:url com o id do agente", async () => {
     const head = await Route.options.head?.({ params: { agentId: "a1" } } as never);
 
-    expect(head?.meta?.some((m) => m && "title" in m && m.title === "Agente")).toBe(true);
+    expect(
+      head?.meta?.some((m) => m && "title" in m && m.title === "Agente — Laticínio Stefanello"),
+    ).toBe(true);
     expect(
       head?.links?.some(
-        (l) => l && "href" in l && l.href === "https://aceleraflow.lovable.app/agentes/a1",
+        (l) => l && "href" in l && l.href === "https://crmstefanello.lovable.app/agentes/a1",
       ),
     ).toBe(true);
   });

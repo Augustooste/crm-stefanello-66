@@ -192,9 +192,9 @@ export function McpConnectionForm({
       >
         <p className="font-medium text-foreground">Autorize o acesso no provedor MCP</p>
         <p className="text-caption text-muted-foreground">
-          Esta conexão exige OAuth. Abra o link abaixo, autorize o Stefanello no provedor e, na página
-          de retorno, copie os valores <code>code</code> e <code>state</code> da URL para os campos
-          abaixo.
+          Esta conexão exige OAuth. Abra o link abaixo, autorize o Laticínio Stefanello no provedor
+          e, na página de retorno, copie os valores <code>code</code> e <code>state</code> da URL
+          para os campos abaixo.
         </p>
         <Button variant="outline" size="sm" className="w-fit" asChild>
           <a href={oauth.url} target="_blank" rel="noopener noreferrer">

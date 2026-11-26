@@ -173,7 +173,7 @@ describe("AppSidebar", () => {
 
     renderSidebar();
 
-    expect(screen.getAllByText("Stefanello").length).toBeGreaterThan(0);
+    expect(screen.getAllByText("Laticínio Stefanello").length).toBeGreaterThan(0);
   });
 
   it("usa o nome do tenant quando fornecido pela marca", () => {
@@ -191,7 +191,7 @@ describe("AppSidebar", () => {
 
     const { rerender } = renderSidebar();
 
-    expect(screen.queryByText("Stefanello")).not.toBeInTheDocument();
+    expect(screen.queryByText("Laticínio Stefanello")).not.toBeInTheDocument();
     expect(screen.queryByText("C")).not.toBeInTheDocument();
     const placeholder = screen.getByText("Carregando…");
     expect(placeholder.closest("[aria-busy='true']")).not.toBeNull();
@@ -208,16 +208,19 @@ describe("AppSidebar", () => {
     expect(document.querySelector("[aria-busy='true']")).toBeNull();
   });
 
-  it("renderiza a inicial da marca quando não há logo", () => {
+  it("renderiza a logo oficial quando não há logo do tenant", () => {
     useCurrentProfileMock.mockReturnValue({ data: { role: "admin" } });
     useTenantBrandMock.mockReturnValue({ name: "zeta", logoUrl: null });
 
     renderSidebar();
 
-    expect(screen.getByText("Z")).toBeInTheDocument();
+    expect(screen.getAllByAltText("Laticínio Stefanello")[0]).toHaveAttribute(
+      "src",
+      "/stefanello-logo.png",
+    );
   });
 
-  it("renderiza a logo do tenant como imagem quando logoUrl é fornecido", () => {
+  it("mantém a logo oficial mesmo quando logoUrl do tenant é fornecido", () => {
     useCurrentProfileMock.mockReturnValue({ data: { role: "admin" } });
     useTenantBrandMock.mockReturnValue({
       name: "Clínica Vida",
@@ -226,8 +229,8 @@ describe("AppSidebar", () => {
 
     renderSidebar();
 
-    const img = screen.getByAltText("");
-    expect(img).toHaveAttribute("src", "https://logo.example/x.png");
+    const img = screen.getAllByAltText("Laticínio Stefanello")[0];
+    expect(img).toHaveAttribute("src", "/stefanello-logo.png");
   });
 
   it("marca o item Dashboard como ativo apenas na rota raiz", () => {

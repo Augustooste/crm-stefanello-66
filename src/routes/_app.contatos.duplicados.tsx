@@ -21,12 +21,19 @@ import { formatDate } from "@/lib/format";
 export const Route = createFileRoute("/_app/contatos/duplicados")({
   head: () => ({
     meta: [
-      { title: "Contatos duplicados" },
+      { title: "Contatos duplicados — Laticínio Stefanello" },
       {
         name: "description",
         content: "Revise grupos de contatos prováveis duplicados e funda-os preservando histórico.",
       },
       { name: "robots", content: "noindex" },
+      { property: "og:title", content: "Contatos duplicados — Laticínio Stefanello" },
+      {
+        property: "og:description",
+        content: "Revise grupos de contatos prováveis duplicados e funda-os preservando histórico.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: DuplicateContactsPage,

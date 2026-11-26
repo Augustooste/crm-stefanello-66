@@ -36,6 +36,7 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
+import { BrandMark } from "@/components/marketing/BrandMark";
 import { Progress } from "@/components/ui/progress";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -196,6 +197,7 @@ export function OnboardingWizard({
         onEscapeKeyDown={(e) => e.preventDefault()}
       >
         <DialogHeader className="border-b border-border px-6 pt-6 pr-12 pb-4">
+          <BrandMark compact className="mb-3" />
           <div className="flex items-start justify-between gap-4">
             <div>
               <DialogTitle className="text-h5">
@@ -696,9 +698,9 @@ function StepEmpresa({
         <div className="flex flex-col items-center gap-2">
           <div className="flex h-24 w-24 items-center justify-center overflow-hidden rounded-md border border-border bg-muted">
             {logoPreview ? (
-              <img src={logoPreview} alt="Logo" className="h-full w-full object-cover" />
+              <img src={logoPreview} alt="Logo" className="h-full w-full object-contain" />
             ) : (
-              <span className="text-caption text-muted-foreground">Sem logo</span>
+              <BrandMark compact />
             )}
           </div>
           <input

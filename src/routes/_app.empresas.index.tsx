@@ -37,11 +37,18 @@ export const Route = createFileRoute("/_app/empresas/")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Empresas" },
+      { title: "Empresas — Laticínio Stefanello" },
       {
         name: "description",
         content: "Empresas do seu CRM: contatos e negócios agrupados por conta.",
       },
+      { property: "og:title", content: "Empresas — Laticínio Stefanello" },
+      {
+        property: "og:description",
+        content: "Empresas do seu CRM: contatos e negócios agrupados por conta.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: CompaniesPage,

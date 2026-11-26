@@ -12,3 +12,6 @@
 ## Commercial funnel rules
 - Business rules for the Stefanello funnel live in DB triggers keyed by `boards.board_key` and `board_stages.stage_key` (never by display names); boards without a `board_key` are untouched so existing AI/pipeline flows keep working.
 - Automated stage moves go through `private.stef_move_deal`, which sets `app.deal_stage_transition_context` required by the stage-transition guard.
+
+## Visual identity
+- Use the shared BrandMark component for official app branding; derived public icons and the leaf-route share image use the same source logo to keep identity consistent without changing tenant data.

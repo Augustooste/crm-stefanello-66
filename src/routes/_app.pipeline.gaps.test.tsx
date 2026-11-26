@@ -135,10 +135,10 @@ describe("página de pipeline — lacunas de cobertura (/_app/pipeline)", () => 
     const head = await Route.options.head?.({} as never);
     if (!head) throw new Error("head indefinido");
 
-    expect(head.meta?.[0]).toEqual({ title: "Funil de vendas" });
+    expect(head.meta?.[0]).toEqual({ title: "Funil de vendas — Laticínio Stefanello" });
     expect(head.links?.[0]).toEqual({
       rel: "canonical",
-      href: "https://aceleraflow.lovable.app/pipeline",
+      href: "https://crmstefanello.lovable.app/pipeline",
     });
   });
 

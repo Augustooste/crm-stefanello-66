@@ -12,27 +12,29 @@ import {
 export const Route = createFileRoute("/_app/ajuda")({
   head: () => ({
     meta: [
-      { title: "Ajuda" },
+      { title: "Ajuda — Laticínio Stefanello" },
       {
         name: "description",
         content:
-          "Guia rápido de uso do Stefanello: funil, conversas, contatos, atividades, agenda e configurações.",
+          "Guia rápido de uso do Laticínio Stefanello: funil, conversas, contatos, atividades, agenda e configurações.",
       },
-      { property: "og:title", content: "Ajuda" },
+      { property: "og:title", content: "Ajuda — Laticínio Stefanello" },
       {
         property: "og:description",
         content:
-          "Guia rápido de uso do Stefanello: funil, conversas, contatos, atividades, agenda e configurações.",
+          "Guia rápido de uso do Laticínio Stefanello: funil, conversas, contatos, atividades, agenda e configurações.",
       },
-      { property: "og:url", content: "https://aceleraflow.lovable.app/ajuda" },
-      { name: "twitter:title", content: "Ajuda" },
+      { property: "og:url", content: "https://crmstefanello.lovable.app/ajuda" },
+      { name: "twitter:title", content: "Ajuda — Laticínio Stefanello" },
       {
         name: "twitter:description",
         content:
-          "Guia rápido de uso do Stefanello: funil, conversas, contatos, atividades, agenda e configurações.",
+          "Guia rápido de uso do Laticínio Stefanello: funil, conversas, contatos, atividades, agenda e configurações.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://aceleraflow.lovable.app/ajuda" }],
+    links: [{ rel: "canonical", href: "https://crmstefanello.lovable.app/ajuda" }],
   }),
   component: AjudaPage,
 });
@@ -103,7 +105,7 @@ const helpSections: HelpSection[] = [
 function AjudaPage() {
   return (
     <div className="col-span-12 flex flex-col gap-4">
-      <PageHeader title="Ajuda" description="Guia rápido de uso do Stefanello" />
+      <PageHeader title="Ajuda" description="Guia rápido de uso do Laticínio Stefanello" />
       <Card>
         <CardContent className="p-4">
           <Accordion type="single" collapsible className="w-full">

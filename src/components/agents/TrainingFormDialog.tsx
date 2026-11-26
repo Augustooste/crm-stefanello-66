@@ -326,8 +326,9 @@ export function TrainingFormDialog({
 
           {mode === "create" && (
             <p className="text-caption text-muted-foreground">
-              O acompanhamento do processamento é automático: o Stefanello recebe a notificação do
-              provedor de agentes quando o treinamento termina, sem nada para configurar aqui.
+              O acompanhamento do processamento é automático: o Laticínio Stefanello recebe a
+              notificação do provedor de agentes quando o treinamento termina, sem nada para
+              configurar aqui.
             </p>
           )}
         </div>

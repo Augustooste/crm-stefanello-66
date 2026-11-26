@@ -152,24 +152,26 @@ export const Route = createFileRoute("/_app/inbox")({
   }),
   head: () => ({
     meta: [
-      { title: "Conversas" },
+      { title: "Conversas — Laticínio Stefanello" },
       {
         name: "description",
         content: "Central unificada de conversas de WhatsApp e e-mail com contexto do lead.",
       },
-      { property: "og:title", content: "Conversas" },
+      { property: "og:title", content: "Conversas — Laticínio Stefanello" },
       {
         property: "og:description",
         content: "Central unificada de conversas de WhatsApp e e-mail com contexto do lead.",
       },
-      { property: "og:url", content: "https://aceleraflow.lovable.app/inbox" },
-      { name: "twitter:title", content: "Conversas" },
+      { property: "og:url", content: "https://crmstefanello.lovable.app/inbox" },
+      { name: "twitter:title", content: "Conversas — Laticínio Stefanello" },
       {
         name: "twitter:description",
         content: "Central unificada de conversas de WhatsApp e e-mail com contexto do lead.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://aceleraflow.lovable.app/inbox" }],
+    links: [{ rel: "canonical", href: "https://crmstefanello.lovable.app/inbox" }],
   }),
   component: InboxPage,
 });

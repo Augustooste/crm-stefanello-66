@@ -118,8 +118,8 @@ export function AgentIntentionsTab({ agentId }: { agentId: string }) {
       <CardContent className="space-y-4">
         <Alert>
           <AlertDescription>
-            O Stefanello não executa a URL cadastrada em uma intenção — quem chama o webhook durante a
-            conversa é o próprio provedor de agentes.
+            O Laticínio Stefanello não executa a URL cadastrada em uma intenção — quem chama o
+            webhook durante a conversa é o próprio provedor de agentes.
           </AlertDescription>
         </Alert>
 

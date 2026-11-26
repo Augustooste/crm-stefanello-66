@@ -25,24 +25,26 @@ import { useCanManageDeveloper } from "@/lib/api/developer";
 export const Route = createFileRoute("/_app/configuracoes")({
   head: () => ({
     meta: [
-      { title: "Configurações" },
+      { title: "Configurações — Laticínio Stefanello" },
       {
         name: "description",
-        content: "Preferências da conta, da empresa e do time no Stefanello.",
+        content: "Preferências da conta, da empresa e do time no Laticínio Stefanello.",
       },
-      { property: "og:title", content: "Configurações" },
+      { property: "og:title", content: "Configurações — Laticínio Stefanello" },
       {
         property: "og:description",
-        content: "Preferências da conta, da empresa e do time no Stefanello.",
+        content: "Preferências da conta, da empresa e do time no Laticínio Stefanello.",
       },
-      { property: "og:url", content: "https://aceleraflow.lovable.app/configuracoes" },
-      { name: "twitter:title", content: "Configurações" },
+      { property: "og:url", content: "https://crmstefanello.lovable.app/configuracoes" },
+      { name: "twitter:title", content: "Configurações — Laticínio Stefanello" },
       {
         name: "twitter:description",
-        content: "Preferências da conta, da empresa e do time no Stefanello.",
+        content: "Preferências da conta, da empresa e do time no Laticínio Stefanello.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://aceleraflow.lovable.app/configuracoes" }],
+    links: [{ rel: "canonical", href: "https://crmstefanello.lovable.app/configuracoes" }],
   }),
   component: ConfiguracoesPage,
 });

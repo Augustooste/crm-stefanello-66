@@ -66,24 +66,26 @@ import {
 export const Route = createFileRoute("/_app/nurture")({
   head: () => ({
     meta: [
-      { title: "Acompanhamento automático" },
+      { title: "Acompanhamento automático — Laticínio Stefanello" },
       {
         name: "description",
         content: "Sequências automáticas de nutrição e inscrições de contatos.",
       },
-      { property: "og:title", content: "Acompanhamento automático" },
+      { property: "og:title", content: "Acompanhamento automático — Laticínio Stefanello" },
       {
         property: "og:description",
         content: "Sequências automáticas de nutrição e inscrições de contatos.",
       },
-      { property: "og:url", content: "https://aceleraflow.lovable.app/nurture" },
-      { name: "twitter:title", content: "Acompanhamento automático" },
+      { property: "og:url", content: "https://crmstefanello.lovable.app/nurture" },
+      { name: "twitter:title", content: "Acompanhamento automático — Laticínio Stefanello" },
       {
         name: "twitter:description",
         content: "Sequências automáticas de nutrição e inscrições de contatos.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://aceleraflow.lovable.app/nurture" }],
+    links: [{ rel: "canonical", href: "https://crmstefanello.lovable.app/nurture" }],
   }),
   component: NurturePage,
 });

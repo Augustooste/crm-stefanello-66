@@ -22,8 +22,8 @@ import { AgentAdvancedTab } from "@/components/agents/AgentAdvancedTab";
 
 export const Route = createFileRoute("/_app/agentes/$agentId")({
   head: ({ params }) => {
-    const url = `https://aceleraflow.lovable.app/agentes/${params.agentId}`;
-    const title = "Agente";
+    const url = `https://crmstefanello.lovable.app/agentes/${params.agentId}`;
+    const title = "Agente — Laticínio Stefanello";
     const description = "Perfil, treinamentos, canais e configurações do agente de IA.";
     return {
       meta: [
@@ -35,6 +35,8 @@ export const Route = createFileRoute("/_app/agentes/$agentId")({
         { name: "twitter:title", content: title },
         { name: "twitter:description", content: description },
         { name: "robots", content: "noindex" },
+        { property: "og:type", content: "website" },
+        { name: "twitter:card", content: "summary_large_image" },
       ],
       links: [{ rel: "canonical", href: url }],
     };

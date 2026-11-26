@@ -144,7 +144,7 @@ describe("head() da rota de nurture", () => {
   it("define título e descrição de SEO", async () => {
     const head = await Route.options.head?.({} as never);
     const titleMeta = head?.meta?.find((m) => m && "title" in m);
-    expect(titleMeta).toMatchObject({ title: "Acompanhamento automático" });
+    expect(titleMeta).toMatchObject({ title: "Acompanhamento automático — Laticínio Stefanello" });
     const descriptionMeta = head?.meta?.find((m) => m && "name" in m && m.name === "description");
     expect(descriptionMeta).toMatchObject({
       content: "Sequências automáticas de nutrição e inscrições de contatos.",

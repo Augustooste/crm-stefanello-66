@@ -35,11 +35,18 @@ import { formatBRL } from "@/lib/format";
 export const Route = createFileRoute("/_app/produtos/")({
   head: () => ({
     meta: [
-      { title: "Produtos" },
+      { title: "Produtos — Laticínio Stefanello" },
       {
         name: "description",
         content: "Catálogo de produtos e serviços: preço, duração e SKU num só lugar.",
       },
+      { property: "og:title", content: "Produtos — Laticínio Stefanello" },
+      {
+        property: "og:description",
+        content: "Catálogo de produtos e serviços: preço, duração e SKU num só lugar.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: ProductsPage,

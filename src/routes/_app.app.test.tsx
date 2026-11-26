@@ -152,7 +152,7 @@ describe("head() da rota do dashboard", () => {
   it("define título e descrição de SEO", async () => {
     const head = await Route.options.head?.({} as never);
     const titleMeta = head?.meta?.find((m) => m && "title" in m);
-    expect(titleMeta).toMatchObject({ title: "Visão Geral" });
+    expect(titleMeta).toMatchObject({ title: "Visão Geral — Laticínio Stefanello" });
     const descriptionMeta = head?.meta?.find((m) => m && "name" in m && m.name === "description");
     expect(descriptionMeta).toMatchObject({
       content: "O pulso do seu negócio em tempo real: funil, receita, saúde da carteira e IA.",

@@ -106,10 +106,10 @@ describe("página de contatos — lacunas de cobertura (/_app/contatos)", () => 
     const head = await Route.options.head?.({} as never);
     if (!head) throw new Error("head indefinido");
 
-    expect(head.meta?.[0]).toEqual({ title: "Contatos" });
+    expect(head.meta?.[0]).toEqual({ title: "Contatos — Laticínio Stefanello" });
     expect(head.links?.[0]).toEqual({
       rel: "canonical",
-      href: "https://aceleraflow.lovable.app/contatos",
+      href: "https://crmstefanello.lovable.app/contatos",
     });
   });
 

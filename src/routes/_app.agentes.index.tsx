@@ -16,25 +16,27 @@ import type { AgentPlatformAgent } from "@/lib/api/agent-platform-contract";
 export const Route = createFileRoute("/_app/agentes/")({
   head: () => ({
     meta: [
-      { title: "Agentes de IA" },
+      { title: "Agentes de IA — Laticínio Stefanello" },
       {
         name: "description",
         content:
           "Agentes do provedor de agentes conectados a esta empresa: perfil, treinamentos e canais.",
       },
-      { property: "og:title", content: "Agentes de IA" },
+      { property: "og:title", content: "Agentes de IA — Laticínio Stefanello" },
       {
         property: "og:description",
         content:
           "Agentes do provedor de agentes conectados a esta empresa: perfil, treinamentos e canais.",
       },
-      { property: "og:url", content: "https://aceleraflow.lovable.app/agentes" },
-      { name: "twitter:title", content: "Agentes de IA" },
+      { property: "og:url", content: "https://crmstefanello.lovable.app/agentes" },
+      { name: "twitter:title", content: "Agentes de IA — Laticínio Stefanello" },
       {
         name: "twitter:description",
         content:
           "Agentes do provedor de agentes conectados a esta empresa: perfil, treinamentos e canais.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: AgentesPage,

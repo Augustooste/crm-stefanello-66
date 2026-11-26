@@ -63,24 +63,26 @@ export const Route = createFileRoute("/_app/formularios")({
   beforeLoad: ({ context }) => requireAdmin(context.queryClient),
   head: () => ({
     meta: [
-      { title: "Formulários de captura" },
+      { title: "Formulários de captura — Laticínio Stefanello" },
       {
         name: "description",
         content: "Crie e edite formulários públicos de captura de leads.",
       },
-      { property: "og:title", content: "Formulários de captura" },
+      { property: "og:title", content: "Formulários de captura — Laticínio Stefanello" },
       {
         property: "og:description",
         content: "Crie e edite formulários públicos de captura de leads.",
       },
-      { property: "og:url", content: "https://aceleraflow.lovable.app/formularios" },
-      { name: "twitter:title", content: "Formulários de captura" },
+      { property: "og:url", content: "https://crmstefanello.lovable.app/formularios" },
+      { name: "twitter:title", content: "Formulários de captura — Laticínio Stefanello" },
       {
         name: "twitter:description",
         content: "Crie e edite formulários públicos de captura de leads.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://aceleraflow.lovable.app/formularios" }],
+    links: [{ rel: "canonical", href: "https://crmstefanello.lovable.app/formularios" }],
   }),
   component: FormulariosPage,
 });

@@ -95,7 +95,15 @@ describe("head de /auth", () => {
     const head = Route.options.head?.({} as never);
 
     expect(head).toEqual({
-      meta: [{ title: "Entrar — Stefanello" }, { name: "robots", content: "noindex" }],
+      meta: [
+        { title: "Entrar — Laticínio Stefanello" },
+        { name: "robots", content: "noindex" },
+        { name: "description", content: "Acesse sua conta no Laticínio Stefanello." },
+        { property: "og:title", content: "Entrar — Laticínio Stefanello" },
+        { property: "og:description", content: "Acesse sua conta no Laticínio Stefanello." },
+        { property: "og:type", content: "website" },
+        { name: "twitter:card", content: "summary_large_image" },
+      ],
     });
   });
 });

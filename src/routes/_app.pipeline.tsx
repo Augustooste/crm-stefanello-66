@@ -210,24 +210,26 @@ export const Route = createFileRoute("/_app/pipeline")({
   }),
   head: () => ({
     meta: [
-      { title: "Funil de vendas" },
+      { title: "Funil de vendas — Laticínio Stefanello" },
       {
         name: "description",
         content: "Funil de vendas em quadro por etapa, com arrastar e soltar e ações rápidas.",
       },
-      { property: "og:title", content: "Funil de vendas" },
+      { property: "og:title", content: "Funil de vendas — Laticínio Stefanello" },
       {
         property: "og:description",
         content: "Funil de vendas em quadro por etapa, com arrastar e soltar e ações rápidas.",
       },
-      { property: "og:url", content: "https://aceleraflow.lovable.app/pipeline" },
-      { name: "twitter:title", content: "Funil de vendas" },
+      { property: "og:url", content: "https://crmstefanello.lovable.app/pipeline" },
+      { name: "twitter:title", content: "Funil de vendas — Laticínio Stefanello" },
       {
         name: "twitter:description",
         content: "Funil de vendas em quadro por etapa, com arrastar e soltar e ações rápidas.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://aceleraflow.lovable.app/pipeline" }],
+    links: [{ rel: "canonical", href: "https://crmstefanello.lovable.app/pipeline" }],
   }),
   component: PipelinePage,
 });

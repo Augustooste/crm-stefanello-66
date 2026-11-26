@@ -76,7 +76,11 @@ const AGENT_A: AgentPlatformAgent = {
 describe("head() da rota /_app/agentes/ (índice)", () => {
   it("gera título e descrição da SEO", async () => {
     const head = await Route.options.head?.({} as never);
-    expect(head?.meta?.some((m) => m && "title" in m && m.title === "Agentes de IA")).toBe(true);
+    expect(
+      head?.meta?.some(
+        (m) => m && "title" in m && m.title === "Agentes de IA — Laticínio Stefanello",
+      ),
+    ).toBe(true);
   });
 });
 

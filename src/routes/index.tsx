@@ -1,28 +1,34 @@
 import { Link, createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, Bot, Check, Layers3, MessageCircleMore, Sparkles, Target } from "lucide-react";
+import { ArrowRight, Bot, Check, Layers3, MessageCircleMore, Target } from "lucide-react";
 
 import { BrandMark } from "@/components/marketing/BrandMark";
 import { ProductSignalPreview } from "@/components/marketing/ProductSignalPreview";
 import { Button } from "@/components/ui/button";
+import shareAsset from "@/assets/stefanello-share.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Stefanello — Laticínios e embutidos" },
+      { title: "Laticínio Stefanello" },
       {
         name: "description",
         content:
           "Funil, conversas e inteligência artificial para equipes que querem transformar conversas em receita previsível.",
       },
-      { property: "og:title", content: "Stefanello — Laticínios e embutidos" },
+      { property: "og:title", content: "Laticínio Stefanello" },
       {
         property: "og:description",
         content:
           "O painel comercial para equipes que não querem perder o momento de avançar uma venda.",
       },
-      { property: "og:url", content: "https://aceleraflow.lovable.app/" },
+      { property: "og:url", content: "https://crmstefanello.lovable.app/" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:image", content: `https://crmstefanello.lovable.app${shareAsset.url}` },
+      { name: "twitter:image", content: `https://crmstefanello.lovable.app${shareAsset.url}` },
+      { name: "twitter:title", content: "Laticínio Stefanello" },
     ],
-    links: [{ rel: "canonical", href: "https://aceleraflow.lovable.app/" }],
+    links: [{ rel: "canonical", href: "https://crmstefanello.lovable.app/" }],
   }),
   component: LandingPage,
 });
@@ -36,8 +42,7 @@ const capabilities = [
   {
     icon: MessageCircleMore,
     title: "Pedidos pelo WhatsApp com contexto",
-    description:
-      "Vendedores, representantes e tele vendas veem o histórico de cada cliente.",
+    description: "Vendedores, representantes e tele vendas veem o histórico de cada cliente.",
   },
   {
     icon: Bot,
@@ -55,7 +60,7 @@ function LandingPage() {
       />
       <div className="relative mx-auto max-w-[1280px] px-4 pb-12 pt-4 sm:px-6 lg:px-8">
         <header className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/[0.035] px-4 py-3 backdrop-blur-sm sm:px-5">
-          <span className="sm:hidden" aria-label="Stefanello">
+          <span className="sm:hidden" aria-label="Laticínio Stefanello">
             <BrandMark compact />
           </span>
           <span className="hidden sm:block">
@@ -91,7 +96,7 @@ function LandingPage() {
         <section className="grid items-center gap-12 pb-20 pt-16 lg:grid-cols-[1.05fr_0.95fr] lg:pb-28 lg:pt-24">
           <div className="max-w-3xl">
             <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3 py-1.5 text-caption font-semibold uppercase tracking-[0.12em] text-primary">
-              <Sparkles className="h-3.5 w-3.5" /> Laticínio Stefanello · gestão comercial
+              Laticínio Stefanello · gestão comercial
             </p>
             <h1 className="max-w-3xl [font-family:Lexend,sans-serif] text-h2 font-semibold leading-[1.06] tracking-[-0.055em] text-white sm:text-h1 lg:text-display">
               Do lead digital ao pedido da semana, sem perder nenhum cliente.

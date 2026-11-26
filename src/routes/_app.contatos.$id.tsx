@@ -61,8 +61,8 @@ import { ContactQualificationCard } from "@/components/contacts/ContactQualifica
 
 export const Route = createFileRoute("/_app/contatos/$id")({
   head: ({ params }) => {
-    const url = `https://aceleraflow.lovable.app/contatos/${params.id}`;
-    const title = "Contato";
+    const url = `https://crmstefanello.lovable.app/contatos/${params.id}`;
+    const title = "Contato — Laticínio Stefanello";
     const description = "Perfil do contato: dados, conversas, negócios e histórico.";
     return {
       meta: [
@@ -74,6 +74,8 @@ export const Route = createFileRoute("/_app/contatos/$id")({
         { name: "twitter:title", content: title },
         { name: "twitter:description", content: description },
         { name: "robots", content: "noindex" },
+        { property: "og:type", content: "website" },
+        { name: "twitter:card", content: "summary_large_image" },
       ],
       links: [{ rel: "canonical", href: url }],
     };
@@ -337,13 +339,15 @@ function ContactDetail() {
           stageNames.set(s.id, s.name);
       }
 
-      return rows.map((r): StageChangeTimelineSource => ({
-        id: r.id,
-        deal_title: r.deal?.title ?? null,
-        from_stage_name: r.from_stage_id ? (stageNames.get(r.from_stage_id) ?? null) : null,
-        to_stage_name: r.to_stage_id ? (stageNames.get(r.to_stage_id) ?? null) : null,
-        created_at: r.created_at,
-      }));
+      return rows.map(
+        (r): StageChangeTimelineSource => ({
+          id: r.id,
+          deal_title: r.deal?.title ?? null,
+          from_stage_name: r.from_stage_id ? (stageNames.get(r.from_stage_id) ?? null) : null,
+          to_stage_name: r.to_stage_id ? (stageNames.get(r.to_stage_id) ?? null) : null,
+          created_at: r.created_at,
+        }),
+      );
     },
   });
 
@@ -471,7 +475,9 @@ function ContactDetail() {
         .sort((a, b) => new Date(a.created_at).getTime() - new Date(b.created_at).getTime())
         .map((m) => ({
           sender: (m.sender === "contact" || m.sender === "ai" ? m.sender : "agent") as
-            "contact" | "agent" | "ai",
+            | "contact"
+            | "agent"
+            | "ai",
           content: m.content,
         })),
     [timelineMessagesQuery.data],

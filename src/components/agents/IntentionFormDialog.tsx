@@ -126,9 +126,9 @@ export function IntentionFormDialog({
         <DialogHeader>
           <DialogTitle>{isEditing ? "Editar intenção" : "Nova intenção"}</DialogTitle>
           <DialogDescription>
-            Define quando e como o agente deve agir para atender a este objetivo. O Stefanello não
-            executa a URL cadastrada — quem chama o webhook durante a conversa é o provedor de
-            agentes.
+            Define quando e como o agente deve agir para atender a este objetivo. O Laticínio
+            Stefanello não executa a URL cadastrada — quem chama o webhook durante a conversa é o
+            provedor de agentes.
           </DialogDescription>
         </DialogHeader>
 
@@ -203,8 +203,8 @@ export function IntentionFormDialog({
               </div>
 
               <p className="text-caption text-muted-foreground">
-                Este endereço é chamado pelo próprio provedor de agentes durante a conversa — o CRM
-                IA nunca dispara essa URL, então não há botão de "testar" aqui.
+                Este endereço é chamado pelo próprio provedor de agentes durante a conversa — o
+                Laticínio Stefanello nunca dispara essa URL, então não há botão de "testar" aqui.
               </p>
 
               <div className="flex flex-col gap-3 sm:flex-row sm:gap-6">

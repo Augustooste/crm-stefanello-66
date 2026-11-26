@@ -59,6 +59,22 @@ export const Route = createFileRoute("/.lovable/oauth/consent")({
     return data;
   },
   component: ConsentPage,
+  head: () => ({
+    meta: [
+      { title: "Autorizar conexão — Laticínio Stefanello" },
+      {
+        name: "description",
+        content: "Autorize uma conexão com sua conta no Laticínio Stefanello.",
+      },
+      { property: "og:title", content: "Autorizar conexão — Laticínio Stefanello" },
+      {
+        property: "og:description",
+        content: "Autorize uma conexão com sua conta no Laticínio Stefanello.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   errorComponent: ({ error }) => (
     <main className="mx-auto max-w-md p-6 text-slate-100">
       <h1 className="text-lead font-semibold">Não foi possível carregar esta autorização</h1>
@@ -102,13 +118,13 @@ function ConsentPage() {
       <Card className="w-full border-white/10 bg-[var(--neutral-950)]/90 text-slate-100 shadow-2xl">
         <CardHeader>
           <CardTitle className="[font-family:Lexend,sans-serif] text-h4">
-            Conectar {clientName} ao Stefanello
+            Conectar {clientName} ao Laticínio Stefanello
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <p className="text-sm text-slate-300">
-            Isso permitirá que <strong>{clientName}</strong> use o Stefanello como você, respeitando as
-            permissões do seu papel e o isolamento do seu tenant.
+            Isso permitirá que <strong>{clientName}</strong> use o Laticínio Stefanello como você,
+            respeitando as permissões do seu papel e o isolamento do seu tenant.
           </p>
           {scope && (
             <p className="text-caption text-slate-400">

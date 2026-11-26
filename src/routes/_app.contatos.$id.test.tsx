@@ -97,10 +97,12 @@ describe("head() da rota /_app/contatos/$id", () => {
   it("gera título, canonical e og:url com o id do contato", async () => {
     const head = await Route.options.head?.({ params: { id: "c1" } } as never);
 
-    expect(head?.meta?.some((m) => m && "title" in m && m.title === "Contato")).toBe(true);
+    expect(
+      head?.meta?.some((m) => m && "title" in m && m.title === "Contato — Laticínio Stefanello"),
+    ).toBe(true);
     expect(
       head?.links?.some(
-        (l) => l && "href" in l && l.href === "https://aceleraflow.lovable.app/contatos/c1",
+        (l) => l && "href" in l && l.href === "https://crmstefanello.lovable.app/contatos/c1",
       ),
     ).toBe(true);
   });

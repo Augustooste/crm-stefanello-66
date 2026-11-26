@@ -18,7 +18,7 @@ describe("head() da documentação de webhooks", () => {
   it("define título sem canonical nem og:url fixos (página autenticada, template de remix)", async () => {
     const head = await Route.options.head?.({} as never);
     expect(head?.meta?.find((m) => m && "title" in m)).toMatchObject({
-      title: "Documentação de webhooks",
+      title: "Documentação de webhooks — Laticínio Stefanello",
     });
     expect(head?.links ?? []).toEqual([]);
     expect(head?.meta?.some((m) => m && "property" in m && m.property === "og:url")).toBe(false);

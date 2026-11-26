@@ -43,11 +43,18 @@ export const Route = createFileRoute("/_app/relatorios")({
   beforeLoad: ({ context }) => requireAdmin(context.queryClient),
   head: () => ({
     meta: [
-      { title: "Relatórios" },
+      { title: "Relatórios — Laticínio Stefanello" },
       {
         name: "description",
         content: "Métricas de atendimento e visão gerencial do funil.",
       },
+      { property: "og:title", content: "Relatórios — Laticínio Stefanello" },
+      {
+        property: "og:description",
+        content: "Métricas de atendimento e visão gerencial do funil.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: RelatoriosPage,

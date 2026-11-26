@@ -19,8 +19,12 @@ import { passwordSchema } from "@/lib/validation/password";
 export const Route = createFileRoute("/_app/perfil")({
   head: () => ({
     meta: [
-      { title: "Perfil" },
+      { title: "Perfil — Laticínio Stefanello" },
       { name: "description", content: "Edite seu nome e altere sua senha de acesso." },
+      { property: "og:title", content: "Perfil — Laticínio Stefanello" },
+      { property: "og:description", content: "Edite seu nome e altere sua senha de acesso." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: PerfilPage,

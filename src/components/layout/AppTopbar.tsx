@@ -29,6 +29,7 @@ import { useWorkspaces } from "@/lib/api/workspaces";
 import { useTenantRecord } from "@/lib/api/tenant-brand";
 import { toast } from "sonner";
 import { setClientAuthTransition } from "@/lib/client-error-telemetry";
+import { displayBrandName } from "@/lib/brand-name";
 
 const FOCUS_RING =
   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-surface";
@@ -180,10 +181,11 @@ export function AppTopbar() {
   // Marca padrão só quando já se sabe que não há nome; carregando → texto neutro.
   const isTenantLoading =
     !!profileQ.isPending || !!workspacesQ.isPending || (!!tenantId && tenantQ.isPending);
-  const tenantName =
+  const tenantName = displayBrandName(
     activeWorkspace?.tenant_name ??
-    tenantQ.data?.name ??
-    (isTenantLoading ? "Carregando…" : "Stefanello");
+      tenantQ.data?.name ??
+      (isTenantLoading ? "Carregando…" : "Laticínio Stefanello"),
+  );
 
   async function handleSignOut() {
     if (isSigningOut) return;
@@ -211,8 +213,23 @@ export function AppTopbar() {
       <SidebarTrigger aria-label="Alternar menu lateral" />
       <Separator orientation="vertical" className="hidden h-6 sm:block" />
       <div className="flex min-w-0 items-center gap-2">
-        {logoUrl && (
-          <img src={logoUrl} alt="" aria-hidden className="h-6 w-6 shrink-0 rounded object-cover" />
+        {tenantName === "Laticínio Stefanello" ? (
+          <img
+            src="/stefanello-logo.png"
+            alt="Laticínio Stefanello"
+            width={600}
+            height={181}
+            className="hidden h-8 w-auto max-w-28 object-contain sm:block"
+          />
+        ) : (
+          logoUrl && (
+            <img
+              src={logoUrl}
+              alt=""
+              aria-hidden
+              className="h-6 w-6 shrink-0 rounded object-cover"
+            />
+          )
         )}
         <WorkspaceSwitcher />
         <span className="sr-only">{tenantName}</span>

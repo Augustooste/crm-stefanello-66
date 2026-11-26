@@ -41,24 +41,26 @@ import { useViewPrefs } from "@/lib/api/view-prefs";
 export const Route = createFileRoute("/_app/app")({
   head: () => ({
     meta: [
-      { title: "Visão Geral" },
+      { title: "Visão Geral — Laticínio Stefanello" },
       {
         name: "description",
         content: "O pulso do seu negócio em tempo real: funil, receita, saúde da carteira e IA.",
       },
-      { property: "og:title", content: "Visão Geral" },
+      { property: "og:title", content: "Visão Geral — Laticínio Stefanello" },
       {
         property: "og:description",
         content: "O pulso do seu negócio em tempo real: funil, receita, saúde da carteira e IA.",
       },
-      { property: "og:url", content: "https://aceleraflow.lovable.app/app" },
-      { name: "twitter:title", content: "Visão Geral" },
+      { property: "og:url", content: "https://crmstefanello.lovable.app/app" },
+      { name: "twitter:title", content: "Visão Geral — Laticínio Stefanello" },
       {
         name: "twitter:description",
         content: "O pulso do seu negócio em tempo real: funil, receita, saúde da carteira e IA.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://aceleraflow.lovable.app/app" }],
+    links: [{ rel: "canonical", href: "https://crmstefanello.lovable.app/app" }],
   }),
   component: DashboardPage,
 });

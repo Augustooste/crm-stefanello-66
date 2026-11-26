@@ -1,7 +1,7 @@
 import { Link, createFileRoute, redirect, useNavigate } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { useQueryClient } from "@tanstack/react-query";
-import { ArrowLeft, ArrowRight, Check, Chrome, KeyRound, ShieldCheck } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, Chrome, ShieldCheck } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { lovable } from "@/integrations/lovable";
 import { Button } from "@/components/ui/button";
@@ -25,7 +25,15 @@ export const Route = createFileRoute("/auth")({
   },
   component: AuthPage,
   head: () => ({
-    meta: [{ title: "Entrar — Stefanello" }, { name: "robots", content: "noindex" }],
+    meta: [
+      { title: "Entrar — Laticínio Stefanello" },
+      { name: "robots", content: "noindex" },
+      { name: "description", content: "Acesse sua conta no Laticínio Stefanello." },
+      { property: "og:title", content: "Entrar — Laticínio Stefanello" },
+      { property: "og:description", content: "Acesse sua conta no Laticínio Stefanello." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
   }),
 });
 
@@ -257,7 +265,7 @@ function AuthPage() {
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(30,99,200,0.2),transparent_42%)]"
       />
       <Link to="/" className="relative z-10 lg:absolute lg:left-8 lg:top-8">
-        <BrandMark />
+        <BrandMark className="h-12 sm:h-14" />
       </Link>
 
       <aside className="relative z-10 hidden min-h-[calc(100vh-4rem)] flex-col justify-center py-20 lg:flex lg:px-[max(2rem,8vw)]">
@@ -289,9 +297,6 @@ function AuthPage() {
       <section className="relative z-10 flex min-h-[calc(100vh-5rem)] items-center justify-center py-10 lg:min-h-[calc(100vh-4rem)] lg:py-16">
         <Card className="w-full max-w-md border-white/10 bg-[var(--neutral-950)]/90 shadow-2xl shadow-black/30 backdrop-blur-xl">
           <CardHeader className="space-y-3 pb-5">
-            <span className="inline-flex w-fit items-center gap-2 text-caption font-semibold uppercase tracking-[0.14em] text-primary lg:hidden">
-              <KeyRound className="h-3.5 w-3.5" /> Stefanello
-            </span>
             <CardTitle className="[font-family:Lexend,sans-serif] text-h3 font-semibold leading-tight tracking-[-0.045em] text-white">
               {mode === "signin" && "Entre no seu cockpit"}
               {mode === "signup" &&
