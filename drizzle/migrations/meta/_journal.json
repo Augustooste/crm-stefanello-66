@@ -43,6 +43,13 @@
       "when": 1795722597616,
       "tag": "0005_allow_commercial_roles_in_invites",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1795724013203,
+      "tag": "0006_stef_agent_insert_defaults",
+      "breakpoints": true
     }
   ]
 }
