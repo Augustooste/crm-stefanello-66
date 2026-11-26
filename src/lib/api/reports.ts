@@ -77,12 +77,8 @@ export function useDashboardReport(from: Date, to: Date) {
   const { data: profile } = useCurrentProfile();
   return useQuery<DashboardReport>({
     queryKey: ["dashboard-report", profile?.tenant_id, from.toISOString(), to.toISOString()],
-    // `dashboard_report` levanta `forbidden` para quem não é admin (a RPC checa
-    // `private.is_admin()`), então chamar sem o papel é erro garantido. O gate
-    // vivia só no componente (`_app.app.tsx`); trazê-lo para cá vale para TODO
-    // chamador do hook, presente e futuro — defesa em profundidade junto com o
-    // fix da causa raiz em `useSwitchWorkspace`.
-    enabled: !!profile?.tenant_id && profile?.role === "admin",
+    // A RPC exige analytics.read: Administrador e Gestor acessam o relatório.
+    enabled: !!profile?.tenant_id && ["admin", "manager"].includes(profile?.role),
     staleTime: 60 * 1000,
     // Trava de sessão + retry: mesmo padrão de entitlements.ts (session-guard.ts)
     // contra o 42501 quando a RPC sai antes do token anexar.

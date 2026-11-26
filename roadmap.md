@@ -9,6 +9,14 @@
 - [ ] 2. Quadros (principal + pós-venda) e dados fictícios
 - [ ] 3–9. Telas: cadastro de lead, Pipeline, Fora da área, pós-venda, Dashboard, Configurações, testes de tela
 
+## Papéis, acesso e menu (etapa atual)
+- [ ] Papéis admin, gestor, financeiro e vendedor com RLS e permissões
+- [ ] Escopo de leads por responsável e criação própria pelo vendedor
+- [ ] Campos e regras de crédito, incluindo bloqueio de Ganho sem avaliação
+- [ ] Usuários de exemplo e rótulos de papel atualizados
+- [ ] Menu, Configurações e card do Financeiro conforme os papéis
+- [ ] Testes pgTAP e Vitest; verificação e publicação
+
 ## Identidade visual oficial
 - [x] Logo em página inicial, menu lateral, login/cadastro e onboarding
 - [x] Nome da marca, favicon, ícones do app e imagem de compartilhamento

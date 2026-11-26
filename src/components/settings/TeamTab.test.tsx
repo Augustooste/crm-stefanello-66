@@ -404,7 +404,7 @@ describe("TeamTab", () => {
 
     await screen.findByText("Eu Admin");
     await user.click(screen.getByRole("combobox"));
-    await user.click(await screen.findByRole("option", { name: "Atendente" }));
+    await user.click(await screen.findByRole("option", { name: "Vendedor" }));
 
     await waitFor(() =>
       expect(toast.error).toHaveBeenCalledWith(
@@ -424,7 +424,7 @@ describe("TeamTab", () => {
 
     await screen.findByText("Único Admin");
     await user.click(screen.getByRole("combobox"));
-    await user.click(await screen.findByRole("option", { name: "Atendente" }));
+    await user.click(await screen.findByRole("option", { name: "Vendedor" }));
 
     await waitFor(() =>
       expect(toast.error).toHaveBeenCalledWith(

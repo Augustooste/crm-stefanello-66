@@ -1,4 +1,5 @@
 import { supabase } from "@/integrations/supabase/client";
+import type { TeamMemberRole } from "@/lib/commercial-roles";
 
 /** Prazo do convite — é o mesmo prazo que a UI promete ("expira em 7 dias"). */
 const INVITE_TTL_MS = 7 * 24 * 60 * 60 * 1000;
@@ -15,7 +16,7 @@ function newExpiry(): string {
 export type CreateInviteInput = {
   tenantId: string;
   email: string;
-  role: "admin" | "agent";
+  role: TeamMemberRole;
   createdBy: string | null;
 };
 

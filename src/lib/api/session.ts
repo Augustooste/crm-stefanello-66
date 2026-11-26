@@ -3,12 +3,13 @@ import { redirect } from "@tanstack/react-router";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/lib/auth/AuthProvider";
 import { permissionQueryOptions } from "@/lib/api/workspaces";
+import type { TeamMemberRole } from "@/lib/commercial-roles";
 
 export type CurrentProfile = {
   id: string;
   tenant_id: string;
   name: string;
-  role: "admin" | "agent";
+  role: TeamMemberRole;
   /** Preferência de aparência do usuário; ver useAppearanceSync. */
   appearance?: unknown;
 };

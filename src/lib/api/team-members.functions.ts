@@ -1,6 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 
 import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
+import { isTeamMemberRole, type TeamMemberRole } from "@/lib/commercial-roles";
 
 /**
  * Criação direta de membro (com senha inicial) pelo admin do workspace.
@@ -17,7 +18,7 @@ import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 const INVITE_TTL_MS = 7 * 24 * 60 * 60 * 1000;
 const MIN_PASSWORD_LENGTH = 8;
 
-export type TeamMemberRole = "admin" | "agent";
+export type { TeamMemberRole };
 
 export type CreateTeamMemberInput = {
   name: string;
@@ -41,12 +42,12 @@ export function validateInput(input: CreateTeamMemberInput): CreateTeamMemberInp
   const email = String(input?.email ?? "")
     .trim()
     .toLowerCase();
-  const role = input?.role === "admin" ? "admin" : "agent";
+  const role = input?.role;
   const password = String(input?.password ?? "");
 
   if (name.length < 2) throw new Error("Informe o nome da pessoa.");
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) throw new Error("E-mail inválido.");
-  if (input?.role !== "admin" && input?.role !== "agent") throw new Error("Papel inválido.");
+  if (!isTeamMemberRole(role)) throw new Error("Papel inválido.");
   if (password.length < MIN_PASSWORD_LENGTH) {
     throw new Error(`A senha precisa ter pelo menos ${MIN_PASSWORD_LENGTH} caracteres.`);
   }

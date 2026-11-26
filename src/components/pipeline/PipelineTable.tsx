@@ -58,6 +58,7 @@ export interface PipelineTableProps {
   highlightDealId: string | null;
   /** Mesmo mecanismo "Mover para…" do card do kanban — ver `handleMoveToStage` em _app.pipeline.tsx. */
   onMoveDeal: (dealId: string, stageId: string) => void;
+  readOnly?: boolean;
 }
 
 const STAGE_BADGE_TONE = {
@@ -85,6 +86,7 @@ export function PipelineTable({
   showCompanyColumn,
   highlightDealId,
   onMoveDeal,
+  readOnly = false,
 }: PipelineTableProps) {
   const stageById = new Map(stages.map((s) => [s.id, s]));
 
@@ -145,6 +147,11 @@ export function PipelineTable({
                   <TableCell className="text-muted-foreground">{row.companyName ?? "—"}</TableCell>
                 )}
                 <TableCell>
+                  {readOnly ? (
+                    <span className={cn("inline-flex items-center rounded-md border px-2 py-0.5 text-caption font-medium", stageTone(stage))}>
+                      {stage?.name ?? "—"}
+                    </span>
+                  ) : (
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <button
@@ -167,6 +174,7 @@ export function PipelineTable({
                       ))}
                     </DropdownMenuContent>
                   </DropdownMenu>
+                  )}
                 </TableCell>
                 <TableCell className="text-right font-semibold text-primary">
                   {formatBRL(Number(row.value ?? 0))}

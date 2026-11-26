@@ -33,18 +33,23 @@ import { useCurrentProfile } from "@/lib/api/session";
 import { useAuth } from "@/lib/auth/AuthProvider";
 import { formatDate } from "@/lib/format";
 import { userFacingErrorMessage } from "@/lib/integrations/friendly-errors";
+import {
+  TEAM_MEMBER_ROLE_LABELS,
+  TEAM_MEMBER_ROLES,
+  type TeamMemberRole,
+} from "@/lib/commercial-roles";
 
 type ProfileRow = {
   id: string;
   name: string;
   email: string | null;
-  role: "admin" | "agent";
+  role: TeamMemberRole;
   disabled: boolean;
 };
 type InviteRow = {
   id: string;
   email: string;
-  role: "admin" | "agent";
+  role: TeamMemberRole;
   token: string;
   expires_at: string;
   accepted_at: string | null;
@@ -93,7 +98,7 @@ export function TeamTab() {
   ).length;
 
   const setRole = useMutation({
-    mutationFn: async ({ id, role }: { id: string; role: "admin" | "agent" }) => {
+    mutationFn: async ({ id, role }: { id: string; role: TeamMemberRole }) => {
       const { error } = await supabase.from("profiles").update({ role }).eq("id", id);
       if (error) throw error;
     },
@@ -150,10 +155,10 @@ export function TeamTab() {
     if (m.role === "admin" && activeAdmins <= 1 && !m.disabled) return false;
     return true;
   };
-  const canChangeRoleTo = (m: ProfileRow, next: "admin" | "agent") => {
-    if (m.id === user?.id && m.role === "admin" && next === "agent" && activeAdmins <= 1)
+  const canChangeRoleTo = (m: ProfileRow, next: TeamMemberRole) => {
+    if (m.id === user?.id && m.role === "admin" && next !== "admin" && activeAdmins <= 1)
       return false;
-    if (m.role === "admin" && next === "agent" && activeAdmins <= 1) return false;
+    if (m.role === "admin" && next !== "admin" && activeAdmins <= 1) return false;
     return true;
   };
 
@@ -203,7 +208,7 @@ export function TeamTab() {
                   <Select
                     value={m.role}
                     onValueChange={(v) => {
-                      const next = v as "admin" | "agent";
+                      const next = v as TeamMemberRole;
                       if (!canChangeRoleTo(m, next)) {
                         toast.error("Não é possível: deve haver ao menos um administrador ativo.");
                         return;
@@ -216,8 +221,9 @@ export function TeamTab() {
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="admin">Administrador</SelectItem>
-                      <SelectItem value="agent">Atendente</SelectItem>
+                      {TEAM_MEMBER_ROLES.map((role) => (
+                        <SelectItem key={role} value={role}>{TEAM_MEMBER_ROLE_LABELS[role]}</SelectItem>
+                      ))}
                     </SelectContent>
                   </Select>
                   <Button
@@ -276,7 +282,7 @@ export function TeamTab() {
                     <div className="min-w-0 flex-1">
                       <div className="text-body font-medium text-foreground">{i.email}</div>
                       <div className="text-caption text-muted-foreground">
-                        Papel: {i.role === "admin" ? "Administrador" : "Atendente"} ·{" "}
+                        Papel: {TEAM_MEMBER_ROLE_LABELS[i.role]} ·{" "}
                         {expired ? "Expirado" : `Expira em ${formatDate(i.expires_at)}`}
                       </div>
                     </div>
@@ -365,7 +371,7 @@ function InviteDialog({
   const { user } = useAuth();
   const qc = useQueryClient();
   const [email, setEmail] = useState("");
-  const [role, setRole] = useState<"admin" | "agent">("agent");
+  const [role, setRole] = useState<TeamMemberRole>("agent");
 
   const create = useMutation({
     mutationFn: () => createInvite({ tenantId, email, role, createdBy: user?.id ?? null }),
@@ -404,13 +410,14 @@ function InviteDialog({
           </div>
           <div className="space-y-1.5">
             <Label>Papel</Label>
-            <Select value={role} onValueChange={(v) => setRole(v as "admin" | "agent")}>
+            <Select value={role} onValueChange={(v) => setRole(v as TeamMemberRole)}>
               <SelectTrigger>
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="admin">Administrador</SelectItem>
-                <SelectItem value="agent">Atendente</SelectItem>
+                {TEAM_MEMBER_ROLES.map((role) => (
+                  <SelectItem key={role} value={role}>{TEAM_MEMBER_ROLE_LABELS[role]}</SelectItem>
+                ))}
               </SelectContent>
             </Select>
           </div>
@@ -444,7 +451,7 @@ function AddMemberDialog({
   const createMember = useServerFn(createTeamMember);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [role, setRole] = useState<"admin" | "agent">("agent");
+  const [role, setRole] = useState<TeamMemberRole>("agent");
   const [password, setPassword] = useState("");
 
   const create = useMutation({
@@ -488,13 +495,14 @@ function AddMemberDialog({
           </div>
           <div className="space-y-1.5">
             <Label>Papel</Label>
-            <Select value={role} onValueChange={(v) => setRole(v as "admin" | "agent")}>
+            <Select value={role} onValueChange={(v) => setRole(v as TeamMemberRole)}>
               <SelectTrigger>
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="admin">Administrador</SelectItem>
-                <SelectItem value="agent">Atendente</SelectItem>
+                {TEAM_MEMBER_ROLES.map((role) => (
+                  <SelectItem key={role} value={role}>{TEAM_MEMBER_ROLE_LABELS[role]}</SelectItem>
+                ))}
               </SelectContent>
             </Select>
           </div>

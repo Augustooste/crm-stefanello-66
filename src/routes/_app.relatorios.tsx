@@ -26,7 +26,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { formatBRL } from "@/lib/format";
-import { requireAdmin } from "@/lib/api/session";
+import { requirePermission } from "@/lib/api/session";
 import { useGlobalPeriod } from "@/lib/view-prefs/use-global-period";
 import {
   computeHandoffSlaPercentiles,
@@ -40,7 +40,7 @@ import {
 } from "@/lib/api/reports";
 
 export const Route = createFileRoute("/_app/relatorios")({
-  beforeLoad: ({ context }) => requireAdmin(context.queryClient),
+  beforeLoad: ({ context }) => requirePermission(context.queryClient, "analytics.read"),
   head: () => ({
     meta: [
       { title: "Relatórios — Laticínio Stefanello" },
@@ -138,7 +138,7 @@ function RelatoriosPage() {
       ) : reportQ.isError ? (
         <EmptyState
           title="Não foi possível carregar"
-          description="Tente novamente em instantes. Apenas administradores acessam relatórios."
+          description="Tente novamente em instantes. Administradores e gestores acessam relatórios."
         />
       ) : r ? (
         <>

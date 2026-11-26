@@ -96,7 +96,8 @@ begin
   select owner_id, due_at into v_uuid, v_ts from public.activities where deal_id = d_rs and metadata->>'kind' = 'credit_review';
   if v_uuid = uk and v_ts = private.stef_compute_due(now(), 2, true) and v_ts > now() + interval '47 hours' then ok_n:=ok_n+1; else fail_n:=fail_n+1; r:=r||'FAIL tarefa Keiti; '; end if;
 
-  -- 12 ganho exige 1º pedido
+  -- 12 ganho exige 1º pedido (crédito já avaliado; a regra de crédito tem teste próprio)
+  update public.deals set credit_condition = 'a_vista' where id = d_rs;
   procedure_ok := false;
   begin perform private.stef_move_deal(d_rs, s_won, 't'); exception when check_violation then procedure_ok := true; end;
   if procedure_ok then ok_n:=ok_n+1; else fail_n:=fail_n+1; r:=r||'FAIL ganho sem 1o pedido; '; end if;

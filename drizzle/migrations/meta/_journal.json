@@ -29,6 +29,20 @@
       "when": 1795714400275,
       "tag": "0003_scope_catalog_reads_to_workspace_members",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1795722474997,
+      "tag": "0004_stefanello_roles_access_credit",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1795722597616,
+      "tag": "0005_allow_commercial_roles_in_invites",
+      "breakpoints": true
     }
   ]
 }

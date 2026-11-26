@@ -89,6 +89,7 @@ import {
 } from "@/lib/deal-health";
 import { buildDealBriefing, type DealBriefing, type DealFollowupStatus } from "@/lib/deal-briefing";
 import { DealChatDialog } from "@/components/pipeline/deal-chat-dialog";
+import { DealCreditSection, type CreditCondition } from "@/components/pipeline/DealCreditSection";
 import { MeetingPrepSheet } from "@/components/pipeline/meeting-prep-sheet";
 import { MeetingResultSheet } from "@/components/pipeline/meeting-result-sheet";
 import { ProposalSheet } from "@/components/pipeline/proposal-sheet";
@@ -123,6 +124,11 @@ type DealRow = {
   automation_lock_reason: string | null;
   last_ai_transition_at: string | null;
   ai_transition_count_24h: number;
+  credit_condition: CreditCondition | null;
+  credit_limit: number | null;
+  payment_terms_days: number[];
+  credit_notes: string | null;
+  credit_evaluated_at: string | null;
   contact: {
     id: string;
     name: string;
@@ -340,7 +346,7 @@ function PipelinePage() {
       const { data, error } = await supabase
         .from("deals")
         .select(
-          "id, title, value, stage_id, owner_id, status, lost_reason, contact_id, created_at, stage_entered_at, custom_fields, automation_mode, automation_paused_until, automation_lock_reason, last_ai_transition_at, ai_transition_count_24h, contact:contacts(id, name, tags, source, deleted_at, company_id)",
+          "id, title, value, stage_id, owner_id, status, lost_reason, contact_id, created_at, stage_entered_at, custom_fields, automation_mode, automation_paused_until, automation_lock_reason, last_ai_transition_at, ai_transition_count_24h, credit_condition, credit_limit, payment_terms_days, credit_notes, credit_evaluated_at, contact:contacts(id, name, tags, source, deleted_at, company_id)",
         )
         .eq("board_id", boardId!)
         .order("created_at", { ascending: false });
@@ -777,6 +783,8 @@ function PipelinePage() {
   // esconde sozinho (`boards.length === 0` → null), então o estado vazio virava
   // beco sem saída apontando para um assistente que não abre mais.
   const isAdmin = profile?.role === "admin";
+  const isFinance = profile?.role === "finance";
+  const canEditCredit = isAdmin || profile?.role === "manager" || isFinance;
 
   const handleExport = async () => {
     if (!boardId) return;
@@ -812,7 +820,7 @@ function PipelinePage() {
               )}
               Exportar CSV
             </Button>
-            {firstStage && (
+            {firstStage && !isFinance && (
               <Button onClick={() => setOpenNew(true)}>
                 <Plus className="mr-1 h-4 w-4" /> Novo negócio
               </Button>
@@ -1054,6 +1062,8 @@ function PipelinePage() {
                         onResult={setResultDeal}
                         onProposal={setProposalDeal}
                         onCreateInStage={() => setOpenNew(true)}
+                        readOnly={isFinance}
+                        canEditCredit={canEditCredit}
                       />
                     ))}
                   </div>
@@ -1079,6 +1089,7 @@ function PipelinePage() {
               showCompanyColumn={companiesActive}
               highlightDealId={highlightDealId}
               onMoveDeal={handleTableMove}
+              readOnly={isFinance}
             />
           )}
         </>
@@ -1136,7 +1147,7 @@ function PipelinePage() {
         onOpenChange={(v) => !v && setProposalDeal(null)}
       />
 
-      {firstStage && (
+      {firstStage && !isFinance && (
         <NewDealDialog
           open={openNew}
           onOpenChange={setOpenNew}
@@ -1168,6 +1179,8 @@ function Column({
   highlightDealId,
   isFiltered,
   boardTotal,
+  readOnly,
+  canEditCredit,
 }: {
   stage: Stage;
   deals: DealRow[];
@@ -1186,6 +1199,8 @@ function Column({
   highlightDealId: string | null;
   isFiltered: boolean;
   boardTotal: number;
+  readOnly: boolean;
+  canEditCredit: boolean;
 }) {
   const { setNodeRef, isOver } = useDroppable({ id: stage.id });
   const total = deals.reduce((s, d) => s + Number(d.value ?? 0), 0);
@@ -1246,15 +1261,17 @@ function Column({
           <div className="flex flex-1 flex-col items-center justify-center gap-2 rounded-md border border-dashed border-border p-6 text-center text-caption text-muted-foreground">
             <LayoutGrid className="h-5 w-5 opacity-60" aria-hidden />
             <span>Arraste negócios para cá</span>
-            <Button
-              type="button"
-              variant="ghost"
-              size="sm"
-              className="h-7 text-caption"
-              onClick={onCreateInStage}
-            >
-              <Plus className="mr-1 h-3.5 w-3.5" aria-hidden /> Adicionar negócio nesta etapa
-            </Button>
+            {!readOnly && (
+              <Button
+                type="button"
+                variant="ghost"
+                size="sm"
+                className="h-7 text-caption"
+                onClick={onCreateInStage}
+              >
+                <Plus className="mr-1 h-3.5 w-3.5" aria-hidden /> Adicionar negócio nesta etapa
+              </Button>
+            )}
           </div>
         ) : (
           deals.map((d) => (
@@ -1273,6 +1290,8 @@ function Column({
               onResult={onResult}
               onProposal={onProposal}
               isHighlighted={d.id === highlightDealId}
+              readOnly={readOnly}
+              canEditCredit={canEditCredit}
             />
           ))
         )}
@@ -1295,6 +1314,8 @@ function DraggableCard({
   onResult,
   onProposal,
   isHighlighted,
+  readOnly,
+  canEditCredit,
 }: {
   deal: DealRow;
   stages: Stage[];
@@ -1309,8 +1330,10 @@ function DraggableCard({
   onResult: (d: DealRow) => void;
   onProposal: (d: DealRow) => void;
   isHighlighted: boolean;
+  readOnly: boolean;
+  canEditCredit: boolean;
 }) {
-  const { attributes, listeners, setNodeRef, isDragging } = useDraggable({ id: deal.id });
+  const { attributes, listeners, setNodeRef, isDragging } = useDraggable({ id: deal.id, disabled: readOnly });
 
   const activities = health.activitiesByDeal.get(deal.id) ?? [];
   const followups = health.followupsByDeal.get(deal.id) ?? [];
@@ -1352,21 +1375,27 @@ function DraggableCard({
               <Info className="h-4 w-4" />
             </Button>
           </PopoverTrigger>
-          <PopoverContent align="end" className="w-64">
+          <PopoverContent align="end" className="w-80">
             <DealBriefingContent briefing={briefing} />
-            <Button size="sm" className="mt-3 w-full" onClick={() => onPrepare(deal)}>
-              <ClipboardList className="mr-2 h-4 w-4" /> Preparar reunião
-            </Button>
-            <Button
-              size="sm"
-              variant="outline"
-              className="mt-2 w-full"
-              onClick={() => onResult(deal)}
-            >
-              <FileText className="mr-2 h-4 w-4" /> Resultado da reunião
-            </Button>
+            {!readOnly && (
+              <>
+                <Button size="sm" className="mt-3 w-full" onClick={() => onPrepare(deal)}>
+                  <ClipboardList className="mr-2 h-4 w-4" /> Preparar reunião
+                </Button>
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="mt-2 w-full"
+                  onClick={() => onResult(deal)}
+                >
+                  <FileText className="mr-2 h-4 w-4" /> Resultado da reunião
+                </Button>
+              </>
+            )}
+            <DealCreditSection deal={deal} canEdit={canEditCredit} />
           </PopoverContent>
         </Popover>
+        {!readOnly && (
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" size="icon" className="h-7 w-7" aria-label="Ações do negócio">
@@ -1402,11 +1431,16 @@ function DraggableCard({
             </DropdownMenuSub>
           </DropdownMenuContent>
         </DropdownMenu>
+        )}
       </div>
       <button
-        {...listeners}
-        className="block w-full cursor-grab pr-16 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:ring-ring active:cursor-grabbing"
-        aria-label={`Arrastar ${deal.title}`}
+        {...(readOnly ? {} : listeners)}
+        disabled={readOnly}
+        className={cn(
+          "block w-full pr-16 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:ring-ring",
+          readOnly ? "cursor-default" : "cursor-grab active:cursor-grabbing",
+        )}
+        aria-label={readOnly ? `Negócio ${deal.title}` : `Arrastar ${deal.title}`}
       >
         <DealCardBody
           deal={deal}
@@ -1421,7 +1455,7 @@ function DraggableCard({
           288px — agora vivem dentro do diálogo de detalhes. */}
       <div className="mt-2 space-y-1" onPointerDown={(event) => event.stopPropagation()}>
         <DealAutomationDetails deal={deal} snapshot={automation} stages={stages} />
-        {isDealOpen(deal) && (
+        {!readOnly && isDealOpen(deal) && (
           <div className="flex gap-1 border-t border-border pt-1.5">
             <Button
               variant="ghost"

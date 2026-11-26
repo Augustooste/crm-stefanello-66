@@ -2913,6 +2913,13 @@ export type Database = {
           contact_attempts: number
           contact_id: string | null
           created_at: string
+          credit_condition:
+            | Database["public"]["Enums"]["credit_condition_type"]
+            | null
+          credit_evaluated_at: string | null
+          credit_evaluated_by: string | null
+          credit_limit: number | null
+          credit_notes: string | null
           custom_fields: Json
           first_delivery_at: string | null
           first_order_at: string | null
@@ -2926,6 +2933,7 @@ export type Database = {
             | null
           nurture_return_at: string | null
           owner_id: string | null
+          payment_terms_days: number[]
           sample_delivered_at: string | null
           sample_requested: boolean
           sample_status:
@@ -2954,6 +2962,13 @@ export type Database = {
           contact_attempts?: number
           contact_id?: string | null
           created_at?: string
+          credit_condition?:
+            | Database["public"]["Enums"]["credit_condition_type"]
+            | null
+          credit_evaluated_at?: string | null
+          credit_evaluated_by?: string | null
+          credit_limit?: number | null
+          credit_notes?: string | null
           custom_fields?: Json
           first_delivery_at?: string | null
           first_order_at?: string | null
@@ -2967,6 +2982,7 @@ export type Database = {
             | null
           nurture_return_at?: string | null
           owner_id?: string | null
+          payment_terms_days?: number[]
           sample_delivered_at?: string | null
           sample_requested?: boolean
           sample_status?:
@@ -2995,6 +3011,13 @@ export type Database = {
           contact_attempts?: number
           contact_id?: string | null
           created_at?: string
+          credit_condition?:
+            | Database["public"]["Enums"]["credit_condition_type"]
+            | null
+          credit_evaluated_at?: string | null
+          credit_evaluated_by?: string | null
+          credit_limit?: number | null
+          credit_notes?: string | null
           custom_fields?: Json
           first_delivery_at?: string | null
           first_order_at?: string | null
@@ -3008,6 +3031,7 @@ export type Database = {
             | null
           nurture_return_at?: string | null
           owner_id?: string | null
+          payment_terms_days?: number[]
           sample_delivered_at?: string | null
           sample_requested?: boolean
           sample_status?:
@@ -3037,6 +3061,13 @@ export type Database = {
             columns: ["contact_id"]
             isOneToOne: false
             referencedRelation: "contacts"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "deals_credit_evaluated_by_fkey"
+            columns: ["credit_evaluated_by"]
+            isOneToOne: false
+            referencedRelation: "profiles"
             referencedColumns: ["id"]
           },
           {
@@ -8139,6 +8170,7 @@ export type Database = {
     }
     Enums: {
       client_origin_type: "lead_empresa" | "prospeccao_propria"
+      credit_condition_type: "a_vista" | "credito_aprovado" | "sem_aprovacao"
       customer_segment_type:
         | "pizzaria"
         | "restaurante"
@@ -8290,6 +8322,7 @@ export const Constants = {
   public: {
     Enums: {
       client_origin_type: ["lead_empresa", "prospeccao_propria"],
+      credit_condition_type: ["a_vista", "credito_aprovado", "sem_aprovacao"],
       customer_segment_type: [
         "pizzaria",
         "restaurante",

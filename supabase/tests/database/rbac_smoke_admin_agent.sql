@@ -10,7 +10,7 @@
 
 begin;
 create extension if not exists pgtap;
-select plan(11);
+select plan(12);
 
 
 -- --------------------------------------------------------------------
@@ -126,7 +126,7 @@ select pg_temp.assume('agent');
 
 select is(
   (select count(*)::int from public.contacts where tenant_id::text = current_setting('rbac.tenant')),
-  2, 'atendente lê os contatos do tenant (inclusive o criado pelo admin)'
+  0, 'vendedor não lê contato sem responsável nem carteira de outro colega'
 );
 
 select lives_ok(
@@ -134,6 +134,11 @@ select lives_ok(
              values ('%s'::uuid, 'Criado pelo atendente', '+5511988880003') $q$,
          current_setting('rbac.tenant')),
   'atendente cria contato — trabalho do dia a dia dele'
+);
+
+select is(
+  (select count(*)::int from public.contacts where tenant_id::text = current_setting('rbac.tenant')),
+  1, 'depois de criar, o vendedor enxerga somente o próprio contato'
 );
 
 select lives_ok(
