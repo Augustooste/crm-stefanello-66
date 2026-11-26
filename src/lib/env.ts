@@ -50,21 +50,46 @@ export type PublicSupabaseEnv = {
   publishableKey: string;
 };
 
+/**
+ * Identificador do backend deste projeto. O fallback abaixo é load-bearing no
+ * rebuild via GitHub (quando o `.env` não chega), mas ele só pode valer AQUI:
+ * num remix o backend é outro, e apontar para este faria o app clonado falhar
+ * em toda tela com erro de permissão — parecendo "erro ao remixar".
+ */
+const FALLBACK_PROJECT_ID = "sjgtxxdkfsoqjuridvht";
+
+const FALLBACK_PUBLIC_SUPABASE_ENV: PublicSupabaseEnv = {
+  url: `https://${FALLBACK_PROJECT_ID}.supabase.co`,
+  publishableKey: "sb_publishable_qstfmTHCBqq1Uw67YH03wA_1Ye0i8xZ",
+};
+
 function normalizeEnvValue(value: unknown): string {
   return typeof value === "string" && value.trim().length > 0 ? value.trim() : "";
+}
+
+/** O fallback só vale quando o ambiente não identifica OUTRO projeto. */
+function isFallbackAllowed(): boolean {
+  const projectId = normalizeEnvValue(
+    import.meta.env?.VITE_SUPABASE_PROJECT_ID ||
+      (typeof process !== "undefined" ? process.env?.SUPABASE_PROJECT_ID : undefined),
+  );
+  return projectId === "" || projectId === FALLBACK_PROJECT_ID;
 }
 
 function readPublicSupabaseEnv():
   { ok: true; env: PublicSupabaseEnv } | { ok: false; missing: string[] } {
   // Vite substitui `import.meta.env.VITE_*` em build; `process.env.*` só chega
   // via `define` no vite.config para o caminho SSR. Aceitamos os dois.
+  const fallbackAllowed = isFallbackAllowed();
   const url = normalizeEnvValue(
     import.meta.env?.VITE_SUPABASE_URL ||
-      (typeof process !== "undefined" ? process.env?.SUPABASE_URL : undefined),
+      (typeof process !== "undefined" ? process.env?.SUPABASE_URL : undefined) ||
+      (fallbackAllowed ? FALLBACK_PUBLIC_SUPABASE_ENV.url : ""),
   );
   const publishableKey = normalizeEnvValue(
     import.meta.env?.VITE_SUPABASE_PUBLISHABLE_KEY ||
-      (typeof process !== "undefined" ? process.env?.SUPABASE_PUBLISHABLE_KEY : undefined),
+      (typeof process !== "undefined" ? process.env?.SUPABASE_PUBLISHABLE_KEY : undefined) ||
+      (fallbackAllowed ? FALLBACK_PUBLIC_SUPABASE_ENV.publishableKey : ""),
   );
 
   const missing: string[] = [];
